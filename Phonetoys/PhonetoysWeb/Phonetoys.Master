@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Phonetoys.master.cs" Inherits="PhonetoysWeb.Phonetoys" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Content/MasterCSS.css" rel="stylesheet" />
+    <link href="Content/foundation.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <asp:ContentPlaceHolder ID="topContent" runat="server" />
+    <form id="form1" runat="server">
+    <div class="masterContent">
+        <div class="row">
+            <div class="columns large-6">
+                <asp:Image CssClass="logo" runat="server" ImageUrl="http://lorempixel.com/150/120/technics/" />
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="large-12 columns medium-12 small-14">
+                <div class="nav-bar right">
+                    <ul class="button-group">
+                        <li><a href="Index.aspx" class="button">Link 1</a></li>
+                        <li><a href="Index.aspx" class="button">Link 2</a></li>
+                        <li><a href="Index.aspx" class="button">Link 3</a></li>
+                        <li><a href="Index.aspx" class="button">Link 4</a></li>
+                    </ul>
+                 </div>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+    </form>
+</body>
+</html>

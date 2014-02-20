@@ -1,0 +1,24 @@
+﻿body {
+}
+
+.masterContent {
+    height: 500px;
+    width: 500px;
+    background-color: tomato;
+}
+
+.columns.large-6 {
+    height: 120px;
+    width:150px;
+    border:solid black;
+}
+
+.logo {
+    width: 150px;
+    height: 120px;
+}
+
+.button-group {
+    position:absolute;
+    left: 45px; 
+}
