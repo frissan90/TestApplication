@@ -1,24 +1,12 @@
-﻿body {
-}
-
+﻿
 .masterContent {
-    height: 500px;
-    width: 500px;
-    background-color: tomato;
+    height: 1000px;
+    width: 1600px;
+    background-color: navy;
 }
 
-.columns.large-6 {
-    height: 120px;
-    width:150px;
-    border:solid black;
-}
 
 .logo {
     width: 150px;
     height: 120px;
-}
-
-.button-group {
-    position:absolute;
-    left: 45px; 
 }
