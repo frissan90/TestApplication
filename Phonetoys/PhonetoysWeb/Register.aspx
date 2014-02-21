@@ -14,7 +14,7 @@
         <asp:Label ID="Label2" runat="server" Text="Confirm Password" ForeColor="Navy" style="border:solid;"></asp:Label>
         <asp:TextBox CssClass="large-3 medium-3 small-3" ID="ConfPWTB" runat="server" Text="Repeat password" Style="width:300px;"></asp:TextBox>
         <asp:Label ID="Label3" runat="server" Text="First Name" ForeColor="Navy" style="border:solid;"></asp:Label>
-        <asp:TextBox CssClass="large-3 medium-3 small-3" ID="FnameTB" runat="server" Text="Insert First Name" Style="width:300px;"></asp:TextBox>
+        <asp:TextBox CssClass="large-3 medium-3 small-3" ID="FnameTB" runat="server" Text="Inserdt First Name" Style="width:300px;"></asp:TextBox>
         <asp:Label ID="Label4" runat="server" Text="Last Name" ForeColor="Navy" style="border:solid;"></asp:Label>
         <asp:TextBox CssClass="large-3 medium-3 small-3" ID="LnameTB" runat="server" Text="Insert Last Name" Style="width:300px;"></asp:TextBox>
     </div>
