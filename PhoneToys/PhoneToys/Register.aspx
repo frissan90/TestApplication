@@ -12,7 +12,7 @@
         <asp:Label ID="Label1" runat="server" Text="Password" ForeColor="Navy" style="border:solid;"></asp:Label>
         <asp:TextBox CssClass="large-3 medium-3 small-3" ID="PWTB" runat="server" Text="Insert Password" Style="width:300px;" TextMode="Password"></asp:TextBox>
         <asp:Label ID="Label2" runat="server" Text="Confirm Password" ForeColor="Navy" style="border:solid;"></asp:Label>
-        <asp:TextBox CssClass="large-3 medium-3 small-3" ID="ConfPWTB" runat="server" Text="Repeat password" Style="width:300px;"></asp:TextBox>
+        <asp:TextBox CssClass="large-3 medium-3 small-3" ID="ConfPWTB" runat="server" Text="Repeat password" Style="width:300px;" TextMode="Password"></asp:TextBox>
         <asp:Label ID="Label3" runat="server" Text="First Name" ForeColor="Navy" style="border:solid;"></asp:Label>
         <asp:TextBox CssClass="large-3 medium-3 small-3" ID="FnameTB" runat="server" Text="Inserdt First Name" Style="width:300px;"></asp:TextBox>
         <asp:Label ID="Label4" runat="server" Text="Last Name" ForeColor="Navy" style="border:solid;"></asp:Label>
@@ -29,7 +29,7 @@
         <asp:Label ID="Label8" runat="server" Text="Country" ForeColor="Navy" style="border:solid;"></asp:Label>
         <asp:DropDownList CssClass="large-3 medium-3 small-3" runat="server" ID="countryDD"></asp:DropDownList>
         <%--<div class="button radius large-10 medium-8 small-6" id>Register</div>--%>
-        <asp:Button runat="server" CssClass="button radius large-10 medium-8 small-6" ID="registerBTN" Text="Register" />
+        <asp:Button runat="server" CssClass="button radius large-10 medium-8 small-6" ID="registerBTN" Text="Register" OnClick="registerBTN_Click" />
     </div>
         
     </div>
