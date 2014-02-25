@@ -21,7 +21,7 @@ namespace PhoneToys
 
         protected void LightOnBTN_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("http://localhost:16947/api/values");
         }
     }
 }
