@@ -15,8 +15,6 @@ namespace PhonetoysWeb
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            countryDD.Items.Add("Select Country");
             countryDD.Items.Add("Sverige");
             countryDD.Items.Add("Norge");
             countryDD.Items.Add("Danmark");
