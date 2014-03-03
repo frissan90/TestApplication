@@ -27,6 +27,8 @@ namespace PhoneToys
                 Session["Username"] = Email;
             }
             loginBTN.Text = (string)Session["Username"];
+
+
         }
     }
 }

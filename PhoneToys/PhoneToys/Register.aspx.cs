@@ -37,6 +37,12 @@ namespace PhonetoysWeb
             user.Country = countryDD.SelectedItem.Text;
 
             data.Register(user);
+
+            Session["Username"] = EmailTB.Text;
+
+            Response.Redirect("Index.aspx");
+
+
         }
     }
 }
