@@ -32,7 +32,7 @@ namespace PhonetoysWeb
             user.Fname = FnameTB.Text;
             user.Lname = LnameTB.Text;
             user.Address = AddressTB.Text;
-            user.ZipCode = int.Parse(ZipTB.Text);
+            user.ZipCode = Convert.ToInt32(ZipTB.Text);
             user.City = CityTB.Text;
             user.Country = countryDD.SelectedItem.Text;
 
