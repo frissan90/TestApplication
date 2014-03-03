@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Phonetoys.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="PhoneToys.Login" %>
+﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" MasterPageFile="~/Phonetoys.Master" Inherits="PhoneToys.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="topContent" runat="server">
@@ -7,4 +7,6 @@
     <asp:TextBox runat="server" ID="loginEmailTB"></asp:TextBox>
     <asp:TextBox runat="server" ID="loginPWTB"></asp:TextBox>
     <asp:Button runat="server" ID="loginBTN" CssClass="button radius large-10 medium-8 small-6" OnClick="loginBTN_Click" />
+    <br />
+    <asp:Button runat="server" ID="AdminBTN" CssClass="button tiny" Text="Are you an admin? Click here!" OnClick="AdminBTN_Click" ForeColor="Navy" BackColor="White"> </asp:Button> 
 </asp:Content>

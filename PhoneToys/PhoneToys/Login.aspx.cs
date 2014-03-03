@@ -21,7 +21,6 @@ namespace PhoneToys
         {
             string Email = loginEmailTB.Text;
             string Password = loginPWTB.Text;
-
             if (data.authenticateUser(Email, Password))
             {
                 Session["Username"] = Email;
@@ -30,5 +29,11 @@ namespace PhoneToys
 
 
         }
+
+        protected void AdminBTN_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Admin.aspx");
+        }
+
     }
 }

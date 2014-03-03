@@ -13,15 +13,6 @@ namespace PhonetoysWeb {
     public partial class WebForm1 {
         
         /// <summary>
-        /// EmailTB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EmailTB;
-        
-        /// <summary>
         /// fv1 control.
         /// </summary>
         /// <remarks>
@@ -31,22 +22,13 @@ namespace PhonetoysWeb {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator fv1;
         
         /// <summary>
-        /// Label1 control.
+        /// EmailTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
-        /// PWTB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PWTB;
+        protected global::System.Web.UI.WebControls.TextBox EmailTB;
         
         /// <summary>
         /// fv2 control.
@@ -58,22 +40,13 @@ namespace PhonetoysWeb {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator fv2;
         
         /// <summary>
-        /// Label2 control.
+        /// PWTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
-        
-        /// <summary>
-        /// ConfPWTB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ConfPWTB;
+        protected global::System.Web.UI.WebControls.TextBox PWTB;
         
         /// <summary>
         /// fv3 control.
@@ -85,22 +58,13 @@ namespace PhonetoysWeb {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator fv3;
         
         /// <summary>
-        /// Label3 control.
+        /// ConfPWTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
-        
-        /// <summary>
-        /// FnameTB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FnameTB;
+        protected global::System.Web.UI.WebControls.TextBox ConfPWTB;
         
         /// <summary>
         /// fv4 control.
@@ -112,22 +76,13 @@ namespace PhonetoysWeb {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator fv4;
         
         /// <summary>
-        /// Label4 control.
+        /// FnameTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
-        
-        /// <summary>
-        /// LnameTB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LnameTB;
+        protected global::System.Web.UI.WebControls.TextBox FnameTB;
         
         /// <summary>
         /// fv5 control.
@@ -139,13 +94,22 @@ namespace PhonetoysWeb {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator fv5;
         
         /// <summary>
-        /// Label5 control.
+        /// LnameTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.TextBox LnameTB;
+        
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// AddressTB control.
@@ -157,13 +121,13 @@ namespace PhonetoysWeb {
         protected global::System.Web.UI.WebControls.TextBox AddressTB;
         
         /// <summary>
-        /// Label6 control.
+        /// RequiredFieldValidator2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
         /// ZipTB control.
@@ -175,13 +139,13 @@ namespace PhonetoysWeb {
         protected global::System.Web.UI.WebControls.TextBox ZipTB;
         
         /// <summary>
-        /// Label7 control.
+        /// RequiredFieldValidator3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
         /// CityTB control.
@@ -193,13 +157,13 @@ namespace PhonetoysWeb {
         protected global::System.Web.UI.WebControls.TextBox CityTB;
         
         /// <summary>
-        /// Label8 control.
+        /// RequiredFieldValidator4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
         /// countryDD control.

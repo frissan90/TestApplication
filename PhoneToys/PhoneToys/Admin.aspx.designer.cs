@@ -10,42 +10,42 @@
 namespace PhoneToys {
     
     
-    public partial class Login {
+    public partial class Admin {
         
         /// <summary>
-        /// loginEmailTB control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox loginEmailTB;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// loginPWTB control.
+        /// AdminLoginEmailTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox loginPWTB;
+        protected global::System.Web.UI.WebControls.TextBox AdminLoginEmailTB;
         
         /// <summary>
-        /// loginBTN control.
+        /// AdminLoginPWTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button loginBTN;
+        protected global::System.Web.UI.WebControls.TextBox AdminLoginPWTB;
         
         /// <summary>
-        /// AdminBTN control.
+        /// AdminLoginBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AdminBTN;
+        protected global::System.Web.UI.WebControls.Button AdminLoginBtn;
     }
 }
