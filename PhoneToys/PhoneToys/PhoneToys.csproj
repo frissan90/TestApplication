@@ -233,6 +233,7 @@
     <Content Include="Phonetoys.Master" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Register.aspx" />
+    <Content Include="SagoUpload.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
@@ -329,6 +330,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SagoUpload.aspx.cs">
+      <DependentUpon>SagoUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SagoUpload.aspx.designer.cs">
+      <DependentUpon>SagoUpload.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

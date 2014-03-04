@@ -129,5 +129,61 @@ namespace DataAccessLayer
 
             return result;
         }
+
+        public void addSaga(Saga sagan)
+        {
+            string Query = @"insert into Saga values(@Namn, @Beskrivning, @Data, @Langd, @Pris, GETDATE(), null)";
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                SqlParameter param = new SqlParameter();
+                param.ParameterName = "@Namn";
+                param.Value = sagan.Namn;
+                cmd.Parameters.Add(param);
+
+                SqlParameter param2 = new SqlParameter();
+                param2.ParameterName = "@Beskrivning";
+                param2.Value = sagan.Beskrivning;
+                cmd.Parameters.Add(param2);
+
+                SqlParameter param3 = new SqlParameter();
+                param3.ParameterName = "@Data";
+                param3.Value = sagan.Data;
+                cmd.Parameters.Add(param3);
+
+                SqlParameter param4 = new SqlParameter();
+                param4.ParameterName = "@Langd";
+                param4.Value = sagan.Langd;
+                cmd.Parameters.Add(param4);
+
+                SqlParameter param5 = new SqlParameter();
+                param5.ParameterName = "@Pris";
+                param5.Value = sagan.Pris;
+                cmd.Parameters.Add(param5);
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        public Saga getSaga()
+        {
+            List<Saga> sagor = new List<Saga>();
+ 
+
+        }
     }
 }
