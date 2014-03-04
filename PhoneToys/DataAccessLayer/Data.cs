@@ -179,10 +179,10 @@ namespace DataAccessLayer
             }
         }
 
-        public Saga getSaga()
+        public List<Saga> getSaga()
         {
             List<Saga> sagor = new List<Saga>();
- 
+            return sagor;
 
         }
     }
