@@ -17,22 +17,29 @@ namespace PhoneToys
 
         }
 
-        protected void loginBTN_Click(object sender, EventArgs e)
+        //protected void loginBTN_Click(object sender, EventArgs e)
+        //{
+        //    string Email = loginEmailTB.Text;
+        //    string Password = loginPWTB.Text;
+        //    if (data.authenticateUser(Email, Password))
+        //    {
+        //        Session["Username"] = Email;
+        //    }
+        //    loginBTN.Text = (string)Session["Username"];
+
+
+        //}
+
+
+
+        protected void AdminBTN_Click1(object sender, EventArgs e)
         {
-            string Email = loginEmailTB.Text;
-            string Password = loginPWTB.Text;
-            if (data.authenticateUser(Email, Password))
-            {
-                Session["Username"] = Email;
-            }
-            loginBTN.Text = (string)Session["Username"];
-
-
+            Response.Redirect("AdminLogin.aspx");
         }
 
-        protected void AdminBTN_Click(object sender, EventArgs e)
+        protected void MemberBTN_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Admin.aspx");
+            Response.Redirect("MemberLogin.aspx");
         }
 
     }

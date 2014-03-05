@@ -1,27 +1,24 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SagoUpload.aspx.cs" Inherits="PhoneToys.SagoUpload" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Phonetoys.Master" AutoEventWireup="true" CodeBehind="SagoUpload.aspx.cs" Inherits="PhoneToys.WebForm2" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="topContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    <asp:Label Text="Namn" runat="server" AssociatedControlID="NamnTB" ForeColor="Tomato"></asp:Label>
+    <div class="Upload">
+    <asp:Label ID="Label1" Text="Namn" runat="server" AssociatedControlID="NamnTB" ForeColor="Tomato"></asp:Label>
     <asp:TextBox ID="NamnTB" runat="server"></asp:TextBox>
     <br />
-    <asp:Label runat="server" AssociatedControlID="besTB" Text="Beskrivning" ForeColor="Tomato"></asp:Label>
+    <asp:Label ID="Label2" runat="server" AssociatedControlID="besTB" Text="Beskrivning" ForeColor="Tomato"></asp:Label>
     <asp:TextBox runat="server" ID="besTB"></asp:TextBox>
     <br />
-    <asp:Label runat="server" Text="Längd" AssociatedControlID="LangdTB" ForeColor="Tomato"></asp:Label>
+    <asp:Label ID="Label3" runat="server" Text="Längd" AssociatedControlID="LangdTB" ForeColor="Tomato"></asp:Label>
     <asp:TextBox runat="server" ID="LangdTB"></asp:TextBox>
     <br />
-    <asp:Label runat="server" Text="Pris" AssociatedControlID="PrisTB" ForeColor="Tomato"></asp:Label>
+    <asp:Label ID="Label4" runat="server" Text="Pris" AssociatedControlID="PrisTB" ForeColor="Tomato"></asp:Label>
     <asp:TextBox runat="server" ID="PrisTB"></asp:TextBox>
     <br />
-    <asp:Label runat="server" Text="Välj fil" ForeColor="Tomato"></asp:Label>
+    <asp:Label ID="Label5" runat="server" Text="Välj fil" ForeColor="Tomato"></asp:Label>
     <asp:FileUpload runat="server" ID="minUpload" />
     </div>
     <br />
@@ -29,21 +26,16 @@
     <br />
         <br />
 
-         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" RowStyle-BackColor="#A1DCF2" Font-Names = "Arial" Font-Size = "10pt" HeaderStyle-BackColor="#3AC0F2" HeaderStyle-ForeColor="White">
-    <Columns>
-        <asp:BoundField DataField="Name" HeaderText="FileName" />
-        <asp:TemplateField>
-            <itemtemplate>
-                <object type="application/x-shockwave-flash" data='<%Eval("ID"); %>'
-                    width="240" height="20" id="dewplayer">
-                    <param name="wmode" value="transparent" />
-                    <%--<param name="movie" value='dewplayer-vol.swf?mp3=File.ashx?Id=<%# Eval("Id") %>'/>--%>
-                <object>
-           </itemtemplate>
-           
-        </asp:TemplateField>
-    </Columns>
-</asp:GridView>
-    </form>
-</body>
-</html>
+    <div>
+        <asp:DataGrid runat="server" ID="sagoGrid" AutoGenerateColumns="true">
+            <Columns>
+                <asp:BoundColumn DataField="Namn"></asp:BoundColumn>
+                <asp:BoundColumn DataField="Langd"></asp:BoundColumn>
+                <asp:BoundColumn DataField="Pris"></asp:BoundColumn>
+                <asp:ButtonColumn ButtonType="LinkButton" Text="Redigera"></asp:ButtonColumn>
+                <asp:ButtonColumn ButtonType="LinkButton" Text="Ta bort"></asp:ButtonColumn>
+            </Columns>
+        </asp:DataGrid>
+    </div>
+
+</asp:Content>

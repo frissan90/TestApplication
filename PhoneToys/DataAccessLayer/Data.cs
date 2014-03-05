@@ -89,9 +89,9 @@ namespace DataAccessLayer
         /// <param name="Email">Email inserted by the user</param>
         /// <param name="Password">Password inserted by the user</param>
         /// <returns>Returns the result</returns>
-        public bool authenticateUser(string Email, string Password)
+        public bool authenticateUser(string Username, string Password)
         {
-            string Query = @"select count(*) from Member where Email = @Email and Password = @PW";
+            string Query = @"select count(*) from Member where Username = @Username and Password = @PW";
 
             bool result = false;
 
@@ -102,8 +102,8 @@ namespace DataAccessLayer
                 SqlCommand cmd = new SqlCommand(Query, con);
 
                 SqlParameter param = new SqlParameter();
-                param.ParameterName = "@Email";
-                param.Value = Email;
+                param.ParameterName = "@Username";
+                param.Value = Username;
                 cmd.Parameters.Add(param);
 
                 SqlParameter param2 = new SqlParameter();
@@ -130,9 +130,58 @@ namespace DataAccessLayer
             return result;
         }
 
+        /// <summary>
+        /// Authenticates an Admin
+        /// </summary>
+        /// <param name="Email">Email inserted by the user</param>
+        /// <param name="Password">Password inserted by the user</param>
+        /// <returns>Returns the result</returns>
+        public bool authenticateAdmin(string Username, string Password)
+        {
+            string Query = @"select count(*) from Admin where Username = @Username and Password = @PW";
+
+            bool result = false;
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                SqlParameter param = new SqlParameter();
+                param.ParameterName = "@Username";
+                param.Value = Username;
+                cmd.Parameters.Add(param);
+
+                SqlParameter param2 = new SqlParameter();
+                param2.ParameterName = "@PW";
+                param2.Value = Password;
+                cmd.Parameters.Add(param2);
+
+                if ((int)cmd.ExecuteScalar() > 0)
+                {
+                    result = true;
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+
+            return result;
+        }
+
+
+
         public void addSaga(Saga sagan)
         {
-            string Query = @"insert into Saga values(@Namn, @Beskrivning, @Data, @Langd, @Pris, GETDATE(), null)";
+            string Query = @"insert into Saga values(@Namn, @Beskrivning, @Data, @Langd, @Pris, GETDATE(), null, 0)";
 
             try
             {
@@ -169,6 +218,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
+
             }
             finally
             {
@@ -182,8 +232,94 @@ namespace DataAccessLayer
         public List<Saga> getSaga()
         {
             List<Saga> sagor = new List<Saga>();
+
+            SqlDataReader reader = null;
+
+            string Query = @"select * from Saga";
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Saga sagan = new Saga();
+
+                    sagan.Namn = (string)reader["Namn"];
+                    sagan.Langd = (string)reader["Langd"];
+                    sagan.Pris = (int)reader["Pris"];
+
+                    sagor.Add(sagan);
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+            }
+
             return sagor;
 
+        }
+
+        /// <summary>
+        /// Authenticates an Editor
+        /// </summary>
+        /// <param name="Email">Email inserted by the user</param>
+        /// <param name="Password">Password inserted by the user</param>
+        /// <returns>Returns the result</returns>
+        public bool authenticateEditor(string Username, string Password)
+        {
+            string Query = @"select count(*) from Redaktor where Username = @Username and Password = @PW";
+
+            bool result = false;
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                SqlParameter param = new SqlParameter();
+                param.ParameterName = "@Username";
+                param.Value = Username;
+                cmd.Parameters.Add(param);
+
+                SqlParameter param2 = new SqlParameter();
+                param2.ParameterName = "@PW";
+                param2.Value = Password;
+                cmd.Parameters.Add(param2);
+
+                if ((int)cmd.ExecuteScalar() > 0)
+                {
+                    result = true;
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+
+            return result;
         }
     }
 }

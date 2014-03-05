@@ -4,18 +4,19 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DataAccessLayer;
 using Entities;
 using System.IO;
-using DataAccessLayer;
 
 namespace PhoneToys
 {
-    public partial class SagoUpload : System.Web.UI.Page
+    public partial class WebForm2 : System.Web.UI.Page
     {
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            sagoGrid.DataSource = data.getSaga();
+            sagoGrid.DataBind();
         }
 
         protected void UploadBTN_Click(object sender, EventArgs e)

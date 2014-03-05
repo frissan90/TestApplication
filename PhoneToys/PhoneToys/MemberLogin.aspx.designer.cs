@@ -10,24 +10,33 @@
 namespace PhoneToys {
     
     
-    public partial class Login {
+    public partial class WebForm1 {
         
         /// <summary>
-        /// MemberBTN control.
+        /// UnameTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button MemberBTN;
+        protected global::System.Web.UI.WebControls.TextBox UnameTB;
         
         /// <summary>
-        /// AdminBTN control.
+        /// PWTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AdminBTN;
+        protected global::System.Web.UI.WebControls.TextBox PWTB;
+        
+        /// <summary>
+        /// LogInBTN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button LogInBTN;
     }
 }

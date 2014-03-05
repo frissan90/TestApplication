@@ -15,5 +15,6 @@ namespace Entities
         public int Pris { get; set; }
         public DateTime Upplagd { get; set; }
         public string Redaktor { get; set; }
+        public int Nedladdningar { get; set; }
     }
 }

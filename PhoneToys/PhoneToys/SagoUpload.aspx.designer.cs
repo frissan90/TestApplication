@@ -10,16 +10,16 @@
 namespace PhoneToys {
     
     
-    public partial class SagoUpload {
+    public partial class WebForm2 {
         
         /// <summary>
-        /// form1 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
         /// NamnTB control.
@@ -31,6 +31,15 @@ namespace PhoneToys {
         protected global::System.Web.UI.WebControls.TextBox NamnTB;
         
         /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
         /// besTB control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace PhoneToys {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox besTB;
+        
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
         /// LangdTB control.
@@ -49,6 +67,15 @@ namespace PhoneToys {
         protected global::System.Web.UI.WebControls.TextBox LangdTB;
         
         /// <summary>
+        /// Label4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
+        
+        /// <summary>
         /// PrisTB control.
         /// </summary>
         /// <remarks>
@@ -56,6 +83,15 @@ namespace PhoneToys {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PrisTB;
+        
+        /// <summary>
+        /// Label5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
         /// minUpload control.
@@ -76,12 +112,12 @@ namespace PhoneToys {
         protected global::System.Web.UI.WebControls.Button UploadBTN;
         
         /// <summary>
-        /// GridView1 control.
+        /// sagoGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.DataGrid sagoGrid;
     }
 }
