@@ -23,10 +23,10 @@
             <div class="columns">
                 <div class="nav-bar middle">
                     <ul class="button-group" >
-                        <li class="large-3 medium-3 small-3"><a href="Light.aspx" class="button">Tänd Lampa</a></li>
-                        <li class="large-3 medium-3 small-3"><a href="Index.aspx" class="button">Link 2</a></li>
-                        <li class="large-3 medium-3 small-3"><a href="Index.aspx" class="button">Link 3</a></li>
-                        <li class="large-3 medium-3 small-3"><a href="Index.aspx" class="button">Link 4</a></li>
+                        <li class="large-3 medium-3 small-3"><a href="Light" class="button">Tänd Lampa</a></li>
+                        <li class="large-3 medium-3 small-3"><a href="SagoUpload" class="button">Link 2</a></li>
+                        <li class="large-3 medium-3 small-3"><a href="Index" class="button">Link 3</a></li>
+                        <li class="large-3 medium-3 small-3"><a href="Index" class="button">Link 4</a></li>
                     </ul>
                  </div>
             </div>
