@@ -252,6 +252,7 @@ namespace DataAccessLayer
                     sagan.Namn = (string)reader["Namn"];
                     sagan.Langd = (string)reader["Langd"];
                     sagan.Pris = (int)reader["Pris"];
+                    sagan.Beskrivning = (string)reader["Beskrivning"];
 
                     sagor.Add(sagan);
                 }

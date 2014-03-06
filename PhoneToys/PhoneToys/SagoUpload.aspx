@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Phonetoys.Master" AutoEventWireup="true" CodeBehind="SagoUpload.aspx.cs" Inherits="PhoneToys.WebForm2" %>
+<%@ Import Namespace="System.Data" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="topContent" runat="server">
@@ -27,15 +28,43 @@
         <br />
 
     <div>
-        <asp:DataGrid runat="server" ID="sagoGrid" AutoGenerateColumns="true">
+        <asp:Repeater runat="server" ID="sagoGrid" OnItemCommand="sagoGrid_ItemCommand">
+            <HeaderTemplate>
+                <table border="0" width="50%">
+                    <tr>
+                        <th align="left">Titel</th>
+                        <th align="left">Beskrivning</th>
+                        <th align="left">Pris</th>
+                    </tr>
+            </HeaderTemplate>
+            <ItemTemplate>
+                <tr>
+                        <%--<%#Container.DataItem("Namn")%>
+                        <%#Container.DataItem("Beskrivning") %>
+                        <%#Container.DataItem("Namn") %>--%>
+                        <td><%#Eval("Namn") %></td>
+                        <td><%#Eval("Beskrivning") %></td>
+                        <td><%#Eval("Pris") %></td>
+                        <td><asp:LinkButton runat="server" Text="Redigera"></asp:LinkButton></td>
+                        <td><asp:LinkButton runat="server" Text="Ta bort"></asp:LinkButton></td>
+                </tr>
+            </ItemTemplate>
+            <SeparatorTemplate>
+                <tr>
+                    <td colspan="0"><hr /></td>
+                </tr>
+            </SeparatorTemplate>
+            <FooterTemplate></table></FooterTemplate>
+        </asp:Repeater>
+        <%--<asp:GridView runat="server" ID="sagoGrid" AutoGenerateColumns="false">
             <Columns>
-                <asp:BoundColumn DataField="Namn"></asp:BoundColumn>
-                <asp:BoundColumn DataField="Langd"></asp:BoundColumn>
-                <asp:BoundColumn DataField="Pris"></asp:BoundColumn>
-                <asp:ButtonColumn ButtonType="LinkButton" Text="Redigera"></asp:ButtonColumn>
-                <asp:ButtonColumn ButtonType="LinkButton" Text="Ta bort"></asp:ButtonColumn>
+                <asp:BoundField DataField="Namn"></asp:BoundField>
+                <asp:BoundField DataField="Langd"></asp:BoundField>
+                <asp:BoundField DataField="Pris"></asp:BoundField>
+                <asp:ButtonField ButtonType="Link" Text="Redigera"></asp:ButtonField>
+                <asp:ButtonField ButtonType="Link" Text="Ta bort"></asp:ButtonField>
             </Columns>
-        </asp:DataGrid>
+        </asp:GridView>--%>
     </div>
 
 </asp:Content>
