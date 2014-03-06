@@ -322,5 +322,34 @@ namespace DataAccessLayer
 
             return result;
         }
+
+        public void removeSaga(string Namn)
+        {
+            string Query = @"delete from Saga where Namn = @Namn";
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                SqlParameter param = new SqlParameter();
+                param.ParameterName = "@Namn";
+                param.Value = Namn;
+                cmd.Parameters.Add(param);
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+        }
     }
 }

@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="topContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-
+    <asp:ScriptManager runat="server"></asp:ScriptManager>
     <div class="Upload">
     <asp:Label ID="Label1" Text="Namn" runat="server" AssociatedControlID="NamnTB" ForeColor="Tomato"></asp:Label>
     <asp:TextBox ID="NamnTB" runat="server"></asp:TextBox>
@@ -27,7 +27,9 @@
     <br />
         <br />
 
-    <div>
+    <div style="float:right">
+        <asp:UpdatePanel runat="server" ID="sagoPanel">
+            <ContentTemplate>
         <asp:Repeater runat="server" ID="sagoGrid" OnItemCommand="sagoGrid_ItemCommand">
             <HeaderTemplate>
                 <table border="0" width="50%">
@@ -42,11 +44,11 @@
                         <%--<%#Container.DataItem("Namn")%>
                         <%#Container.DataItem("Beskrivning") %>
                         <%#Container.DataItem("Namn") %>--%>
-                        <td><%#Eval("Namn") %></td>
+                        <td><asp:Label runat="server" ID="namn" Text='<%#Eval("Namn") %>'></asp:Label></td>
                         <td><%#Eval("Beskrivning") %></td>
                         <td><%#Eval("Pris") %></td>
-                        <td><asp:LinkButton runat="server" Text="Redigera"></asp:LinkButton></td>
-                        <td><asp:LinkButton runat="server" Text="Ta bort"></asp:LinkButton></td>
+                        <td><asp:LinkButton CommandName="edit" runat="server" Text="Redigera"></asp:LinkButton></td>
+                        <td><asp:LinkButton CommandName="remove" runat="server" Text="Ta bort"></asp:LinkButton></td>
                 </tr>
             </ItemTemplate>
             <SeparatorTemplate>
@@ -56,6 +58,12 @@
             </SeparatorTemplate>
             <FooterTemplate></table></FooterTemplate>
         </asp:Repeater>
+                </ContentTemplate>
+            <%--<Triggers>
+                <asp:AsyncPostBackTrigger ControlID="sagoPanel" />
+            </Triggers>--%>
+            </asp:UpdatePanel>
+        
         <%--<asp:GridView runat="server" ID="sagoGrid" AutoGenerateColumns="false">
             <Columns>
                 <asp:BoundField DataField="Namn"></asp:BoundField>

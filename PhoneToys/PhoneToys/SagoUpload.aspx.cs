@@ -15,8 +15,12 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-            sagoGrid.DataSource = data.getSaga();
-            sagoGrid.DataBind();
+            if (!Page.IsPostBack)
+            {
+                sagoGrid.DataSource = data.getSaga();
+                sagoGrid.DataBind();
+            }
+            sagoGrid.ItemCommand += new RepeaterCommandEventHandler(this.sagoGrid_ItemCommand);
         }
 
         protected void UploadBTN_Click(object sender, EventArgs e)
@@ -37,7 +41,18 @@ namespace PhoneToys
 
         protected void sagoGrid_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
+            int index = e.Item.ItemIndex;
 
+            if (e.CommandName == "remove")
+            {
+                Label Namn = (Label)e.Item.FindControl("namn") as Label;
+
+                string sagan = Namn.Text;
+
+                data.removeSaga(sagan);
+
+                sagoGrid.DataBind();
+            }
         }
     }
 }
