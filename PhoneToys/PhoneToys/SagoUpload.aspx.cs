@@ -34,5 +34,10 @@ namespace PhoneToys
 
             data.addSaga(sagan);
         }
+
+        protected void sagoGrid_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+
+        }
     }
 }
