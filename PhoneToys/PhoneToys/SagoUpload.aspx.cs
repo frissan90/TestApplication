@@ -37,6 +37,9 @@ namespace PhoneToys
             sagan.Data = sagaReader.ReadBytes((int)minUpload.PostedFile.InputStream.Length);
 
             data.addSaga(sagan);
+
+            sagoGrid.DataSource = data.getSaga();
+            sagoGrid.DataBind();
         }
 
         protected void sagoGrid_ItemCommand(object source, RepeaterCommandEventArgs e)
@@ -50,6 +53,8 @@ namespace PhoneToys
                 string sagan = Namn.Text;
 
                 data.removeSaga(sagan);
+
+                sagoGrid.DataSource = data.getSaga();
 
                 sagoGrid.DataBind();
             }
