@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class Varukorg
+    public class Varukorgen
     {
         public string Saga { get; set; }
         public double Pris { get; set; }

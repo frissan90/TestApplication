@@ -14,8 +14,7 @@ namespace PhoneToys
         {
             if (Session["lst"] != null)
             {
-                
-                
+                   
             }
         }
     }
