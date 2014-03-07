@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using DataAccessLayer;
+using Entities;
 
 namespace PhoneToys
 {
@@ -20,7 +21,10 @@ namespace PhoneToys
         {
             if (data.authenticateUser(UnameTB.Text, PWTB.Text))
             {
+                Session["username"] = UnameTB.Text;
+
                 Response.Redirect("Index.aspx");
+                
             }
                 
         }

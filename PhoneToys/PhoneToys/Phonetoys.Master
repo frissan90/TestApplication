@@ -17,6 +17,7 @@
             <div class="columns large-6">
                 <asp:Image ID="Image1" CssClass="logo" runat="server" ImageUrl="http://lorempixel.com/150/120/technics/" />
             </div>
+            <asp:Label runat="server" ID="cartLabel" ForeColor="Black"></asp:Label>
         </div>
          <%--style="width: 150px; height: 60px;"--%>
         <div class="row">
@@ -33,6 +34,7 @@
         </div>
         <asp:ContentPlaceHolder ID="MainContent" runat="server" />
     </div>
+        
     </form>
 </body>
 </html>
