@@ -14,8 +14,6 @@ namespace PhoneToys
         {
             if (Session["lst"] != null)
             {
-                List<Varukorg> hej = (List<Varukorg>)Session["lst"];
-                cartLabel.Text = "Du har " + hej.Count + " Varor";
                 
                 
             }
