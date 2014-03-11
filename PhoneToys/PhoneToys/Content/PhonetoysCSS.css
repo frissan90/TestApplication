@@ -35,3 +35,21 @@
 }
 
 /*Upload Saga slutar här*/
+
+/*Register börjar här*/
+.row-hoger {
+float:right;
+
+
+}
+
+.row-vanster {
+float: left;
+
+
+}
+.row-content {
+margin:auto;
+}
+
+/*Register slutar här*/
