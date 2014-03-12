@@ -10,7 +10,7 @@
 namespace PhoneToys {
     
     
-    public partial class Phonetoys2 {
+    public partial class SiteAdmin {
         
         /// <summary>
         /// Head1 control.
@@ -31,22 +31,22 @@ namespace PhoneToys {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
         
         /// <summary>
-        /// loginRegisterUL control.
+        /// Form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl loginRegisterUL;
+        protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
         
         /// <summary>
-        /// LogOutUser control.
+        /// LogOut control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LogOutUser;
+        protected global::System.Web.UI.WebControls.Button LogOut;
         
         /// <summary>
         /// FeaturedContent control.

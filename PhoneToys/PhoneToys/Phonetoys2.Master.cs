@@ -29,7 +29,14 @@ namespace PhoneToys
             else
             {
                 loginRegisterUL.Visible = true;
+                LogOutUser.Visible = false;
             }
+        }
+
+        protected void LogOutUser_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("~/Index");
         }
     }
 }

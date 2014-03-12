@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Phonetoys2.master.cs" Inherits="PhoneToys.Phonetoys2" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteAdmin.master.cs" Inherits="PhoneToys.SiteAdmin" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +33,7 @@
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
 </head>
 <body>
-    <form runat="server">
+    <form id="Form1" runat="server">
         <nav class="top-bar" data-topbar>
             <ul class="title-area">
 
@@ -43,7 +43,7 @@
 
                     <h1>
 
-                        <a href="Index">Bamse
+                        <a href="Admin">Bamse
               
                         </a>
 
@@ -64,28 +64,18 @@
 
                 <ul>
 
-                    <li><a href="Index">Hem	</a></li>
-
-                    <li><a href="MinSida">Min Sida</a></li>
-
-                    <li><a href="#">Hem	</a></li>
+                    <li><a href="Admin">Hem	</a></li>
 
                     <li><a href="#">Sagor</a></li>
 
                 </ul>
 
-                <ul class="right" runat="server" id="loginRegisterUL">
+                <ul class="right" runat="server" >
 
-                    <li><a href="Register">Registrera	
-                    </a></li>
-
-                    <li><a href="Login">Logga In</a></li>
+                    <li><asp:Button runat="server" ID="LogOut" OnClick="LogOut_Click" CssClass="button radius" Text="Logga ut" BackColor="Black"/></li>
 
                 </ul>
 
-              <ul class="right" runat="server">
-                <li><asp:Button runat="server" ID="LogOutUser" OnClick="LogOutUser_Click" CssClass="button radius" Text="Logga ut" BackColor="Black"/></li>
-              </ul>
 
             </section>
 
@@ -125,3 +115,4 @@
     </form>
 </body>
 </html>
+
