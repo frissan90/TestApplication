@@ -19,7 +19,7 @@ namespace PhoneToys
             
             if (!Page.IsPostBack)
             {
-                VarukorgRepeater.DataSource = Session["lst"];
+                VarukorgRepeater.DataSource = Session["varukorg"];
                 VarukorgRepeater.DataBind();
             }
 
@@ -33,10 +33,10 @@ namespace PhoneToys
             {
                 int index = e.Item.ItemIndex;
 
-                List<Varukorgen> v = (List<Varukorgen>)Session["lst"];
+                List<Varukorgen> v = (List<Varukorgen>)Session["varukorg"];
                 v.RemoveAt(index);
 
-                Session["lst"] = v;
+                Session["varukorg"] = v;
 
                 Response.Redirect("Varukorg");
             }

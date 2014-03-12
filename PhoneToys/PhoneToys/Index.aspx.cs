@@ -21,7 +21,7 @@ namespace PhoneToys
             v.Antal = 12;
             lstshop.Add(v);
 
-            Session["lst"] = lstshop;
+            Session["varukorg"] = lstshop;
 
             
         }

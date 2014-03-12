@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Entities;
 
 namespace PhoneToys
 {
@@ -11,7 +12,24 @@ namespace PhoneToys
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+            //if (Session["varukorg"] != null)
+            //{
+            //    varukorgAntalLabel.Text = ((List<Varukorgen>)Session["varukorg"]).Count.ToString();
+            //}
+            //else
+            //{
+            //    varukorgAntalLabel.Text = "0";
+            //}
 
+            if (Session["Username"] != null)
+            {
+                loginRegisterUL.Visible = false;
+            }
+            else
+            {
+                loginRegisterUL.Visible = true;
+            }
         }
     }
 }

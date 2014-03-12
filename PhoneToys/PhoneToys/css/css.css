@@ -10,5 +10,10 @@ float: left;
 
 }
 .row-content {
-margin:auto;
+margin: 0px auto;
+}
+
+.varukorgMasterPage {
+    position: absolute;
+    left: 500px;
 }

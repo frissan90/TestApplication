@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="row">
+    <div class="row row-content">
         <div class="row-vanster large-6">
             <div class="columns large-6 medium-6 small-12">
                 <asp:Label ID="Label1" CssClass="label" runat="server" Text="Epost" ForeColor="Navy"></asp:Label><asp:RequiredFieldValidator ID="fv1" runat="server" ControlToValidate="EmailTB" ValidationGroup="register" ErrorMessage="Epost krävs" ForeColor="Red">*</asp:RequiredFieldValidator>

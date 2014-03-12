@@ -12,7 +12,7 @@ namespace PhoneToys
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["lst"] != null)
+            if (Session["varukorg"] != null)
             {
                    
             }

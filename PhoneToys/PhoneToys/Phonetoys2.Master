@@ -34,91 +34,92 @@
 </head>
 <body>
     <form runat="server">
-    <nav class="top-bar">
-        <ul class="title-area">
+        <nav class="top-bar" data-topbar>
+            <ul class="title-area">
 
-            <!-- Title Area -->
+                <!-- Title Area -->
 
-            <li class="name">
+                <li class="name">
 
-                <h1>
+                    <h1>
 
-                    <a href="#">Bamse
+                        <a href="Index">Bamse
               
-                    </a>
+                        </a>
 
-                </h1>
+                    </h1>
 
-            </li>
-
-
-            <li class="toggle-topbar menu-icon"><a href="#"><span>meny</span></a></li>
-
-        </ul>
+                </li>
 
 
-        <section class="top-bar-section">
-
-            <ul class="left">
-
-                <li><a href="#">Hem	</a></li>
-
-                <li><a href="#">Sagor</a></li>
-
-                <li><a href="#">Hem	</a></li>
-
-                <li><a href="#">Sagor</a></li>
+                <li class="toggle-topbar menu-icon"><a href="#"><span>meny</span></a></li>
 
             </ul>
 
+            <%--<panel>
+                <asp:Label ID="Label1" runat="server" Text="Du har ">
+                    <asp:Label runat="server" ID="varukorgAntalLabel"></asp:Label><asp:Label ID="Label2" runat="server" Text=" varor i varukorgen"></asp:Label></asp:Label>
+            </panel>--%>
+            <section class="top-bar-section">
 
-            <ul class="right">
+                <ul>
 
-                <li><a href="#">Registrera	
-                </a></li>
+                    <li><a href="Index">Hem	</a></li>
 
-                <li><a href="#">Logga In</a></li>
+                    <li><a href="#">Sagor</a></li>
+
+                    <li><a href="#">Hem	</a></li>
+
+                    <li><a href="#">Sagor</a></li>
+
+                </ul>
+
+                <ul class="right" runat="server" id="loginRegisterUL">
+
+                    <li><a href="Register">Registrera	
+                    </a></li>
+
+                    <li><a href="Login">Logga In</a></li>
 
 
 
-            </ul>
+                </ul>
 
-        </section>
+            </section>
 
-    </nav>
-
-    <div id="body">
-        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-        <section class="content-wrapper main-content clear-fix">
-            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
-        </section>
-    </div>
-    <footer class="row">
-        <div class="large-12 columns">
-            <hr />
-            <div class="row">
-
-                <div class="large-6 columns">
-                    <p>© Copyright no one at all. Go to town.</p>
-                </div>
-
-                <div class="large-6 columns">
-                    <ul class="inline-list right">
-                        <li><a href="#">Link 1</a></li>
-                        <li><a href="#">Link 2</a></li>
-                        <li><a href="#">Link 3</a></li>
-                        <li><a href="#">Link 4</a></li>
-                    </ul>
-                </div>
-
-            </div>
+        </nav>
+        <div id="body">
+            <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+            <section class="content-wrapper main-content clear-fix">
+                <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+            </section>
         </div>
-    </footer>
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script>
-        $(document).foundation();
-    </script>
-        </form>
+        <footer class="row">
+            <div class="large-12 columns">
+                <hr />
+                <div class="row">
+
+                    <div class="large-6 columns">
+                        <p>© Copyright no one at all. Go to town.</p>
+                    </div>
+
+                    <div class="large-6 columns">
+                        <ul class="inline-list right">
+                            <li><a href="#">Link 1</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/foundation.min.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
+    </form>
 </body>
 </html>
