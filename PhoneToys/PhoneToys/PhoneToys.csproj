@@ -257,6 +257,7 @@
     <Content Include="js\vendor\placeholder.js" />
     <Content Include="Light.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="MinSida.aspx" />
     <Content Include="packages.config" />
     <Content Include="Phonetoys.Master" />
     <Content Include="MemberLogin.aspx" />
@@ -356,6 +357,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MinSida.aspx.cs">
+      <DependentUpon>MinSida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MinSida.aspx.designer.cs">
+      <DependentUpon>MinSida.aspx</DependentUpon>
     </Compile>
     <Compile Include="Phonetoys.Master.cs">
       <DependentUpon>Phonetoys.Master</DependentUpon>

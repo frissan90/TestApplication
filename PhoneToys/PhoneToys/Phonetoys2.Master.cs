@@ -12,7 +12,7 @@ namespace PhoneToys
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             //if (Session["varukorg"] != null)
             //{
             //    varukorgAntalLabel.Text = ((List<Varukorgen>)Session["varukorg"]).Count.ToString();

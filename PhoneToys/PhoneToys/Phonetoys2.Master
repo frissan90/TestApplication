@@ -56,17 +56,17 @@
 
             </ul>
 
-            <%--<panel>
-                <asp:Label ID="Label1" runat="server" Text="Du har ">
-                    <asp:Label runat="server" ID="varukorgAntalLabel"></asp:Label><asp:Label ID="Label2" runat="server" Text=" varor i varukorgen"></asp:Label></asp:Label>
-            </panel>--%>
+            
+<%--                <asp:Label ID="Label1" runat="server" Text="Du har ">
+                    <asp:Label runat="server" ID="varukorgAntalLabel"></asp:Label><asp:Label ID="Label2" runat="server" Text=" varor i varukorgen"></asp:Label></asp:Label>--%>
+            
             <section class="top-bar-section">
 
                 <ul>
 
                     <li><a href="Index">Hem	</a></li>
 
-                    <li><a href="#">Sagor</a></li>
+                    <li><a href="MinSida">Min Sida</a></li>
 
                     <li><a href="#">Hem	</a></li>
 
