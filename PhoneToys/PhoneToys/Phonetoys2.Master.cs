@@ -13,22 +13,22 @@ namespace PhoneToys
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (Session["varukorg"] != null)
-            {
-                if (((List<Varukorgen>)Session["varukorg"]).Count > 0)
-                {
-                    List<Varukorgen> vara = ((List<Varukorgen>)Session["varukorg"]);
-                    varukorgAntalLabel.Text = ((List<Varukorgen>)Session["varukorg"]).Count.ToString();
-                }
-                else
-                {
-                    varukorgAntalLabel.Text = "0";
-                }
-            }
-            else
-            {
-                varukorgAntalLabel.Text = "0";
-            }
+            //if (Session["varukorg"] != null)
+            //{
+            //    if (((List<Varukorgen>)Session["varukorg"]).Count > 0)
+            //    {
+            //        List<Varukorgen> vara = ((List<Varukorgen>)Session["varukorg"]);
+            //        varukorgAntalLabel.Text = ((List<Varukorgen>)Session["varukorg"]).Count.ToString();
+            //    }
+            //    else
+            //    {
+            //        varukorgAntalLabel.Text = "0";
+            //    }
+            //}
+            //else
+            //{
+            //    varukorgAntalLabel.Text = "0";
+            //}
 
             if (Session["Username"] != null)
             {
