@@ -48,7 +48,23 @@ namespace PhoneToys
 
         protected void SagoView_ItemCommand(object sender, ListViewCommandEventArgs e)
         {
+            List<Varukorgen> varor = (List<Varukorgen>)Session["varukorg"];
+            int index = e.Item.DataItemIndex;
 
+            string sagoNamn = ((Label)SagoView.Items[index].FindControl("text")).Text;
+
+            int pris = Convert.ToInt32(((Label)SagoView.Items[index].FindControl("pris")).Text);
+
+            Varukorgen varan = new Varukorgen();
+
+            varan.Pris = pris;
+            varan.Saga = sagoNamn;
+
+            varor.Add(varan);
+
+            Session["varukorg"] = varor;
+
+            Response.Redirect("Sagor");
         }
     }
 }

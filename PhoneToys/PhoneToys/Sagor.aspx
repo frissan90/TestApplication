@@ -77,10 +77,10 @@
             <div class="large-4 small-6 columns">
               <asp:Image runat="server" ImageUrl='<%#Eval("Bild") %>' />
               <div class="panel">
-                <h5><asp:Label runat="server" Text='<%#Eval("text") %>'></asp:Label></h5>
-                <h6 class="subheader"><asp:Label runat="server" Text='<%#Eval("pris") %>'></asp:Label></h6>
+                <h5><asp:Label runat="server" ID="text" Text='<%#Eval("text") %>'></asp:Label></h5>
+                <h6 class="subheader"><asp:Label runat="server" ID="pris" Text='<%#Eval("pris") %>'></asp:Label></h6>
                   <br />
-                  <asp:Button ValidateRequestMode="Disabled" runat="server" Text="Köp" />
+                  <asp:Button CommandName="kop" ValidateRequestMode="Disabled" runat="server" Text="Köp" />
               </div>
             </div>
         </ItemTemplate>

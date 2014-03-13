@@ -23,9 +23,12 @@ namespace PhoneToys
             {
                 Session["username"] = UnameTB.Text;
 
+                Session["varukorg"] = new List<Varukorgen>();
+
                 Response.Redirect("Index.aspx");
                 
             }
+            
                 
         }
     }
