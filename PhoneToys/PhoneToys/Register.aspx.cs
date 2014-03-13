@@ -25,6 +25,7 @@ namespace PhonetoysWeb
         {
             User user = new User();
 
+            user.Uname = UnameTB.Text;
             user.Email = EmailTB.Text;
             user.Password = PWTB.Text;
             user.Fname = FnameTB.Text;
@@ -35,11 +36,9 @@ namespace PhonetoysWeb
             user.Country = countryDD.SelectedItem.Text;
 
             data.Register(user);
-
             Session["Username"] = EmailTB.Text;
 
             Response.Redirect("Index.aspx");
-
 
         }
     }

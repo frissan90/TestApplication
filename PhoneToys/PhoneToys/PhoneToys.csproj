@@ -261,6 +261,7 @@
     <Content Include="packages.config" />
     <Content Include="Phonetoys.Master" />
     <Content Include="MemberLogin.aspx" />
+    <Content Include="Sagor.aspx" />
     <Content Include="SagoUpload.aspx" />
     <Content Include="Phonetoys2.Master" />
     <Content Include="WebForm3.aspx" />
@@ -387,6 +388,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sagor.aspx.cs">
+      <DependentUpon>Sagor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sagor.aspx.designer.cs">
+      <DependentUpon>Sagor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

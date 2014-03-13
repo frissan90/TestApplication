@@ -19,7 +19,7 @@ namespace DataAccessLayer
         /// <param name="user">Info about the new user</param>
         public void Register(User user)
         {
-            string Query = @"insert into Member values(@Email, @PW, @Fname, @Lname, @Address, @Zip, @City, @Country)";
+            string Query = @"insert into Member values(@Uname, @Email, @PW, @Fname, @Lname, @Address, @Zip, @City, @Country)";
 
             try
             {
@@ -67,6 +67,11 @@ namespace DataAccessLayer
                 param8.ParameterName = "@Country";
                 param8.Value = user.Country;
                 cmd.Parameters.Add(param8);
+
+                SqlParameter param9 = new SqlParameter();
+                param9.ParameterName = "@Uname";
+                param9.Value = user.Uname;
+                cmd.Parameters.Add(param9);
 
                 cmd.ExecuteNonQuery();
 
@@ -350,6 +355,55 @@ namespace DataAccessLayer
                     con.Close();
                 }
             }
+        }
+
+        public List<Saga> getSagorByUser(string Username)
+        {
+            List<Saga> sagorna = new List<Saga>();
+
+            SqlDataReader reader = null;
+
+            string Query = @"Select * from Saga join SagorMedlem on SagorMedlem.Member = Member.Username where SagorMedlem.Member = @User";
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                SqlParameter param = new SqlParameter();
+                param.ParameterName = "@User";
+                param.Value = Username;
+                cmd.Parameters.Add(param);
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Saga sagan = new Saga();
+
+                    sagan.Namn = (string)reader["Namn"];
+                    sagan.Langd = (string)reader["Langd"];
+                    sagan.Beskrivning = (string)reader["Beskrivning"];
+
+                    sagorna.Add(sagan);
+                }
+            }
+            catch(Exception ex)
+            {
+            }
+            finally
+            {
+                if(con != null)
+                {
+                    con.Close();
+                }
+                if(reader != null)
+                {
+                    reader.Close();
+                }
+            }
+            return sagorna;
         }
     }
 }
