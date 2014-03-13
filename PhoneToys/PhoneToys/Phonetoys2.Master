@@ -59,7 +59,7 @@
             
 <%--                <asp:Label ID="Label1" runat="server" Text="Du har ">
                     <asp:Label runat="server" ID="varukorgAntalLabel"></asp:Label><asp:Label ID="Label2" runat="server" Text=" varor i varukorgen"></asp:Label></asp:Label>--%>
-            
+            <%--hoihoih --%>
             <section class="top-bar-section">
 
                 <ul>
