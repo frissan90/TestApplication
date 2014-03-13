@@ -12,17 +12,6 @@ namespace PhoneToys
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<Varukorgen> lstshop = new List<Varukorgen>();
-
-            Varukorgen v = new Varukorgen();
-
-            v.Saga = "wefw";
-            v.Pris = 123;
-            v.Antal = 12;
-            lstshop.Add(v);
-
-            Session["varukorg"] = lstshop;
-
             
         }
     }

@@ -15,7 +15,15 @@ namespace PhoneToys
 
             if (Session["varukorg"] != null)
             {
-                varukorgAntalLabel.Text = ((List<Varukorgen>)Session["varukorg"]).Count.ToString();
+                if (((List<Varukorgen>)Session["varukorg"]).Count > 0)
+                {
+                    List<Varukorgen> vara = ((List<Varukorgen>)Session["varukorg"]);
+                    varukorgAntalLabel.Text = ((List<Varukorgen>)Session["varukorg"]).Count.ToString();
+                }
+                else
+                {
+                    varukorgAntalLabel.Text = "0";
+                }
             }
             else
             {
