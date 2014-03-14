@@ -53,12 +53,12 @@
 
         </div>
 
-        <div class="large-20" style="border: solid;">
+        <%--<div class="large-20" style="border: solid;">
             <h3>Hej</h3>
         </div>
 
         <div class="large-20" style="border: solid;">
             <h3>Hej</h3>
-        </div>
+        </div>--%>
     </div>
 </asp:Content>
