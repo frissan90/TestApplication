@@ -5,12 +5,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="large-10" style="border: solid;">
-        <div class="large-20" style="border: solid;">
+    <div class="large-10" >
+        <div class="large-20">
             <asp:Repeater runat="server" ID="VarukorgRepeater" OnItemCommand="VarukorgRepeater_ItemCommand">
                 <HeaderTemplate>
 
-                    <table border="0" class="large-10 medium-8 small-6">
+                    <table class="large-10 medium-8 small-6">
                         <tr>
                             <th align="left"></th>
                             <th align="left">Namn</th>
@@ -45,12 +45,11 @@
                 </SeparatorTemplate>
                 <FooterTemplate>
                     </table>
-
                 </FooterTemplate>
-
+                
             </asp:Repeater>
 
-
+         <asp:Label ID="totalPrisLB" runat="server" CssClass="row-hoger" Text="123"></asp:Label>
         </div>
 
         <%--<div class="large-20" style="border: solid;">

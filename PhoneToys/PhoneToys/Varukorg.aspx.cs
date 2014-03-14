@@ -19,6 +19,17 @@ namespace PhoneToys
                 VarukorgRepeater.DataBind();
             }
 
+            double totalPris = 0;
+
+            List<Varukorgen> varor = (List<Varukorgen>)Session["varukorg"];
+
+            for (int i = 0; i < varor.Count; i++)
+            {
+                totalPris += varor[i].Pris;
+            }
+
+            //totalPrisLB.Text = totalPris.ToString();
+            
             VarukorgRepeater.ItemCommand += new RepeaterCommandEventHandler(this.VarukorgRepeater_ItemCommand);
 
         }
