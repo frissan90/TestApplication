@@ -6,6 +6,7 @@
     <title></title>
     <link rel="stylesheet" href="Content/foundation.css" />
     <link href="css/css.css" rel="stylesheet" />
+    <link href="Content/PhonetoysCSS.css" rel="stylesheet" />
     <script src="js/vendor/modernizr.js"></script>
     <script src="js/foundation/foundation.abide.js"></script>
     <script src="js/foundation/foundation.accordion.js"></script>
