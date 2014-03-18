@@ -10,7 +10,8 @@
             <asp:Label runat="server" Text="Användarnamn" AssociatedControlID="UnameTB" ForeColor="Black"></asp:Label><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="UnameTB" ValidationGroup="memberLogIn" ErrorMessage="Fyll i Användarnamn">
                 <asp:Label ID="Label1" runat="server" ForeColor="Red">*</asp:Label></asp:RequiredFieldValidator><asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="UnameTB" ValidationGroup="adminLogIn" ValidationExpression="^[a-zA-Z0-9]+" ErrorMessage="Fältet innehåller ogiltiga tecken">
                     <asp:Label ID="Label2" runat="server" ForeColor="Red">*</asp:Label></asp:RegularExpressionValidator>
-            <asp:TextBox runat="server" ID="UnameTB"></asp:TextBox>
+                <asp:TextBox runat="server" ID="UnameTB"></asp:TextBox>
+            
         </div>
         <div class="large-6 medium-7 small-12">
             <asp:Label runat="server" Text="Lösenord" AssociatedControlID="PWTB" ForeColor="Black"></asp:Label><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="PWTB" ValidationGroup="memberLogIn" ErrorMessage="Fyll i Lösenord" ForeColor="Red">*</asp:RequiredFieldValidator>

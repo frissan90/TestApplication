@@ -13,6 +13,59 @@ namespace DataAccessLayer
     {
         private SqlConnection con = new SqlConnection(@"Server=8d39074f-5e10-44d3-8873-a2d700fd349e.sqlserver.sequelizer.com;Database=db8d39074f5e1044d38873a2d700fd349e;User ID=dmicdnhhfwonwldo;Password=63wShho5KRp8faNbodMSvxyrcQWE3mEwJqxVPbj8qxByprmnnGqYVxnGCfPztQcy;");
 
+
+
+        public void Register(Editor editor)
+        {
+            string Query = @"insert into Redaktor values(@Uname, @PW, @Email, @Fname, @Lname)";
+
+            try
+            {
+
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                SqlParameter param9 = new SqlParameter();
+                param9.ParameterName = "@Uname";
+                param9.Value = editor.Uname;
+                cmd.Parameters.Add(param9);
+
+                SqlParameter param = new SqlParameter();
+                param.ParameterName = "@Email";
+                param.Value = editor.Email;
+                cmd.Parameters.Add(param);
+
+                SqlParameter param2 = new SqlParameter();
+                param2.ParameterName = "@PW";
+                param2.Value = editor.Password;
+                cmd.Parameters.Add(param2);
+
+                SqlParameter param3 = new SqlParameter();
+                param3.ParameterName = "@Fname";
+                param3.Value = editor.Fname;
+                cmd.Parameters.Add(param3);
+
+                SqlParameter param4 = new SqlParameter();
+                param4.ParameterName = "@Lname";
+                param4.Value = editor.Lname;
+                cmd.Parameters.Add(param4);
+                
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+        }
+
         /// <summary>
         /// Create a new account for a new user
         /// </summary>
