@@ -43,7 +43,7 @@
                 <asp:TextBox ID="AddressTB" runat="server"></asp:TextBox>
             </div>
             <div class=" large-6 medium-6 small-12">
-                <asp:Label ID="Label7" CssClass="label" runat="server" Text="Postnummer"></asp:Label><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ZipTB" ValidationGroup="register" ErrorMessage="8) Postnummer krävs" ForeColor="Red">8</asp:RequiredFieldValidator><asp:RegularExpressionValidator ID="RegularExpressionValidator11" runat="server" ControlToValidate="FnameTB" ValidationGroup="register" ValidationExpression="^[a-öA-Ö]{1,20}$" ErrorMessage="5) Endast bokstäver är tillåtna" ForeColor="Red">5</asp:RegularExpressionValidator>
+                <asp:Label ID="Label7" CssClass="label" runat="server" Text="Postnummer"></asp:Label><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ZipTB" ValidationGroup="register" ErrorMessage="8) Postnummer krävs" ForeColor="Red">8</asp:RequiredFieldValidator><asp:RegularExpressionValidator ID="RegularExpressionValidator11" runat="server" ControlToValidate="FnameTB" ValidationGroup="register" ValidationExpression="^[a-öA-Ö]{1,20}$" ErrorMessage=") Endast bokstäver är tillåtna" ForeColor="Red">8</asp:RegularExpressionValidator>
                 <asp:TextBox ID="ZipTB" runat="server"></asp:TextBox>
             </div>
 
