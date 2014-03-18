@@ -16,10 +16,19 @@
         <div class="row">
             <div class="row-hoger" style="border: 1px solid black">
                 <div class="large-6 medium-6 small-6 column">
-                    <asp:Label ID="Label1" runat="server" Text="Dina Uppgifter"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="Anslut din Bamse"></asp:Label>
+                    <br />
+                    <asp:Label runat="server" Text="BamseID"></asp:Label>
+                    <asp:TextBox runat="server" ID="BamseIDTB" placeholder="BamseID"></asp:TextBox>
+                    
+                    <asp:Label runat="server" Text="Access Token"></asp:Label>
+                    <asp:TextBox runat="server" ID="AtokenTB" placeholder="Access token"></asp:TextBox>
+                    <br />
 
+                    <asp:Button runat="server" CssClass="button radius" ID="ConnectBamseBTN" Text="Anslut" OnClick="ConnectBamseBTN_Click" />
                 </div>
             </div>
+
         </div>
     </div>
     <%--<div class="row">
