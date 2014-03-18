@@ -38,7 +38,7 @@ namespace PhonetoysWeb
             data.Register(user);
             Session["Username"] = EmailTB.Text;
 
-            Response.Redirect("Index.aspx");
+            Response.Redirect("Login");
 
         }
     }
