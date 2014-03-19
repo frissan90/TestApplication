@@ -31,7 +31,11 @@ namespace PhoneToys
         {
             Saga sagan = new Saga();
 
-            sagan.Namn = Path.GetFileName(minUpload.PostedFile.FileName);
+            string sagonamn = Path.GetFileName(minUpload.PostedFile.FileName);
+
+            string[] Namn = sagonamn.Split('.');
+
+            sagan.Namn = Namn[0];
             sagan.Beskrivning = besTB.Text;
             sagan.Langd = LangdTB.Text;
             sagan.Pris = int.Parse(PrisTB.Text);
