@@ -8,8 +8,9 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
+        <hr />
         <div class="row">
-
+            
             <div class=" large-4 medium-4 columns">
                 <asp:Label ID="Label10" CssClass="label" runat="server" Text="Användarnamn"></asp:Label><asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="UnameTB" ValidationGroup="register" ErrorMessage="1) Användarnamn krävs" ForeColor="Red">1</asp:RequiredFieldValidator><asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="UnameTB" ValidationGroup="register" ValidationExpression="^[a-öA-Ö0-9]+" ErrorMessage="1) Fältet innehåller ogiltiga tecken" ForeColor="Red">1</asp:RegularExpressionValidator><asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="UnameTB" ValidationGroup="register" ValidationExpression="^[a-öA-Ö0-9\s]{6,16}$" ErrorMessage="1) Användarnamn måste vara mellan 6 och 16 tecken" ForeColor="Red">1</asp:RegularExpressionValidator>
                 <asp:TextBox ID="UnameTB" placeholder="Användarnamn" runat="server"></asp:TextBox>
@@ -58,7 +59,7 @@
                 <asp:TextBox ID="CityTB" runat="server"></asp:TextBox>
             </div>
 
-            <div class="row row-content">
+            <div class="row-hoger">
             <div class=" large-4 medium-4 columns">
                 <asp:Label ID="Label9" CssClass="label" runat="server" Text="Land" ForeColor="Navy"></asp:Label><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ValidationGroup="register" ControlToValidate="CountryDD" ErrorMessage="10) Vänligen välj land" ForeColor="Red">10</asp:RequiredFieldValidator>
                 <%--<br />--%>

@@ -8,8 +8,13 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ScriptManager runat="server"></asp:ScriptManager>
-    <div class="uploadSagaContent">
-        <div class="uploadSagaDiv">
+   <div class="row">
+    
+       <hr />
+        <%--  <div class="panel">--%>
+    <div class="row large-6 columns">
+     <%--<div class="uploadSagaContent">--%>
+    
 
             <asp:Label ID="Label2" runat="server" AssociatedControlID="besTB" Text="Beskrivning" ForeColor="Tomato"></asp:Label>
             <asp:TextBox runat="server" ID="besTB"></asp:TextBox>
@@ -26,10 +31,11 @@
             <asp:Button runat="server" ID="UploadBTN" OnClick="UploadBTN_Click" Text="Ladda Upp" />
              
         </div>
-        <br />
-        <br />
-
-        <div class="sagorDivUploadPage">
+   
+      
+       <div class="row large-6 columns">
+       <%-- <div class="sagorDivUploadPage">--%>
+           
             <asp:UpdatePanel runat="server" ID="sagoPanel">
                 <ContentTemplate>
                     <asp:Repeater runat="server" ID="sagoGrid" OnItemCommand="sagoGrid_ItemCommand">
@@ -82,5 +88,8 @@
             </Columns>
         </asp:GridView>--%>
         </div>
+      </div>
     </div>
+    </div>
+    <%--</div>--%>
 </asp:Content>
