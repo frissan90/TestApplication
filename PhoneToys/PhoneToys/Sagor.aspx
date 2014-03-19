@@ -80,7 +80,7 @@
                 <h5><asp:Label runat="server" ID="text" Text='<%#Eval("text") %>'></asp:Label></h5>
                 <h6 class="subheader"><asp:Label runat="server" ID="pris" Text='<%#Eval("pris") %>'></asp:Label></h6>
                   <br />
-                  <asp:Button CommandName="kop" ValidateRequestMode="Disabled" runat="server" Text="Köp" />
+                  <asp:Button CssClass="button large-3 medium-3 small-5" CommandName="kop" ValidateRequestMode="Disabled" runat="server" Text="Köp" />
               </div>
             </div>
         </ItemTemplate>
