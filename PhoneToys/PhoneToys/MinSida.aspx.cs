@@ -25,6 +25,9 @@ namespace PhoneToys
 
             var request = new RestRequest(Method.POST);
 
+            var response = new RestResponse();
+            
+
             request.RequestFormat = DataFormat.Json;
 
             IRestResponse result = restClient.Execute(request);
