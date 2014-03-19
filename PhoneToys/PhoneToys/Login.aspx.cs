@@ -34,12 +34,12 @@ namespace PhoneToys
 
         protected void AdminBTN_Click1(object sender, EventArgs e)
         {
-            Response.Redirect("AdminLogin.aspx");
+            Response.Redirect("AdminLogin");
         }
 
         protected void MemberBTN_Click(object sender, EventArgs e)
         {
-            Response.Redirect("MemberLogin.aspx");
+            Response.Redirect("MemberLogin");
         }
 
     }

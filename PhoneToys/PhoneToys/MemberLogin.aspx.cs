@@ -25,7 +25,7 @@ namespace PhoneToys
 
                 Session["varukorg"] = new List<Varukorgen>();
 
-                Response.Redirect("Index.aspx");
+                Response.Redirect("Index");
                 
             }
             

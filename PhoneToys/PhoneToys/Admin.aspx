@@ -35,15 +35,15 @@
             <div class=" large-6 medium-6 small-12">
                 <asp:Label ID="LabelA3" CssClass="label" runat="server" Text="Upprepa lösenord"></asp:Label><asp:RequiredFieldValidator ID="fv3A" runat="server" ControlToValidate="ConfPWTBA" ValidationGroup="registerEditor" ErrorMessage="4) Vänligen upprepa lösenordet" ForeColor="Red">4</asp:RequiredFieldValidator>
                  <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToCompare="PWTBA" ControlToValidate="ConfPWTBA" ErrorMessage="4) Lösenorden är inte lika" ValidationGroup="registerEditor" ForeColor="Red">4</asp:CompareValidator>
-                <asp:TextBox ID="ConfPWTBA" runat="server" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="ConfPWTBA" placeholder="Upprepa lösenord" runat="server" TextMode="Password"></asp:TextBox>
             </div>
             <div class=" large-6 medium-6 small-12">
                 <asp:Label ID="LabelA4" CssClass="label" runat="server" Text="Förnamn"></asp:Label><asp:RequiredFieldValidator ID="fv4A" runat="server" ControlToValidate="FnameATB" ValidationGroup="registerEditor" ErrorMessage="5) Förnamn krävs" ForeColor="Red">5</asp:RequiredFieldValidator>
-                <asp:TextBox ID="FnameATB" runat="server"></asp:TextBox>
+                <asp:TextBox ID="FnameATB" placeholder="Förnamn" runat="server"></asp:TextBox>
             </div>
             <div class=" large-6 medium-6 small-12">
                 <asp:Label ID="LabelA5" CssClass="label" runat="server" Text="Efternamn"></asp:Label><asp:RequiredFieldValidator ID="fv5A" runat="server" ControlToValidate="LnameATB" ValidationGroup="registerEditor" ErrorMessage="6) Efternamn krävs" ForeColor="Red">6</asp:RequiredFieldValidator>
-                <asp:TextBox ID="LnameATB" runat="server"></asp:TextBox>
+                <asp:TextBox ID="LnameATB" runat="server" placeholder="Efternamn"></asp:TextBox>
             </div>
 
             <asp:ValidationSummary DisplayMode="List" ID="ValidationSummary1A" runat="server" ValidationGroup="registerEditor" />

@@ -20,13 +20,13 @@ namespace PhoneToys
         {
             if (data.authenticateAdmin(UnameTB.Text, PWTB.Text))
             {
-                Session["Username"] = UnameTB.Text;
-                Response.Redirect("Admin.aspx");
+                Session["Admin"] = UnameTB.Text;
+                Response.Redirect("Admin");
             }
             if (data.authenticateEditor(UnameTB.Text, PWTB.Text))
             {
-                Session["Username"] = UnameTB.Text;
-                Response.Redirect("Editor.aspx");
+                Session["Editor"] = UnameTB.Text;
+                Response.Redirect("Editor");
             }
             
         }

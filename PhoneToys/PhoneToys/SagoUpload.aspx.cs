@@ -15,6 +15,10 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Editor"] == null)
+            {
+                Response.Redirect("Index");
+            }
             if (!Page.IsPostBack)
             {
                 sagoGrid.DataSource = data.getSaga();
