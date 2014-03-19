@@ -74,9 +74,9 @@
             </div>
         </GroupTemplate>
         <ItemTemplate>
-            <div class="large-4 small-6 columns">
-              <asp:Image runat="server" ImageUrl='<%#Eval("Bild") %>' />
-              <div class="panel">
+            <div class="large-4 medium-4 small-6 columns">
+              <asp:Image runat="server" CssClass="large-4 medium-4 small-6" ImageUrl='<%#Eval("Bild") %>' />
+              <div class="panel large-4 medium-4 small-6">
                 <h5><asp:Label runat="server" ID="text" Text='<%#Eval("text") %>'></asp:Label></h5>
                 <h6 class="subheader"><asp:Label runat="server" ID="pris" Text='<%#Eval("pris") %>'></asp:Label></h6>
                   <br />
