@@ -56,10 +56,10 @@
 
             </ul>
 
-            
-<%--                <asp:Label ID="Label1" runat="server" Text="Du har ">
+
+            <%--                <asp:Label ID="Label1" runat="server" Text="Du har ">
                     <asp:Label runat="server" ID="varukorgAntalLabel"></asp:Label><asp:Label ID="Label2" runat="server" Text=" varor i varukorgen"></asp:Label></asp:Label>--%>
-            
+
             <section class="top-bar-section">
 
                 <ul>
@@ -76,6 +76,34 @@
 
                 <ul class="right" runat="server" id="loginRegisterUL">
 
+                    <li><a href="#" class="button" data-dropdown="contentDrop">Varukorg &raquo;</a></li>
+                    <div id="contentDrop" class="f-dropdown content medium" data-dropdown-content>
+                        <asp:ListView runat="server" ID="lstMaster" GroupItemCount="1">
+                            <LayoutTemplate>
+
+                                <asp:PlaceHolder runat="server" ID="groupPlaceholder"></asp:PlaceHolder>
+                            </LayoutTemplate>
+                            <GroupTemplate>
+                                <div class="row">
+                                    <div class="large-8 columns" id="itemPlaceholder" runat="server">
+                                    </div>
+                                </div>
+                            </GroupTemplate>
+                            <ItemTemplate>
+                                <div class="large-4 medium-4 small-6 columns">
+                                    <asp:Label runat="server" ID="lblMaster" Text='<%#Eval("Namn") %>'></asp:Label>
+                                    <asp:Label runat="server" ID="lblMaster2" Text='<%#Eval("Pris") %>'></asp:Label>
+                                </div>
+                            </ItemTemplate>
+
+
+
+                        </asp:ListView>
+                        <a href="#" class="button">Button</a>
+                    </div>
+
+
+
                     <li><a href="Register">Registrera	
                     </a></li>
 
@@ -83,9 +111,10 @@
 
                 </ul>
 
-              <ul class="right" runat="server">
-                <li><asp:Button runat="server" ID="LogOutUser" OnClick="LogOutUser_Click" CssClass="button radius" Text="Logga ut" BackColor="Black"/></li>
-              </ul>
+                <ul class="right" runat="server">
+                    <li>
+                        <asp:Button runat="server" ID="LogOutUser" OnClick="LogOutUser_Click" CssClass="button radius" Text="Logga ut" BackColor="Black" /></li>
+                </ul>
 
             </section>
 
@@ -113,7 +142,6 @@
                             <li><a href="#">Link 4</a></li>
                         </ul>
                     </div>--%>
-
                 </div>
             </div>
         </footer>

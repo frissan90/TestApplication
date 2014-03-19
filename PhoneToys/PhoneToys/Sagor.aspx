@@ -62,6 +62,7 @@
             </div>
           </div>
         </div>--%>
+    <div class="row">
     <asp:ListView runat="server" ID="SagoView" GroupItemCount="3" OnItemCommand="SagoView_ItemCommand">
         <LayoutTemplate>
             <asp:PlaceHolder ID="groupPlaceholder" runat="server"></asp:PlaceHolder>
@@ -85,4 +86,5 @@
             </div>
         </ItemTemplate>
     </asp:ListView>
+        </div>
 </asp:Content>

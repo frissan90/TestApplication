@@ -11,7 +11,7 @@
     <br/ >
     <br />
     </div>
-    <div class="row">
+    <div class="row-content">
 
         <div class="row-content large-6">
 

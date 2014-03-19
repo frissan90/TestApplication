@@ -39,6 +39,21 @@ namespace PhoneToys
                 loginRegisterUL.Visible = true;
                 LogOutUser.Visible = false;
             }
+
+            Saga sagan = new Saga();
+
+            sagan.Namn = "Exempel";
+            sagan.Pris = 123;
+
+            List<Saga> sagorna = new List<Saga>();
+
+            sagorna.Add(sagan);
+            sagorna.Add(sagan);
+            sagorna.Add(sagan);
+            sagorna.Add(sagan);
+
+            lstMaster.DataSource = sagorna;
+            lstMaster.DataBind();
         }
 
         protected void LogOutUser_Click(object sender, EventArgs e)
