@@ -219,6 +219,7 @@
     <Content Include="css\normalize.css" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bamse.jpg" />
+    <Content Include="Images\Bamse2.jpeg" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\heroAccent.png" />
     <Content Include="Images\orderedList0.png" />

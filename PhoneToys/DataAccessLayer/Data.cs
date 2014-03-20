@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using Entities;
+using System.Web;
 
 namespace DataAccessLayer
 {
@@ -239,7 +240,7 @@ namespace DataAccessLayer
 
         public void addSaga(Saga sagan)
         {
-            string Query = @"insert into Saga values(@Namn, @Beskrivning, @Data, @Langd, @Pris, GETDATE(), null, 0)";
+            string Query = @"insert into Saga values(@Namn, @Beskrivning, @Data, @Langd, @Pris, GETDATE(), @UpplagdAv, 0)";
 
             try
             {
@@ -271,6 +272,11 @@ namespace DataAccessLayer
                 param5.ParameterName = "@Pris";
                 param5.Value = sagan.Pris;
                 cmd.Parameters.Add(param5);
+
+                SqlParameter param6 = new SqlParameter();
+                param6.ParameterName = "@UpplagdAv";
+                param6.Value = sagan.Redaktor;
+                cmd.Parameters.Add(param6);
 
                 cmd.ExecuteNonQuery();
             }

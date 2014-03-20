@@ -39,6 +39,7 @@ namespace PhoneToys
             sagan.Beskrivning = besTB.Text;
             sagan.Langd = LangdTB.Text;
             sagan.Pris = int.Parse(PrisTB.Text);
+            sagan.Redaktor = Session["Editor"].ToString();
 
             BinaryReader sagaReader = new BinaryReader(minUpload.PostedFile.InputStream);
 
