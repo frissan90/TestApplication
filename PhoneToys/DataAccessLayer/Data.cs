@@ -465,5 +465,43 @@ namespace DataAccessLayer
             }
             return sagorna;
         }
+
+        public void kopSagor(string currentMember, List<Varukorgen> varor)
+        {
+
+            string Query = "insert into SagorMedlem values(@Medlem, @Saga)";
+
+            try
+            {
+                con.Open();
+
+                for (int i = 0; i < varor.Count; i++)
+                {
+                    SqlCommand cmd = new SqlCommand(Query, con);
+
+                    SqlParameter param = new SqlParameter();
+                    param.ParameterName = "@Medlem";
+                    param.Value = currentMember;
+                    cmd.Parameters.Add(param);
+
+                    SqlParameter param2 = new SqlParameter();
+                    param2.ParameterName = "@Saga";
+                    param2.Value = varor[i].Saga;
+                    cmd.Parameters.Add(param2);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+        }
     }
 }

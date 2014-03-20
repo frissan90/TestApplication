@@ -59,13 +59,13 @@
 
             <%--                <asp:Label ID="Label1" runat="server" Text="Du har ">
                     <asp:Label runat="server" ID="varukorgAntalLabel"></asp:Label><asp:Label ID="Label2" runat="server" Text=" varor i varukorgen"></asp:Label></asp:Label>--%>
-
+            
             <section class="top-bar-section">
-
                 <ul>
                                         <li><a href="#" data-options="align:Top" data-dropdown="contentDrop">Varukorg &raquo;</a></li>
+                    
                     <div id="Div1" class="f-dropdown content small" data-dropdown-content>
-                        <asp:Panel runat="server" ScrollBars="Vertical" Height="20px" Width="50px">
+                        
                         <asp:ListView runat="server" ID="ListView1" GroupItemCount="1">
                             <LayoutTemplate>
 
@@ -88,16 +88,18 @@
                                     <asp:Label runat="server" ID="lblMaster2" Text='<%#Eval("Pris") %>' Font-Size="XX-Small"></asp:Label>
                                 </div>
                             </ItemTemplate>
+                                            <%--<a href="favicon.ico">favicon.ico</a>--%>
 
 
 
 
 
                         </asp:ListView>
-                            </asp:Panel>
+                            
                         <div class="row-hoger">
                         <a href="#" class="button">Button</a></div>
                     </div>
+                       
                     <li><a href="Index">Hem	</a></li>
 
                     <li><a href="MinSida">Min Sida</a></li>
@@ -107,11 +109,12 @@
                     <li><a href="#">NySida</a></li>
 
                 </ul>
-
+                
                 <ul class="right" runat="server" id="loginRegisterUL">
-
+                    
                     <li><a href="#" class="hide-for-small-only" data-dropdown="contentDrop">Varukorg &raquo;</a></li>
-                    <div id="contentDrop" class="f-dropdown content medium" data-dropdown-content>
+                    
+                    <div id="contentDrop" class="f-dropdown content medium" data-dropdown-content style="overflow:auto; height:30px;">
                         <asp:ListView runat="server" ID="lstMaster" GroupItemCount="1">
                             <LayoutTemplate>
 
@@ -128,7 +131,7 @@
                             </GroupSeparatorTemplate>
                             <ItemTemplate>
                                 <div class="large-4 medium-4 small-6 columns">
-                                    <asp:Label runat="server" ID="lblMaster" Text='<%#Eval("Namn") %>'></asp:Label>
+                                    <asp:Label runat="server" ID="lblMaster" Text='<%#Eval("Saga") %>'></asp:Label>
                                     <asp:Label runat="server" ID="lblMaster2" Text='<%#Eval("Pris") %>'></asp:Label>
                                 </div>
                             </ItemTemplate>
@@ -136,9 +139,9 @@
 
 
                         </asp:ListView>
-                        <a href="#" class="button">Button1</a>
+                        <asp:Button CssClass="button" runat="server" ID="KassaBTN" Text="Kassa" OnClick="KassaBTN_Click" />
                     </div>
-
+                        
                     <li>
                         <asp:Button runat="server" ID="LogOutUser" OnClick="LogOutUser_Click" CssClass="button radius" Text="Logga ut" BackColor="Black" /></li>
 
@@ -146,9 +149,9 @@
                     </a></li>
 
                     <li id="login" runat="server"><a href="Login">Logga In</a></li>
-
+                    
                 </ul>
-
+                
                 <%--<ul class="right" runat="server">
                     
                 </ul>--%>

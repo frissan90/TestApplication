@@ -5,11 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Entities;
+using DataAccessLayer;
 
 namespace PhoneToys
 {
     public partial class Phonetoys2 : System.Web.UI.MasterPage
     {
+        private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -42,24 +44,7 @@ namespace PhoneToys
                 LogOutUser.Visible = false;
             }
 
-            Saga sagan = new Saga();
-
-            sagan.Namn = "Exempel";
-            sagan.Pris = 123;
-
-            List<Saga> sagorna = new List<Saga>();
-
-            sagorna.Add(sagan);
-            sagorna.Add(sagan);
-            sagorna.Add(sagan);
-            sagorna.Add(sagan);
-            sagorna.Add(sagan);
-            sagorna.Add(sagan);
-            sagorna.Add(sagan);
-            sagorna.Add(sagan);
-            sagorna.Add(sagan);
-
-            lstMaster.DataSource = sagorna;
+            lstMaster.DataSource = Session["varukorg"];
             lstMaster.DataBind();
         }
 
@@ -67,6 +52,11 @@ namespace PhoneToys
         {
             Session.Clear();
             Response.Redirect("~/Index");
+        }
+
+        protected void KassaBTN_Click(object sender, EventArgs e)
+        {
+            data.kopSagor(Session["Username"].ToString(), (List<Varukorgen>)Session["varukorg"]);
         }
     }
 }

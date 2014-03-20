@@ -78,7 +78,7 @@
             <div class="large-4 medium-4 small-6 columns">
               <asp:Image runat="server" CssClass="large-4 medium-4 small-6" ImageUrl='<%#Eval("Bild") %>' />
               <div class="panel large-4 medium-4 small-6">
-                <h5><asp:Label CssClass="large-1 medium-1 small-1 tiny" runat="server" ID="text" Text='<%#Eval("Beskrivning") %>'></asp:Label></h5>
+                <h5><asp:Label CssClass="large-1 medium-1 small-1 tiny" runat="server" ID="text" Text='<%#Eval("Namn") %>'></asp:Label></h5>
                 <h6 class="subheader"><asp:Label runat="server" ID="pris" Text='<%#Eval("Pris") %>'></asp:Label></h6>
                   <br />
                   <asp:Button CssClass="button radius large-4 medium-4 small-6 tiny" CommandName="kop" ValidateRequestMode="Disabled" runat="server" Text="Köp" />
