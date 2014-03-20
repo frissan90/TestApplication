@@ -63,7 +63,36 @@
             <section class="top-bar-section">
 
                 <ul>
+                                        <li><a href="#" data-dropdown="contentDrop">Varukorg &raquo;</a></li>
+                    <div id="Div1" class="f-dropdown content small" data-dropdown-content>
+                        <asp:ListView runat="server" ID="ListView1" GroupItemCount="1">
+                            <LayoutTemplate>
 
+                                <asp:PlaceHolder runat="server" ID="groupPlaceholder"></asp:PlaceHolder>
+                            </LayoutTemplate>
+                            <GroupTemplate>
+                                <div class="row">
+                                    <div class="large-8 columns" id="itemPlaceholder" runat="server" style="width:5px;">
+                                    </div>
+                                </div>
+                            </GroupTemplate>
+                            <ItemTemplate>
+                                <div class="small-1 columns">
+                                    <asp:Label runat="server" ID="lblMaster" Text='<%#Eval("Namn") %>' Font-Size="XX-Small"></asp:Label>
+                                    </div>
+                                <div class="small-1 columns" style="text-align:right;">
+                                    <asp:Label runat="server" ID="lblMaster2" Text='<%#Eval("Pris") %>' Font-Size="XX-Small"></asp:Label>
+                                </div>
+                            </ItemTemplate>
+
+
+
+
+
+                        </asp:ListView>
+                        <div class="row-hoger">
+                        <a href="#" class="button">Button</a></div>
+                    </div>
                     <li><a href="Index">Hem	</a></li>
 
                     <li><a href="MinSida">Min Sida</a></li>
@@ -76,7 +105,7 @@
 
                 <ul class="right" runat="server" id="loginRegisterUL">
 
-                    <li><a href="#" class="button" data-dropdown="contentDrop">Varukorg &raquo;</a></li>
+                    <li><a href="#" class="hide-for-small-only" data-dropdown="contentDrop">Varukorg &raquo;</a></li>
                     <div id="contentDrop" class="f-dropdown content medium" data-dropdown-content>
                         <asp:ListView runat="server" ID="lstMaster" GroupItemCount="1">
                             <LayoutTemplate>
@@ -99,22 +128,22 @@
 
 
                         </asp:ListView>
-                        <a href="#" class="button">Button</a>
+                        <a href="#" class="button">Button1</a>
                     </div>
 
-
-
-                    <li><a href="Register">Registrera	
-                    </a></li>
-
-                    <li><a href="Login">Logga In</a></li>
-
-                </ul>
-
-                <ul class="right" runat="server">
                     <li>
                         <asp:Button runat="server" ID="LogOutUser" OnClick="LogOutUser_Click" CssClass="button radius" Text="Logga ut" BackColor="Black" /></li>
+
+                    <li id="register" runat="server"><a href="Register">Registrera	
+                    </a></li>
+
+                    <li id="login" runat="server"><a href="Login">Logga In</a></li>
+
                 </ul>
+
+                <%--<ul class="right" runat="server">
+                    
+                </ul>--%>
 
             </section>
 

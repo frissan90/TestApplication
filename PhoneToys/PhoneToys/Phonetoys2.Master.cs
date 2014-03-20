@@ -32,7 +32,9 @@ namespace PhoneToys
 
             if (Session["Username"] != null)
             {
-                loginRegisterUL.Visible = false;
+                //loginRegisterUL.Visible = false;
+                register.Visible = false;
+                login.Visible = false;
             }
             else
             {
