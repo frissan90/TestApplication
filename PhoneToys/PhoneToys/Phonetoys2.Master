@@ -63,8 +63,9 @@
             <section class="top-bar-section">
 
                 <ul>
-                                        <li><a href="#" data-dropdown="contentDrop">Varukorg &raquo;</a></li>
+                                        <li><a href="#" data-options="align:Top" data-dropdown="contentDrop">Varukorg &raquo;</a></li>
                     <div id="Div1" class="f-dropdown content small" data-dropdown-content>
+                        <asp:Panel runat="server" ScrollBars="Vertical" Height="20px" Width="50px">
                         <asp:ListView runat="server" ID="ListView1" GroupItemCount="1">
                             <LayoutTemplate>
 
@@ -76,6 +77,9 @@
                                     </div>
                                 </div>
                             </GroupTemplate>
+                            <GroupSeparatorTemplate>
+                                <hr />
+                            </GroupSeparatorTemplate>
                             <ItemTemplate>
                                 <div class="small-1 columns">
                                     <asp:Label runat="server" ID="lblMaster" Text='<%#Eval("Namn") %>' Font-Size="XX-Small"></asp:Label>
@@ -90,6 +94,7 @@
 
 
                         </asp:ListView>
+                            </asp:Panel>
                         <div class="row-hoger">
                         <a href="#" class="button">Button</a></div>
                     </div>
@@ -118,6 +123,9 @@
                                     </div>
                                 </div>
                             </GroupTemplate>
+                            <GroupSeparatorTemplate>
+                                <hr />
+                            </GroupSeparatorTemplate>
                             <ItemTemplate>
                                 <div class="large-4 medium-4 small-6 columns">
                                     <asp:Label runat="server" ID="lblMaster" Text='<%#Eval("Namn") %>'></asp:Label>

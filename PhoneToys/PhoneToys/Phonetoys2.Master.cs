@@ -53,6 +53,11 @@ namespace PhoneToys
             sagorna.Add(sagan);
             sagorna.Add(sagan);
             sagorna.Add(sagan);
+            sagorna.Add(sagan);
+            sagorna.Add(sagan);
+            sagorna.Add(sagan);
+            sagorna.Add(sagan);
+            sagorna.Add(sagan);
 
             lstMaster.DataSource = sagorna;
             lstMaster.DataBind();
