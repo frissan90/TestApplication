@@ -61,7 +61,7 @@
                     <asp:Label runat="server" ID="varukorgAntalLabel"></asp:Label><asp:Label ID="Label2" runat="server" Text=" varor i varukorgen"></asp:Label></asp:Label>--%>
             
             <section class="top-bar-section">
-                <ul class="hide-for-medium">
+                <ul>
                                         <li><a href="#" class="hide-for-large" data-options="align:Top" data-dropdown="contentDrop">Varukorg &raquo;</a></li>
                     
                     <div id="Div1" class="f-dropdown content small" data-dropdown-content>
