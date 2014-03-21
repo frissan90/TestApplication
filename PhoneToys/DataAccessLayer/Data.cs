@@ -503,5 +503,38 @@ namespace DataAccessLayer
                 }
             }
         }
+
+        public byte[] getSagaData(string sagoNamn)
+        {
+            string Query = @"Select Data from Saga where Namn = @Saga";
+
+            byte[] Data = null;
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                SqlParameter param = new SqlParameter();
+                param.ParameterName = "@Saga";
+                param.Value = sagoNamn;
+                cmd.Parameters.Add(param);
+
+                Data = (byte[])cmd.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+
+            return Data;
+        }
     }
 }

@@ -26,7 +26,7 @@ namespace PhoneToys
             if (data.authenticateEditor(UnameTB.Text, PWTB.Text))
             {
                 Session["Editor"] = UnameTB.Text;
-                Response.Redirect("Editor");
+                Response.Redirect("Sagoupload");
             }
             
         }

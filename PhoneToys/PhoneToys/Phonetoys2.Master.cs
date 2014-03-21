@@ -56,7 +56,10 @@ namespace PhoneToys
 
         protected void KassaBTN_Click(object sender, EventArgs e)
         {
-            data.kopSagor(Session["Username"].ToString(), (List<Varukorgen>)Session["varukorg"]);
+            if (Session["varukorg"] != null)
+            {
+                Response.Redirect("Kassa");
+            }
         }
     }
 }

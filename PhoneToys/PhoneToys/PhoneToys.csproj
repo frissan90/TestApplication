@@ -257,6 +257,7 @@
     <Content Include="js\vendor\jquery.js" />
     <Content Include="js\vendor\modernizr.js" />
     <Content Include="js\vendor\placeholder.js" />
+    <Content Include="Kassa.aspx" />
     <Content Include="Light.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MinSida.aspx" />
@@ -349,6 +350,13 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kassa.aspx.cs">
+      <DependentUpon>Kassa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kassa.aspx.designer.cs">
+      <DependentUpon>Kassa.aspx</DependentUpon>
     </Compile>
     <Compile Include="Light.aspx.cs">
       <DependentUpon>Light.aspx</DependentUpon>

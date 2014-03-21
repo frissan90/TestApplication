@@ -31,41 +31,41 @@
         <div class="row">
             <div class=" large-4 medium-4 columns">
                 <asp:Label ID="Label3" CssClass="label" runat="server" Text="Upprepa lösenord"></asp:Label><asp:RequiredFieldValidator ID="fv3" runat="server" ControlToValidate="ConfPWTB" ValidationGroup="register" ErrorMessage="4) Vänligen upprepa lösenordet" ForeColor="Red">4</asp:RequiredFieldValidator><asp:CompareValidator runat="server" ControlToCompare="PWTB" ControlToValidate="ConfPWTB" ErrorMessage="4) Lösenorden är inte lika" ValidationGroup="register">4</asp:CompareValidator>
-                <asp:TextBox ID="ConfPWTB" runat="server" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="ConfPWTB" runat="server" placeholder="Upprepa lösenord" TextMode="Password"></asp:TextBox>
             </div>
             <div class=" large-4 medium-4 columns">
                 <asp:Label ID="Label4" CssClass="label" runat="server" Text="Förnamn"></asp:Label><asp:RequiredFieldValidator ID="fv4" runat="server" ControlToValidate="FnameTB" ValidationGroup="register" ErrorMessage="5) Förnamn krävs" ForeColor="Red">5</asp:RequiredFieldValidator><asp:RegularExpressionValidator ID="RegularExpressionValidator8" runat="server" ControlToValidate="FnameTB" ValidationGroup="register" ValidationExpression="^[a-öA-Ö]{1,20}$" ErrorMessage="5) Endast bokstäver är tillåtna" ForeColor="Red">5</asp:RegularExpressionValidator>
-                <asp:TextBox ID="FnameTB" runat="server"></asp:TextBox>
+                <asp:TextBox ID="FnameTB" placeholder="Förnamn" runat="server"></asp:TextBox>
             </div>
             <div class=" large-4 medium-4 columns">
                 <asp:Label ID="Label5" CssClass="label" runat="server" Text="Efternamn"></asp:Label><asp:RequiredFieldValidator ID="fv5" runat="server" ControlToValidate="LnameTB" ValidationGroup="register" ErrorMessage="6) Efternamn krävs" ForeColor="Red">6</asp:RequiredFieldValidator><asp:RegularExpressionValidator ID="RegularExpressionValidator9" runat="server" ControlToValidate="LnameTB" ValidationGroup="register" ValidationExpression="^[a-öA-Ö]{1,20}$" ErrorMessage="6) Endast bokstäver är tillåtna" ForeColor="Red">6</asp:RegularExpressionValidator>
-                <asp:TextBox ID="LnameTB" runat="server"></asp:TextBox>
+                <asp:TextBox ID="LnameTB" placeholder="Efternamn" runat="server"></asp:TextBox>
             </div>
         </div>
 
         <div class="row">
             <div class=" large-4 medium-4 columns">
                 <asp:Label ID="Label6" CssClass="label" runat="server" Text="Adress"></asp:Label><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="AddressTB" ValidationGroup="register" ErrorMessage="7) Adress krävs" ForeColor="Red">7</asp:RequiredFieldValidator><asp:RegularExpressionValidator ID="RegularExpressionValidator10" runat="server" ControlToValidate="AddressTB" ValidationGroup="register" ValidationExpression="^[a-öA-Ö]{1,20}$" ErrorMessage="7) Endast bokstäver är tillåtna" ForeColor="Red">7</asp:RegularExpressionValidator>
-                <asp:TextBox ID="AddressTB" runat="server"></asp:TextBox>
+                <asp:TextBox ID="AddressTB" placeholder="Adress" runat="server"></asp:TextBox>
             </div>
             <div class=" large-4 medium-4 columns">
                 <asp:Label ID="Label7" CssClass="label" runat="server" Text="Postnummer"></asp:Label><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ZipTB" ValidationGroup="register" ErrorMessage="8) Postnummer krävs" ForeColor="Red">8</asp:RequiredFieldValidator><asp:RegularExpressionValidator ID="RegularExpressionValidator11" runat="server" ControlToValidate="FnameTB" ValidationGroup="register" ValidationExpression="^[a-öA-Ö]{1,20}$" ErrorMessage=") Endast bokstäver är tillåtna" ForeColor="Red">8</asp:RegularExpressionValidator>
-                <asp:TextBox ID="ZipTB" runat="server"></asp:TextBox>
+                <asp:TextBox ID="ZipTB" placeholder="Postnummer" runat="server"></asp:TextBox>
             </div>
 
             <div class=" large-4 medium-4 columns">
                 <asp:Label ID="Label8" CssClass="label" runat="server" Text="Stad"></asp:Label>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ValidationGroup="register" ControlToValidate="CityTB" ErrorMessage="9) Stad krävs">9</asp:RequiredFieldValidator>
-                <asp:TextBox ID="CityTB" runat="server"></asp:TextBox>
+                <asp:TextBox placeholder="Stad" ID="CityTB" runat="server"></asp:TextBox>
             </div>
 
-            <div class="row-hoger">
-            <div class=" large-4 medium-4 columns">
+            <div class="row right">
+            <div class=" large-5 medium-5 columns">
                 <asp:Label ID="Label9" CssClass="label" runat="server" Text="Land" ForeColor="Navy"></asp:Label><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ValidationGroup="register" ControlToValidate="CountryDD" ErrorMessage="10) Vänligen välj land" ForeColor="Red">10</asp:RequiredFieldValidator>
                 <%--<br />--%>
                 <asp:DropDownList runat="server" ID="countryDD"></asp:DropDownList>
                 <asp:ValidationSummary DisplayMode="List" ID="ValidationSummary1" runat="server" ValidationGroup="register" />
-                <asp:Button runat="server" CssClass="button radius large-4 medium-3 small-3" ID="registerBTN" Text="Register" ValidationGroup="register" OnClick="registerBTN_Click" />
+                <asp:Button runat="server" CssClass="button radius large-5 medium-5 small-4" ID="registerBTN" Text="Register" ValidationGroup="register" OnClick="registerBTN_Click" />
             </div>
                 </div>
         </div>
