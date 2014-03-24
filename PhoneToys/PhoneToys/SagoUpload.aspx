@@ -60,7 +60,7 @@
                                 <td>
                                     <asp:LinkButton CommandName="edit" runat="server" Text="Redigera"></asp:LinkButton></td>
                                 <td class="uploadSagaRemoveBTN">
-                                    <asp:LinkButton CssClass="uploadSagaRemoveBTN" CommandName="remove" runat="server" Text="Ta bort"></asp:LinkButton></td>
+                                    <asp:LinkButton CssClass="uploadSagaRemoveBTN button radius" CommandName="remove" runat="server" Text="Ta bort"></asp:LinkButton></td>
                             </tr>
                         </ItemTemplate>
                         <SeparatorTemplate>
