@@ -43,9 +43,37 @@
 </head>
 <body>
     <form runat="server">
-        
-        <asp:ContentPlaceHolder ID="body" runat="server">
-        </asp:ContentPlaceHolder>
+        <div class="row large-12" style="border: 2px solid red; height: 900px">
+            <header class="row">
+                <div class="large-12 column">
+                    <asp:Image runat="server" ImageUrl="~/Images/Bamse2.jpeg" CssClass="large-12 headerIMG" />
+                </div>
+            </header>
+            <div class="row">
+            <div class="large-centered">
+            <nav>
+                <ul class="center button-group">
+                    <li><a href="#" class="radius button"><asp:Label runat="server"></asp:Label></a></li>
+                    <li><a href="#" class="radius button">Link 2</a></li>
+                    <li><a href="#" class="radius button">Link 3</a></li>
+                    <li><a href="#" class="radius button">Link 4</a></li>
+                </ul>
+            </nav>
+            </div>
+            </div>
+            <div id="bodyContent">
+                <asp:ContentPlaceHolder ID="body" runat="server" />
+            </div>
+            <footer class="row">
+                <div class="large-12 columns">
+                    <h1></h1>
+                </div>
+                
+            </footer>
+
+
+        </div>
     </form>
+
 </body>
 </html>
