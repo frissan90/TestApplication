@@ -43,32 +43,39 @@
 </head>
 <body>
     <form runat="server">
-        <div class="row large-12" style="border: 2px solid red; height: 900px">
+        <div class="row large-12" style="border: 2px solid red">
             <header class="row">
                 <div class="large-12 column">
-                    <asp:Image runat="server" ImageUrl="~/Images/Bamse2.jpeg" CssClass="large-12 headerIMG" />
+                    <asp:Image runat="server" ImageUrl="~/Images/Bamse2.jpeg" CssClass="large-12 medium-12 small-12 headerIMG" />
                 </div>
             </header>
             <div class="row">
-            <div class="large-centered">
-            <nav>
-                <ul class="center button-group">
-                    <li><a href="#" class="radius button"><asp:Label runat="server"></asp:Label></a></li>
-                    <li><a href="#" class="radius button">Link 2</a></li>
-                    <li><a href="#" class="radius button">Link 3</a></li>
-                    <li><a href="#" class="radius button">Link 4</a></li>
-                </ul>
-            </nav>
-            </div>
+                <div class="large-centered large-12 medium-12 small-12 columns">
+
+                    <ul class="center button-group">
+                        <li class="menuitem">
+                            <asp:Button ID="Button3" CssClass="link" runat="server" Text="Link 1"></asp:Button></li>
+                        <li class="menuitem">
+                            <asp:Button ID="Button2" CssClass="link" runat="server" Text="Link 2"></asp:Button></li>
+                        <li class="menuitem">
+                            <asp:Button ID="Button1" CssClass="link" runat="server" Text="Link 3"></asp:Button></li>
+                        <li class="menuitem">
+                            <asp:Button CssClass="link" runat="server" Text="Link 4"></asp:Button></li>
+                    </ul>
+                </div>
             </div>
             <div id="bodyContent">
-                <asp:ContentPlaceHolder ID="body" runat="server" />
+                <asp:ContentPlaceHolder runat="server" ID="body" />
             </div>
             <footer class="row">
-                <div class="large-12 columns">
-                    <h1></h1>
+                <div class="large-12">
+                    <div class="row">
+                        <div class="large-6">
+                            <h1>&copy; Copyright 2014</h1>
+                        </div>
+                    </div>
                 </div>
-                
+
             </footer>
 
 
