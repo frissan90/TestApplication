@@ -50,3 +50,15 @@
 /*.h1 {
     color: red;
 }*/
+
+.imglink {
+    text-decoration:none;
+}
+
+.skalman {
+    float:left;
+}
+
+.lilleskutt {
+    float:right;
+}

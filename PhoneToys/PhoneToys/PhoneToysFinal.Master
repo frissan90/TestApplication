@@ -43,11 +43,11 @@
 </head>
 <body>
     <form runat="server">
-        <div class="row large-12" style="border: 2px solid red">
+        <div class="row large-12">
             <header class="row">
-                <div class="large-12 column">
-                    <asp:Image runat="server" ImageUrl="~/Images/PhoneToysHeader.png" CssClass="large-12 headerIMG" />
-                </div>
+                
+                    <asp:Image runat="server" ImageUrl="~/Images/PhoneToysHeader.png" CssClass="headerIMG" />
+                
             </header>
             <div class="row">
                 <div class="large-centered large-12 medium-12 small-12 columns">
@@ -67,7 +67,7 @@
             <div id="bodyContent">
                 <asp:ContentPlaceHolder runat="server" ID="body" />
             </div>
-            <footer class="row">
+            <footer class="row collapse">
                 <div class="large-12">
                     <div class="row">
                         <div class="large-6">

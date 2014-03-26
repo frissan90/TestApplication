@@ -239,6 +239,9 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\PhoneToysHeader.png" />
+    <Content Include="Images\Shellman.png" />
+    <Content Include="Images\startPageIMG.png" />
+    <Content Include="Images\vargen.png" />
     <Content Include="Index.aspx" />
     <Content Include="js\foundation.min.js" />
     <Content Include="js\foundation\foundation.abide.js" />
@@ -270,6 +273,7 @@
     <Content Include="Phonetoys.Master" />
     <Content Include="MemberLogin.aspx" />
     <Content Include="PhoneToysFinal.aspx" />
+    <Content Include="RegisterEllerLogin.aspx" />
     <Content Include="Sagor.aspx" />
     <Content Include="SagoUpload.aspx" />
     <Content Include="Phonetoys2.Master" />
@@ -422,6 +426,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterEllerLogin.aspx.cs">
+      <DependentUpon>RegisterEllerLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterEllerLogin.aspx.designer.cs">
+      <DependentUpon>RegisterEllerLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sagor.aspx.cs">
       <DependentUpon>Sagor.aspx</DependentUpon>
