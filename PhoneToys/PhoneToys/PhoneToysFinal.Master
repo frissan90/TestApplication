@@ -46,7 +46,7 @@
         <div class="row large-12" style="border: 2px solid red">
             <header class="row">
                 <div class="large-12 column">
-                    <asp:Image runat="server" ImageUrl="~/Images/PhoneToysHeader.png" CssClass="large-12 hide-for-large headerIMG" />
+                    <asp:Image runat="server" ImageUrl="~/Images/PhoneToysHeader.png" CssClass="large-12 hide-for-medium headerIMG" />
                 </div>
             </header>
             <div class="row">
