@@ -221,6 +221,8 @@
     <Content Include="Images\bamse.jpg" />
     <Content Include="Images\Bamse2.jpeg" />
     <Content Include="Images\bamsen.jpg" />
+    <Content Include="Images\BamsenHeader.gif" />
+    <Content Include="Images\BamsenHeader2.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\dupSbtr.gif" />
     <Content Include="Images\heroAccent.png" />
@@ -236,6 +238,7 @@
     <Content Include="Images\orderedList9.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\PhoneToysHeader.png" />
     <Content Include="Index.aspx" />
     <Content Include="js\foundation.min.js" />
     <Content Include="js\foundation\foundation.abide.js" />

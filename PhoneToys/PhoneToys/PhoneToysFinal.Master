@@ -46,7 +46,7 @@
         <div class="row large-12" style="border: 2px solid red">
             <header class="row">
                 <div class="large-12 column">
-                    <asp:Image runat="server" ImageUrl="~/Images/Bamse2.jpeg" CssClass="large-12 medium-12 small-12 headerIMG" />
+                    <asp:Image runat="server" ImageUrl="~/Images/PhoneToysHeader.png" CssClass="large-12 medium-12 small-12 headerIMG" />
                 </div>
             </header>
             <div class="row">
@@ -54,13 +54,13 @@
 
                     <ul class="center button-group">
                         <li class="menuitem">
-                            <asp:Button ID="Button3" CssClass="link" runat="server" Text="Link 1"></asp:Button></li>
+                            <asp:Button ID="Button3" BackColor="Red" CssClass="link" runat="server" Text="Hem"></asp:Button></li>
                         <li class="menuitem">
-                            <asp:Button ID="Button2" CssClass="link" runat="server" Text="Link 2"></asp:Button></li>
+                            <asp:Button ID="Button2" BackColor="Red" CssClass="link" runat="server" Text="Min Sida"></asp:Button></li>
                         <li class="menuitem">
-                            <asp:Button ID="Button1" CssClass="link" runat="server" Text="Link 3"></asp:Button></li>
+                            <asp:Button ID="Button1" BackColor="Red" CssClass="link" runat="server" Text="Sagor"></asp:Button></li>
                         <li class="menuitem">
-                            <asp:Button CssClass="link" runat="server" Text="Link 4"></asp:Button></li>
+                            <asp:Button CssClass="link" BackColor="Red" runat="server" Text="Link 4"></asp:Button></li>
                     </ul>
                 </div>
             </div>
