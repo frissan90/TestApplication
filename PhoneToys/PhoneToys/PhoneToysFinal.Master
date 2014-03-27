@@ -37,11 +37,13 @@
     <script src="Scripts/jquery-ui-1.8.24.js"></script>
     <script src="Scripts/jquery-ui-1.8.24.min.js"></script>
     <script src="Scripts/modernizr-2.6.2.js"></script>
+    <script src="js/ResponsiveImgMap.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 
 </head>
-<body>
+<body class="large-12">
     <form runat="server">
         <div class="row large-12">
             <header class="row">

@@ -260,6 +260,7 @@
     <Content Include="js\foundation\foundation.tab.js" />
     <Content Include="js\foundation\foundation.tooltip.js" />
     <Content Include="js\foundation\foundation.topbar.js" />
+    <Content Include="js\ResponsiveImgMap.js" />
     <Content Include="js\vendor\fastclick.js" />
     <Content Include="js\vendor\jquery.cookie.js" />
     <Content Include="js\vendor\jquery.js" />
