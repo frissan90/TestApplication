@@ -16,4 +16,5 @@
     <div class="row">
     <asp:Image runat="server" ImageUrl="~/Images/startPageIMG.png" />
         </div>
+    
 </asp:Content>
