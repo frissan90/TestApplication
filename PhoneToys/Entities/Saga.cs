@@ -16,6 +16,6 @@ namespace Entities
         public DateTime Upplagd { get; set; }
         public string Redaktor { get; set; }
         public int Nedladdningar { get; set; }
-        public string bild { get; set; }
+        public byte[] bild { get; set; }
     }
 }

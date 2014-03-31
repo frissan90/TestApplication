@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="RedaktorMaster.master.cs" Inherits="PhoneToys.RedaktorMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head id="Head1" runat="server">
+    <title>Phonetoys.se</title>
+    <link href="Content/foundation.css" rel="stylesheet" />
+    <link href="Content/PhoneToysFinal.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <script src="js/foundation/foundation.abide.js"></script>
+    <script src="js/foundation/foundation.accordion.js"></script>
+    <script src="js/foundation/foundation.alert.js"></script>
+    <script src="js/foundation/foundation.clearing.js"></script>
+    <script src="js/foundation/foundation.dropdown.js"></script>
+    <script src="js/foundation/foundation.equalizer.js"></script>
+    <script src="js/foundation/foundation.interchange.js"></script>
+    <script src="js/foundation/foundation.joyride.js"></script>
+    <script src="js/foundation/foundation.js"></script>
+    <script src="js/foundation/foundation.magellan.js"></script>
+    <script src="js/foundation/foundation.offcanvas.js"></script>
+    <script src="js/foundation/foundation.orbit.js"></script>
+    <script src="js/foundation/foundation.reveal.js"></script>
+    <script src="js/foundation/foundation.tab.js"></script>
+    <script src="js/foundation/foundation.tooltip.js"></script>
+    <script src="js/foundation/foundation.topbar.js"></script>
+    <script src="js/vendor/fastclick.js"></script>
+    <script src="js/vendor/jquery.cookie.js"></script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/vendor/placeholder.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="Scripts/_references.js"></script>
+    <script src="Scripts/jquery-1.8.2.intellisense.js"></script>
+    <script src="Scripts/jquery-1.8.2.js"></script>
+    <script src="Scripts/jquery-1.8.2.min.js"></script>
+    <script src="Scripts/jquery-ui-1.8.24.js"></script>
+    <script src="Scripts/jquery-ui-1.8.24.min.js"></script>
+    <script src="Scripts/modernizr-2.6.2.js"></script>
+    <script src="js/Jquery.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body class="large-12">
+    <form id="Form1" runat="server">
+        <div class="row large-12">
+            <header class="row">
+                
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/PhoneToysHeader.png" CssClass="headerIMG" />
+                
+            </header>
+            <div class="row">
+                <div class="large-centered large-12 medium-12 small-12 columns">
+
+                    <ul class="center button-group">
+                        <li class="menuitem">
+                            <asp:Button ID="Button3" BackColor="Red" CssClass="link" runat="server" Text="Ladda upp saga" PostBackUrl="~/LaddaUpp"></asp:Button></li>
+                        <li class="menuitem">
+                            <asp:Button ID="Button2" BackColor="Red" CssClass="link" runat="server" Text="Redigera saga" PostBackUrl="~/RedigeraSagor"></asp:Button></li>
+                        <li class="menuitem">
+                            <asp:Button ID="Button1" BackColor="Red" CssClass="link" runat="server" Text="Ta bort sagor"></asp:Button></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="bodyContent">
+                <asp:ContentPlaceHolder runat="server" ID="body" />
+            </div>
+            <footer class="row collapse">
+                <div class="large-12">
+                    <div class="row">
+                        <div class="large-6">
+                            <h1>&copy; Copyright 2014</h1>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+
+
+        </div>
+    </form>
+    <script src="js/Jquery.js"></script>
+    <script src="js/ResponsiveImgMap.js"></script>
+</body>
+</html>

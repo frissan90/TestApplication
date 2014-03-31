@@ -317,7 +317,7 @@ namespace DataAccessLayer
                     sagan.Langd = (string)reader["Langd"];
                     sagan.Pris = (int)reader["Pris"];
                     sagan.Beskrivning = (string)reader["Beskrivning"];
-                    sagan.bild = "~/Images/bamse.jpg";
+                    //sagan.bild = "~/Images/bamse.jpg";
 
                     sagor.Add(sagan);
                 }
