@@ -8,8 +8,14 @@
         <asp:TextBox runat="server" ID="BeskrivningTB" placeholder="Beskrivning"></asp:TextBox>
         <asp:Label runat="server" Text="Pris" CssClass="label alert"></asp:Label>
         <asp:TextBox runat="server" ID="PrisTB" placeholder="Pris"></asp:TextBox>
+        <br />
+        <asp:Label runat="server" Text="Välj Fil" CssClass="label alert"></asp:Label>
         <asp:FileUpload runat="server" ID="minUpload" />
-        <asp:Button runat="server" ID="knappen" OnClick="knappen_Click" />
+        <br />
+        <asp:Label runat="server" Text="Välj bild" CssClass="label alert"></asp:Label>
+        <asp:FileUpload runat="server" ID="bildUpload" />
+        <br />
+        <asp:Button runat="server" Text="Ladda upp" ID="uploadBTN" OnClick="uploadBTN_Click" />
         <br />
         <div class="progress success"></div>
     </div>

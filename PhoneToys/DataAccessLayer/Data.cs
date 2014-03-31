@@ -240,7 +240,7 @@ namespace DataAccessLayer
 
         public void addSaga(Saga sagan)
         {
-            string Query = @"insert into Saga values(@Namn, @Beskrivning, @Data, @Langd, @Pris, GETDATE(), @UpplagdAv, 0)";
+            string Query = @"insert into Saga values(@Namn, @Beskrivning, @Data, @Langd, @Pris, GETDATE(), @UpplagdAv, 0, @Bild)";
 
             try
             {
@@ -277,6 +277,11 @@ namespace DataAccessLayer
                 param6.ParameterName = "@UpplagdAv";
                 param6.Value = sagan.Redaktor;
                 cmd.Parameters.Add(param6);
+
+                SqlParameter param7 = new SqlParameter();
+                param7.ParameterName = "@Bild";
+                param7.Value = sagan.bild;
+                cmd.Parameters.Add(param7);
 
                 cmd.ExecuteNonQuery();
             }
@@ -317,7 +322,7 @@ namespace DataAccessLayer
                     sagan.Langd = (string)reader["Langd"];
                     sagan.Pris = (int)reader["Pris"];
                     sagan.Beskrivning = (string)reader["Beskrivning"];
-                    //sagan.bild = "~/Images/bamse.jpg";
+                    sagan.bild = (byte[])reader["Bild"];
 
                     sagor.Add(sagan);
                 }

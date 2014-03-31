@@ -20,7 +20,7 @@ namespace PhoneToys
             
         }
 
-        protected void knappen_Click(object sender, EventArgs e)
+        protected void uploadBTN_Click(object sender, EventArgs e)
         {
             Saga sagan = new Saga();
             
@@ -37,7 +37,11 @@ namespace PhoneToys
 
             sagan.Data = sagaReader.ReadBytes((int)minUpload.PostedFile.InputStream.Length);
 
+            BinaryReader bildReader = new BinaryReader(bildUpload.PostedFile.InputStream);
+
+            sagan.bild = bildReader.ReadBytes((int)bildUpload.PostedFile.InputStream.Length);
+
             data.addSaga(sagan);
-        }
+            }
     }
 }
