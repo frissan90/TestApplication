@@ -165,6 +165,8 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Admin.aspx" />
     <Content Include="AdminLogin.aspx" />
+    <Content Include="bin\PhoneToys.dll" />
+    <Content Include="bin\PhoneToys.pdb" />
     <Content Include="Content\foundation.css" />
     <Content Include="Content\MasterCSS.css" />
     <Content Include="Content\PhonetoysCSS.css" />
@@ -560,7 +562,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="bin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
