@@ -54,6 +54,7 @@
     <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.WindowsAzure.Configuration, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll</HintPath>
@@ -66,9 +67,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\NAudio.dll</HintPath>
     </Reference>
+    <Reference Include="NAudio.1.7.0.15.Fakes">
+      <HintPath>FakesAssemblies\NAudio.1.7.0.15.Fakes.dll</HintPath>
+    </Reference>
     <Reference Include="NAudio.WindowsMediaFormat, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\NAudio.WindowsMediaFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WindowsMediaFormat.1.0.1.0.Fakes">
+      <HintPath>FakesAssemblies\NAudio.WindowsMediaFormat.1.0.1.0.Fakes.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp">
       <HintPath>..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
@@ -300,6 +307,8 @@
     <Content Include="PhoneToysFinal.Master" />
     <Content Include="Images\startPageIMG.psd" />
     <Content Include="RedaktorMaster.Master" />
+    <Fakes Include="Fakes\NAudio.fakes" />
+    <Fakes Include="Fakes\NAudio.WindowsMediaFormat.fakes" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
