@@ -287,7 +287,6 @@
     <Content Include="Light.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MinSida.aspx" />
-    <Content Include="obj\Debug\PhoneToys.csprojResolveAssemblyReference.cache" />
     <Content Include="obj\Debug\PhoneToys.dll" />
     <Content Include="obj\Debug\PhoneToys.pdb" />
     <Content Include="packages.config" />
