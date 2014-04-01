@@ -10,7 +10,7 @@
         <div class="large-6 medium-6 columns">
             <asp:Label runat="server" Text="Beskrivning" CssClass="label alert"></asp:Label>
             <asp:TextBox runat="server" ID="BeskrivningTB" placeholder="Beskrivning"></asp:TextBox>
-            <asp:Label runat="server" Text="Prisf" CssClass="label alert"></asp:Label>
+            <asp:Label runat="server" Text="Pris" CssClass="label alert"></asp:Label>
             <asp:TextBox runat="server" ID="PrisTB" placeholder="Pris"></asp:TextBox>
             <br />
             <asp:Label runat="server" Text="Välj Fil" CssClass="label alert"></asp:Label>
