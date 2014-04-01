@@ -11,7 +11,7 @@
             <asp:Label runat="server" Text="Beskrivning" CssClass="label alert"></asp:Label>
             <asp:TextBox runat="server" ID="BeskrivningTB" placeholder="Beskrivning"></asp:TextBox>
             <asp:Label runat="server" Text="Pris" CssClass="label alert"></asp:Label>
-            <asp:TextBox runat="server" ID="PrisTB" placeholder="Pris"></asp:TextBox>
+            <asp:TextBox runat="server" ID="PrisTB" placeholder="Prifs"></asp:TextBox>
             <br />
             <asp:Label runat="server" Text="Välj Fil" CssClass="label alert"></asp:Label>
             <asp:FileUpload runat="server" ID="minUpload" />
