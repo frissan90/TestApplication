@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-//using NAudio.FileFormats.Mp3;
-//using NAudio.Utils;
-//using NAudio.Wave;
+using NAudio.FileFormats.Mp3;
+using NAudio.Utils;
+using NAudio.Wave;
 using System.IO;
 using DataAccessLayer;
 using Entities;
@@ -24,10 +24,10 @@ namespace PhoneToys
         {
             Saga sagan = new Saga();
 
-            //Mp3FileReader reader = new Mp3FileReader(minUpload.PostedFile.InputStream);
-            //TimeSpan span = reader.TotalTime;
+            Mp3FileReader reader = new Mp3FileReader(minUpload.PostedFile.InputStream);
+            TimeSpan span = reader.TotalTime;
 
-            //sagan.Langd = span.Minutes.ToString() + ":" + span.Seconds.ToString();
+            sagan.Langd = span.Minutes.ToString() + ":" + span.Seconds.ToString();
             sagan.Namn = Path.GetFileName(minUpload.PostedFile.FileName).Split('.').ElementAt(0);
             sagan.Beskrivning = BeskrivningTB.Text;
             sagan.Pris = Convert.ToInt32(PrisTB.Text);
