@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/RedaktorMaster.Master" AutoEventWireup="true" CodeBehind="LaddaUpp.aspx.cs" Inherits="PhoneToys.LaddaUpp" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <script type="text/javascript" src="js/progress.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
 
@@ -20,14 +19,10 @@
             <asp:Label runat="server" Text="Välj bild" CssClass="label alert"></asp:Label>
             <asp:FileUpload runat="server" ID="bildUpload" />
             <br />
-            <asp:Button OnClientClick="return ProgressBar()" runat="server" BackColor="Red" Text="Ladda upp" ID="uploadBTN" CssClass="link" OnClick="uploadBTN_Click" />
+            <asp:Button runat="server" BackColor="Red" Text="Ladda upp" ID="uploadBTN" CssClass="link" OnClick="uploadBTN_Click" />
             <div class="progress">
                 <div class="meter"></div>
             </div>
         </div>
     </div>
-
-
-
-    <script type="text/javascript" src="js/progress.js"></script>
 </asp:Content>
