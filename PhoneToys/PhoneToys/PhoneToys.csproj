@@ -287,7 +287,6 @@
     <Content Include="Light.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MinSida.aspx" />
-    <Content Include="obj\Debug\PhoneToys.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\PhoneToys.dll" />
     <Content Include="obj\Debug\PhoneToys.pdb" />
     <Content Include="packages.config" />
@@ -305,7 +304,6 @@
     <Content Include="PhoneToysFinal.Master" />
     <Content Include="Images\startPageIMG.psd" />
     <Content Include="RedaktorMaster.Master" />
-    <Content Include="obj\Debug\PhoneToys.csprojResolveAssemblyReference.cache" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
