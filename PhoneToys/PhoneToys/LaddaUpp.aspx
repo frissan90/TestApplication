@@ -1,24 +1,27 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/RedaktorMaster.Master" AutoEventWireup="true" CodeBehind="LaddaUpp.aspx.cs" Inherits="PhoneToys.LaddaUpp" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
 
-    <div class="row">
-        <asp:Label runat="server" Text="Beskrivning" CssClass="label alert"></asp:Label>
-        <asp:TextBox runat="server" ID="BeskrivningTB" placeholder="Beskrivning"></asp:TextBox>
-        <asp:Label runat="server" Text="Pris" CssClass="label alert"></asp:Label>
-        <asp:TextBox runat="server" ID="PrisTB" placeholder="Pris"></asp:TextBox>
+    <div class="center">
         <br />
-        <asp:Label runat="server" Text="Välj Fil" CssClass="label alert"></asp:Label>
-        <asp:FileUpload runat="server" ID="minUpload" />
         <br />
-        <asp:Label runat="server" Text="Välj bild" CssClass="label alert"></asp:Label>
-        <asp:FileUpload runat="server" ID="bildUpload" />
-        <br />
-        <asp:Button runat="server" Text="Ladda upp" ID="uploadBTN" OnClick="uploadBTN_Click" />
-        <br />
-        <div class="progress success"></div>
+        <div class="large-6 medium-6 columns">
+            <asp:Label runat="server" Text="Beskrivning" CssClass="label alert"></asp:Label>
+            <asp:TextBox runat="server" ID="BeskrivningTB" placeholder="Beskrivning"></asp:TextBox>
+            <asp:Label runat="server" Text="Pris" CssClass="label alert"></asp:Label>
+            <asp:TextBox runat="server" ID="PrisTB" placeholder="Pris"></asp:TextBox>
+            <br />
+            <asp:Label runat="server" Text="Välj Fil" CssClass="label alert"></asp:Label>
+            <asp:FileUpload runat="server" ID="minUpload" />
+            <br />
+            <asp:Label runat="server" Text="Välj bild" CssClass="label alert"></asp:Label>
+            <asp:FileUpload runat="server" ID="bildUpload" />
+            <br />
+            <asp:Button runat="server" BackColor="Red" Text="Ladda upp" ID="uploadBTN" CssClass="link" OnClick="uploadBTN_Click" />
+        </div>
     </div>
 
-    
+
 </asp:Content>

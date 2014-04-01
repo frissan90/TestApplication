@@ -23,7 +23,7 @@ namespace PhoneToys
         protected void uploadBTN_Click(object sender, EventArgs e)
         {
             Saga sagan = new Saga();
-            
+
             Mp3FileReader reader = new Mp3FileReader(minUpload.PostedFile.InputStream);
             TimeSpan span = reader.TotalTime;
 
@@ -42,6 +42,7 @@ namespace PhoneToys
             sagan.bild = bildReader.ReadBytes((int)bildUpload.PostedFile.InputStream.Length);
 
             data.addSaga(sagan);
-            }
+        }
+    
     }
 }

@@ -219,6 +219,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\style.css" />
     <Content Include="css\css.css" />
     <Content Include="css\foundation.css" />
     <Content Include="css\foundation.min.css" />
@@ -269,7 +270,9 @@
     <Content Include="js\foundation\foundation.tooltip.js" />
     <Content Include="js\foundation\foundation.topbar.js" />
     <Content Include="js\Jquery.js" />
+    <Content Include="js\progress.js" />
     <Content Include="js\ResponsiveImgMap.js" />
+    <Content Include="js\script.js" />
     <Content Include="js\vendor\fastclick.js" />
     <Content Include="js\vendor\jquery.cookie.js" />
     <Content Include="js\vendor\jquery.js" />
