@@ -22,7 +22,7 @@
             <br />
             <asp:Button OnClientClick="return ProgressBar()" runat="server" BackColor="Red" Text="Ladda upp" ID="uploadBTN" CssClass="link" OnClick="uploadBTN_Click" />
             <div class="progress">
-                <div class="meter alert"></div>
+                <div class="meter alert">d</div>
             </div>
         </div>
     </div>
