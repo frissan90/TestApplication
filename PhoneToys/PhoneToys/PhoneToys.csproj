@@ -67,15 +67,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\NAudio.dll</HintPath>
     </Reference>
-    <Reference Include="NAudio.1.7.0.15.Fakes">
-      <HintPath>FakesAssemblies\NAudio.1.7.0.15.Fakes.dll</HintPath>
-    </Reference>
     <Reference Include="NAudio.WindowsMediaFormat, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\NAudio.WindowsMediaFormat.dll</HintPath>
-    </Reference>
-    <Reference Include="NAudio.WindowsMediaFormat.1.0.1.0.Fakes">
-      <HintPath>FakesAssemblies\NAudio.WindowsMediaFormat.1.0.1.0.Fakes.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp">
       <HintPath>..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
@@ -307,8 +301,6 @@
     <Content Include="PhoneToysFinal.Master" />
     <Content Include="Images\startPageIMG.psd" />
     <Content Include="RedaktorMaster.Master" />
-    <Fakes Include="Fakes\NAudio.fakes" />
-    <Fakes Include="Fakes\NAudio.WindowsMediaFormat.fakes" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
