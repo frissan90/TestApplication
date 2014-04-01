@@ -287,7 +287,6 @@
     <Content Include="Light.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MinSida.aspx" />
-    <Content Include="obj\Debug\PhoneToys.pdb" />
     <Content Include="packages.config" />
     <Content Include="Phonetoys.Master" />
     <Content Include="MemberLogin.aspx" />
@@ -557,6 +556,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="obj\Debug\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
