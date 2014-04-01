@@ -21,7 +21,7 @@
             <br />
             <asp:Button runat="server" BackColor="Red" Text="Ladda upp" ID="uploadBTN" CssClass="link" OnClick="uploadBTN_Click" />
             <div class="progress">
-                <div class="meter"></div>
+                <div class="meter">w3f3f32f3</div>
             </div>
         </div>
     </div>
