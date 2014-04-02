@@ -30,7 +30,6 @@ namespace PhoneToys
             editor.Fname = FnameATB.Text;
             editor.Lname = LnameATB.Text;
 
-            decimal i;
             data.Register(editor);
             Session["Username"] = EmailATB.Text;
 

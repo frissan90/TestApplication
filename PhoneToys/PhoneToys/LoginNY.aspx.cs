@@ -27,6 +27,18 @@ namespace PhoneToys
 
                 Response.Redirect("Hem");
             }
+
+            if(data.authenticateEditor(userTB.Text, passwordTB.Text))
+            {
+                Session["Editor"] = userTB.Text;
+                Response.Redirect("LaddaUpp");
+            }
+
+            if (data.authenticateAdmin(userTB.Text, passwordTB.Text))
+            {
+                Session["Admin"] = userTB.Text;
+                Response.Redirect("Adminsida");
+            }
         }
     }
 }
