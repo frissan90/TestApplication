@@ -22,31 +22,31 @@ namespace PhoneToys {
         protected global::System.Web.UI.WebControls.Image Vargbild;
         
         /// <summary>
-        /// TextBox2 control.
+        /// UnameTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox UnameTB;
         
         /// <summary>
-        /// TextBox3 control.
+        /// EmailTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox EmailTB;
         
         /// <summary>
-        /// TextBox1 control.
+        /// PWTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox PWTB;
         
         /// <summary>
         /// TextBox4 control.

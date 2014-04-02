@@ -73,7 +73,7 @@ namespace DataAccessLayer
         /// <param name="user">Info about the new user</param>
         public void Register(User user)
         {
-            string Query = @"insert into Member values(@Uname, @Email, @PW, @Fname, @Lname, @Address, @Zip, @City, @Country)";
+            string Query = @"insert into Member values(@Uname, @Email, @PW, null, null, null, null, null, null)";
 
             try
             {
@@ -92,35 +92,35 @@ namespace DataAccessLayer
                 param2.Value = user.Password;
                 cmd.Parameters.Add(param2);
 
-                SqlParameter param3 = new SqlParameter();
-                param3.ParameterName = "@Fname";
-                param3.Value = user.Fname;
-                cmd.Parameters.Add(param3);
+                //SqlParameter param3 = new SqlParameter();
+                //param3.ParameterName = "@Fname";
+                //param3.Value = user.Fname;
+                //cmd.Parameters.Add(param3);
 
-                SqlParameter param4 = new SqlParameter();
-                param4.ParameterName = "@Lname";
-                param4.Value = user.Lname;
-                cmd.Parameters.Add(param4);
+                //SqlParameter param4 = new SqlParameter();
+                //param4.ParameterName = "@Lname";
+                //param4.Value = user.Lname;
+                //cmd.Parameters.Add(param4);
 
-                SqlParameter param5 = new SqlParameter();
-                param5.ParameterName = "@Address";
-                param5.Value = user.Address;
-                cmd.Parameters.Add(param5);
+                //SqlParameter param5 = new SqlParameter();
+                //param5.ParameterName = "@Address";
+                //param5.Value = user.Address;
+                //cmd.Parameters.Add(param5);
 
-                SqlParameter param6 = new SqlParameter();
-                param6.ParameterName = "@Zip";
-                param6.Value = user.ZipCode;
-                cmd.Parameters.Add(param6);
+                //SqlParameter param6 = new SqlParameter();
+                //param6.ParameterName = "@Zip";
+                //param6.Value = user.ZipCode;
+                //cmd.Parameters.Add(param6);
 
-                SqlParameter param7 = new SqlParameter();
-                param7.ParameterName = "@City";
-                param7.Value = user.City;
-                cmd.Parameters.Add(param7);
+                //SqlParameter param7 = new SqlParameter();
+                //param7.ParameterName = "@City";
+                //param7.Value = user.City;
+                //cmd.Parameters.Add(param7);
 
-                SqlParameter param8 = new SqlParameter();
-                param8.ParameterName = "@Country";
-                param8.Value = user.Country;
-                cmd.Parameters.Add(param8);
+                //SqlParameter param8 = new SqlParameter();
+                //param8.ParameterName = "@Country";
+                //param8.Value = user.Country;
+                //cmd.Parameters.Add(param8);
 
                 SqlParameter param9 = new SqlParameter();
                 param9.ParameterName = "@Uname";

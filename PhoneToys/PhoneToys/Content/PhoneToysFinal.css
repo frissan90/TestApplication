@@ -96,3 +96,19 @@ background-size: cover;
     background-color: #f04124;
     color: yellow;
 }
+
+.row-hoger {
+float:right;
+
+
+}
+
+.row-vanster {
+float: left;
+
+
+}
+
+.panel {
+    opacity: 0.9;
+}

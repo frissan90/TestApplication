@@ -9,7 +9,7 @@ using Entities;
 
 namespace PhoneToys
 {
-    public partial class Admin : System.Web.UI.Page
+    public partial class Adminsida : System.Web.UI.Page
     {
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)

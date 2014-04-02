@@ -165,6 +165,8 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Admin.aspx" />
     <Content Include="AdminLogin.aspx" />
+    <Content Include="Adminsida.aspx" />
+    <Content Include="Connect.aspx" />
     <Content Include="Content\foundation.css" />
     <Content Include="Content\MasterCSS.css" />
     <Content Include="Content\PhonetoysCSS.css" />
@@ -228,6 +230,7 @@
     <Content Include="css\foundation.css" />
     <Content Include="css\foundation.min.css" />
     <Content Include="css\normalize.css" />
+    <Content Include="Hem.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\Bamseimg.gif" />
     <Content Include="Images\bamse.jpg" />
@@ -252,6 +255,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\PhoneToysHeader.png" />
+    <Content Include="Images\play.gif" />
     <Content Include="Images\Shellman.png" />
     <Content Include="Images\startPageIMG.png" />
     <Content Include="Images\startPageIMG2.png" />
@@ -301,6 +305,7 @@
     <Content Include="RedigeraSagor2.aspx" />
     <Content Include="RegisterEllerLogin.aspx" />
     <Content Include="RegistreringNY.aspx" />
+    <Content Include="sagoDelete.aspx" />
     <Content Include="Sagor.aspx" />
     <Content Include="SagorNY.aspx" />
     <Content Include="SagoUpload.aspx" />
@@ -376,6 +381,13 @@
     <Compile Include="AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Adminsida.aspx.cs">
+      <DependentUpon>Adminsida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adminsida.aspx.designer.cs">
+      <DependentUpon>Adminsida.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="Account\OpenAuthProviders.ascx.cs">
@@ -386,8 +398,22 @@
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Connect.aspx.cs">
+      <DependentUpon>Connect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Connect.aspx.designer.cs">
+      <DependentUpon>Connect.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Hem.aspx.cs">
+      <DependentUpon>Hem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hem.aspx.designer.cs">
+      <DependentUpon>Hem.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -529,6 +555,13 @@
     </Compile>
     <Compile Include="RegistreringNY.aspx.designer.cs">
       <DependentUpon>RegistreringNY.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sagoDelete.aspx.cs">
+      <DependentUpon>sagoDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sagoDelete.aspx.designer.cs">
+      <DependentUpon>sagoDelete.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sagor.aspx.cs">
       <DependentUpon>Sagor.aspx</DependentUpon>

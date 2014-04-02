@@ -14,10 +14,10 @@
             <asp:TextBox runat="server" ID="PrisTB" placeholder="Pris"></asp:TextBox>
             <br />
             <asp:Label runat="server" Text="Välj Fil" CssClass="label PTLabels"></asp:Label>
-            <asp:FileUpload runat="server" ID="minUpload" />
+            <asp:FileUpload runat="server" ID="minUpload" BackColor="White" />
             <br />
             <asp:Label runat="server" Text="Välj bild" CssClass="label PTLabels"></asp:Label>
-            <asp:FileUpload runat="server" ID="bildUpload" />
+            <asp:FileUpload runat="server" ID="bildUpload" BackColor="White" />
             <br />
             <asp:Button runat="server" BackColor="Red" Text="Ladda upp" ID="uploadBTN" CssClass="link" OnClick="uploadBTN_Click" />
             <div class="progress">
