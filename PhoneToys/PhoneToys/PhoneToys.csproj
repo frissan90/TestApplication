@@ -287,6 +287,7 @@
     <Content Include="LaddaUpp.aspx" />
     <Content Include="Light.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Läggatillredaktör.aspx" />
     <Content Include="MinSida.aspx" />
     <Content Include="packages.config" />
     <Content Include="Phonetoys.Master" />
@@ -295,9 +296,12 @@
     <Content Include="RedigeraSagor.aspx" />
     <Content Include="RegisterEllerLogin.aspx" />
     <Content Include="Sagor.aspx" />
+    <Content Include="SagorNY.aspx" />
     <Content Include="SagoUpload.aspx" />
     <Content Include="Phonetoys2.Master" />
     <Content Include="Content\PhoneToysFinal.css" />
+    <Content Include="Spelasaga.aspx" />
+    <Content Include="Testakoppling.aspx" />
     <Content Include="WebForm3.aspx" />
     <Content Include="Editor.aspx" />
     <Content Include="PhoneToysFinal.Master" />
@@ -413,6 +417,13 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Läggatillredaktör.aspx.cs">
+      <DependentUpon>Läggatillredaktör.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Läggatillredaktör.aspx.designer.cs">
+      <DependentUpon>Läggatillredaktör.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MinSida.aspx.cs">
       <DependentUpon>MinSida.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -484,6 +495,13 @@
     <Compile Include="Sagor.aspx.designer.cs">
       <DependentUpon>Sagor.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SagorNY.aspx.cs">
+      <DependentUpon>SagorNY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SagorNY.aspx.designer.cs">
+      <DependentUpon>SagorNY.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -511,6 +529,20 @@
     </Compile>
     <Compile Include="SiteEditor.Master.designer.cs">
       <DependentUpon>SiteEditor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Spelasaga.aspx.cs">
+      <DependentUpon>Spelasaga.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Spelasaga.aspx.designer.cs">
+      <DependentUpon>Spelasaga.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testakoppling.aspx.cs">
+      <DependentUpon>Testakoppling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testakoppling.aspx.designer.cs">
+      <DependentUpon>Testakoppling.aspx</DependentUpon>
     </Compile>
     <Compile Include="Varukorg.aspx.cs">
       <DependentUpon>Varukorg.aspx</DependentUpon>

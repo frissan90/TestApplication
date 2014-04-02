@@ -17,5 +17,6 @@ namespace Entities
         public string Redaktor { get; set; }
         public int Nedladdningar { get; set; }
         public byte[] bild { get; set; }
+        public string bilden { get; set; }
     }
 }

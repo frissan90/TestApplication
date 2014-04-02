@@ -47,10 +47,10 @@
 <body class="large-12">
     <form runat="server">
         <div class="row large-12 medium-12">
-            <header class="row">
-                
+            <header class="row small-12">
+                <%--<div class="row small-12">--%>
                     <asp:Image runat="server" ImageUrl="~/Images/PhoneToysHeader.png" CssClass="headerIMG" />
-                
+                <%--</div>--%>
             </header>
             <div class="row">
                 <div class="large-centered large-12 medium-12 small-12 columns">
@@ -61,7 +61,7 @@
                         <li class="menuitem">
                             <asp:Button ID="Button2" BackColor="Red" CssClass="link" runat="server" Text="Min Sida"></asp:Button></li>
                         <li class="menuitem">
-                            <asp:Button ID="Button1" BackColor="Red" CssClass="link" runat="server" Text="Sagor"></asp:Button></li>
+                            <asp:Button ID="Button1" BackColor="Red" CssClass="link" runat="server" Text="Sagor" PostBackUrl="~/SagorNY"></asp:Button></li>
                         <li class="menuitem">
                             <asp:Button CssClass="link" BackColor="Red" runat="server" Text="Link 4"></asp:Button></li>
                     </ul>
