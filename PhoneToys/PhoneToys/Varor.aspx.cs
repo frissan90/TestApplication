@@ -13,5 +13,10 @@ namespace PhoneToys
         {
 
         }
+
+        protected void VarukorgRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+
+        }
     }
 }
