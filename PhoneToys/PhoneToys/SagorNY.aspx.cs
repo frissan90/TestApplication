@@ -16,24 +16,31 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
+            if (Session["username"] != null)
             {
-
-                List<Saga> Sagor = data.getSaga();
-
-                for (int i = 0; i < Sagor.Count; i++)
+                if (!Page.IsPostBack)
                 {
-                    TypeConverter converter = TypeDescriptor.GetConverter(typeof(Bitmap));
-                    Bitmap bild = (Bitmap)converter.ConvertFrom(Sagor[i].bild);
-                    string imgString = Convert.ToBase64String(Sagor[i].bild);
-                    Sagor[i].bilden = String.Format("data:image/Bmp;base64,{0}\"", imgString);
-                }
-                 
-                SagorLoad.DataSource = Sagor;
-                SagorLoad.DataBind();
-            }
 
-            SagorLoad.ItemCommand += new EventHandler<ListViewCommandEventArgs>(this.SagorLoad_ItemCommand);
+                    List<Saga> Sagor = data.getSaga();
+
+                    for (int i = 0; i < Sagor.Count; i++)
+                    {
+                        TypeConverter converter = TypeDescriptor.GetConverter(typeof(Bitmap));
+                        Bitmap bild = (Bitmap)converter.ConvertFrom(Sagor[i].bild);
+                        string imgString = Convert.ToBase64String(Sagor[i].bild);
+                        Sagor[i].bilden = String.Format("data:image/Bmp;base64,{0}\"", imgString);
+                    }
+
+                    SagorLoad.DataSource = Sagor;
+                    SagorLoad.DataBind();
+                }
+
+                SagorLoad.ItemCommand += new EventHandler<ListViewCommandEventArgs>(this.SagorLoad_ItemCommand);
+            }
+            else
+            {
+                Response.Redirect("LoginNY");
+            }
         }
 
         protected void SagorLoad_ItemCommand(object sender, ListViewCommandEventArgs e)

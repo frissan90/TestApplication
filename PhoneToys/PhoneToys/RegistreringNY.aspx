@@ -38,25 +38,25 @@
         
   <div class="row">
     <div class="large-2 medium-2 small-12 columns">
-                              <div class="label" style="background-color:red;color:yellow;">Användarnamn</div>
+                              <div class="label PTLabels">Användarnamn</div>
               <asp:TextBox ID="UnameTB" runat="server"></asp:TextBox>    </div>
 <%--      <label style="color:darkred;">Användarnamn
         <input type="text" placeholder="" />
       </label>--%>
 
     <div class="large-2 medium-2 small-12 columns">
-                              <div class="label" style="background-color:red;color:yellow;">E-post</div>
+                              <div class="label PTLabels">E-post</div>
               <asp:TextBox ID="EmailTB" runat="server"></asp:TextBox>
     </div>
 
 
           <div class="large-2 medium-2 small-12 columns">
-              <div class="label" style="background-color:red;color:yellow;">Lösenord</div>
+              <div class="label PTLabels">Lösenord</div>
               <asp:TextBox ID="PWTB" runat="server"></asp:TextBox>
 
     </div>
     <div class="large-2 medium-2 small-12 columns">
-                      <div class="label" style="background-color:red;color:yellow;">Bekräfta lösenord</div>
+                      <div class="label PTLabels">Bekräfta lösenord</div>
               <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
 
     </div>

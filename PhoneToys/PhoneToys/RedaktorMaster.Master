@@ -59,7 +59,7 @@
                         <li class="menuitem">
                             <asp:Button ID="Button2" BackColor="Red" CssClass="link" runat="server" Text="Redigera saga" PostBackUrl="~/RedigeraSagor"></asp:Button></li>
                         <li class="menuitem">
-                            <asp:Button ID="Button1" BackColor="Red" CssClass="link" runat="server" Text="Ta bort sagor"></asp:Button></li>
+                            <asp:Button ID="Button1" BackColor="Red" CssClass="link" runat="server" Text="Ta bort sagor" OnClick="Button1_Click"></asp:Button></li>
                     </ul>
                 </div>
             </div>
