@@ -229,6 +229,7 @@
     <Content Include="css\foundation.min.css" />
     <Content Include="css\normalize.css" />
     <Content Include="Images\accent.png" />
+    <Content Include="Images\Bamseimg.gif" />
     <Content Include="Images\bamse.jpg" />
     <Content Include="Images\Bamse2.jpeg" />
     <Content Include="Images\bamsen.jpg" />
@@ -284,9 +285,11 @@
     <Content Include="js\vendor\modernizr.js" />
     <Content Include="js\vendor\placeholder.js" />
     <Content Include="Kassa.aspx" />
+    <Content Include="Koppla.aspx" />
     <Content Include="LaddaUpp.aspx" />
     <Content Include="Light.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="LoginNY.aspx" />
     <Content Include="Läggatillredaktör.aspx" />
     <Content Include="MinSida.aspx" />
     <Content Include="packages.config" />
@@ -294,7 +297,10 @@
     <Content Include="MemberLogin.aspx" />
     <Content Include="PhoneToysFinal.aspx" />
     <Content Include="RedigeraSagor.aspx" />
+    <Content Include="RedigeraSagor1.aspx" />
+    <Content Include="RedigeraSagor2.aspx" />
     <Content Include="RegisterEllerLogin.aspx" />
+    <Content Include="RegistreringNY.aspx" />
     <Content Include="Sagor.aspx" />
     <Content Include="SagorNY.aspx" />
     <Content Include="SagoUpload.aspx" />
@@ -302,6 +308,7 @@
     <Content Include="Content\PhoneToysFinal.css" />
     <Content Include="Spelasaga.aspx" />
     <Content Include="Testakoppling.aspx" />
+    <Content Include="Varor.aspx" />
     <Content Include="WebForm3.aspx" />
     <Content Include="Editor.aspx" />
     <Content Include="PhoneToysFinal.Master" />
@@ -396,6 +403,13 @@
     <Compile Include="Kassa.aspx.designer.cs">
       <DependentUpon>Kassa.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Koppla.aspx.cs">
+      <DependentUpon>Koppla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Koppla.aspx.designer.cs">
+      <DependentUpon>Koppla.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LaddaUpp.aspx.cs">
       <DependentUpon>LaddaUpp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -416,6 +430,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginNY.aspx.cs">
+      <DependentUpon>LoginNY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginNY.aspx.designer.cs">
+      <DependentUpon>LoginNY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Läggatillredaktör.aspx.cs">
       <DependentUpon>Läggatillredaktör.aspx</DependentUpon>
@@ -474,6 +495,20 @@
     <Compile Include="RedigeraSagor.aspx.designer.cs">
       <DependentUpon>RedigeraSagor.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RedigeraSagor1.aspx.cs">
+      <DependentUpon>RedigeraSagor1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RedigeraSagor1.aspx.designer.cs">
+      <DependentUpon>RedigeraSagor1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RedigeraSagor2.aspx.cs">
+      <DependentUpon>RedigeraSagor2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RedigeraSagor2.aspx.designer.cs">
+      <DependentUpon>RedigeraSagor2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -487,6 +522,13 @@
     </Compile>
     <Compile Include="RegisterEllerLogin.aspx.designer.cs">
       <DependentUpon>RegisterEllerLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistreringNY.aspx.cs">
+      <DependentUpon>RegistreringNY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistreringNY.aspx.designer.cs">
+      <DependentUpon>RegistreringNY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sagor.aspx.cs">
       <DependentUpon>Sagor.aspx</DependentUpon>
@@ -543,6 +585,13 @@
     </Compile>
     <Compile Include="Testakoppling.aspx.designer.cs">
       <DependentUpon>Testakoppling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Varor.aspx.cs">
+      <DependentUpon>Varor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Varor.aspx.designer.cs">
+      <DependentUpon>Varor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Varukorg.aspx.cs">
       <DependentUpon>Varukorg.aspx</DependentUpon>

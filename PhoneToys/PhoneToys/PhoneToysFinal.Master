@@ -7,7 +7,7 @@
     <title>Phonetoys.se</title>
     <link href="Content/foundation.css" rel="stylesheet" />
     <link href="Content/PhoneToysFinal.css" rel="stylesheet" type="text/css" />
-    <link href="Content/Site.css" rel="stylesheet" />
+    <%--<link href="Content/Site.css" rel="stylesheet" />--%>
     <script src="js/foundation/foundation.abide.js"></script>
     <script src="js/foundation/foundation.accordion.js"></script>
     <script src="js/foundation/foundation.alert.js"></script>
@@ -38,7 +38,7 @@
     <script src="Scripts/jquery-ui-1.8.24.min.js"></script>
     <script src="Scripts/modernizr-2.6.2.js"></script>
     <script src="js/Jquery.js"></script>
-    <link href="Content/themes/style.css" rel="stylesheet" />
+    <%--<link href="Content/themes/style.css" rel="stylesheet" />--%>
     <script src="js/script.js"></script>
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>

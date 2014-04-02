@@ -51,7 +51,7 @@ namespace DataAccessLayer
                 param4.ParameterName = "@Lname";
                 param4.Value = editor.Lname;
                 cmd.Parameters.Add(param4);
-                
+
                 cmd.ExecuteNonQuery();
 
             }
@@ -141,7 +141,7 @@ namespace DataAccessLayer
                 }
             }
         }
-        
+
         /// <summary>
         /// Authenticates a user 
         /// </summary>
@@ -454,16 +454,16 @@ namespace DataAccessLayer
                     sagorna.Add(sagan);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
             }
             finally
             {
-                if(con != null)
+                if (con != null)
                 {
                     con.Close();
                 }
-                if(reader != null)
+                if (reader != null)
                 {
                     reader.Close();
                 }
@@ -541,5 +541,119 @@ namespace DataAccessLayer
 
             return Data;
         }
+
+        public Saga geteditSaga(string saga)
+        {
+            String Query = @"Select * from Saga where Namn = @Saga";
+
+            SqlDataReader rdr = null;
+
+            Saga saga2 = new Saga();
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                SqlParameter pmr = new SqlParameter();
+
+                pmr.ParameterName = "@Saga";
+
+                pmr.Value = saga;
+
+                cmd.Parameters.Add(pmr);
+
+                rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    saga2.Namn = (string)rdr["Namn"];
+
+                    saga2.Beskrivning = (string)rdr["Beskrivning"];
+
+                    saga2.Pris = (int)rdr["Pris"];
+
+                    saga2.bild = (byte[])rdr["Bild"];
+
+                }
+
+
+
+            }
+
+            catch (Exception ex)
+            {
+
+            }
+
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+
+            }
+            return saga2;
+        }
+        public void editSaga(string Namn, Saga saga)
+        {
+            String query = "Update Saga set Namn = @Namn, Beskrivning = @Beskrivning, Pris = @Pris, Bild = @Bild where Namn = @Namnet";
+
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                SqlParameter pmr = new SqlParameter();
+
+                SqlParameter param = new SqlParameter();
+                param.ParameterName = "@Namn";
+                param.Value = saga.Namn;
+                cmd.Parameters.Add(param);
+
+                SqlParameter param2 = new SqlParameter();
+                param2.ParameterName = "@Beskrivning";
+                param2.Value = saga.Beskrivning;
+                cmd.Parameters.Add(param2);
+
+                SqlParameter param3 = new SqlParameter();
+                param3.ParameterName = "@Pris";
+                param3.Value = saga.Pris;
+                cmd.Parameters.Add(param3);
+
+                SqlParameter param4 = new SqlParameter();
+                param4.ParameterName = "@Bild";
+                param4.Value = saga.bild;
+                cmd.Parameters.Add(param4);
+
+                SqlParameter param5 = new SqlParameter();
+                param5.ParameterName = "@Namnet";
+                param5.Value = saga.Namn;
+                cmd.Parameters.Add(param5);
+
+                cmd.ExecuteNonQuery();
+
+            }
+
+            catch
+            {
+
+            }
+
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+
+            }
+
+        }
     }
 }
+
