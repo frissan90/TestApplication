@@ -66,7 +66,7 @@
             <div id="bodyContent">
                 <asp:ContentPlaceHolder runat="server" ID="body" />
             </div>
-            <footer class="row collapse">
+            <%--<footer class="row collapse">
                 <div class="large-12">
                     <div class="row">
                         <div class="large-6">
@@ -75,7 +75,7 @@
                     </div>
                 </div>
 
-            </footer>
+            </footer>--%>
 
 
         </div>

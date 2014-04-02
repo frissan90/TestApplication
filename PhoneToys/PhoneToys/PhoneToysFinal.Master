@@ -46,7 +46,7 @@
 </head>
 <body class="large-12">
     <form runat="server">
-        <%--<div class="row large-12">--%>
+        <div class="row large-12 medium-12">
             <header class="row">
                 
                     <asp:Image runat="server" ImageUrl="~/Images/PhoneToysHeader.png" CssClass="headerIMG" />
@@ -70,7 +70,7 @@
             <div id="bodyContent">
                 <asp:ContentPlaceHolder runat="server" ID="body" />
             </div>
-            <footer class="row collapse">
+            <%--<footer class="row collapse">
                 <div class="large-12">
                     <div class="row">
                         <div class="large-6">
@@ -79,10 +79,10 @@
                     </div>
                 </div>
 
-            </footer>
+            </footer>--%>
 
 
-        <%--</div>--%>
+        </div>
     </form>
     <script src="js/Jquery.js"></script>
     <script src="js/ResponsiveImgMap.js"></script>
