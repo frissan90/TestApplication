@@ -44,7 +44,7 @@
             </div>
 
             <asp:ValidationSummary DisplayMode="List" ID="ValidationSummary1A" runat="server" ValidationGroup="registerEditor" />
-            <asp:Button runat="server" CssClass=" PTLabels button radius large-4 medium-3 small-3" ID="registerEditorBTN" Text="Register" ValidationGroup="registerEditor" Onclick="registerEditorBTN_Click"/>
+            <asp:Button runat="server" CssClass="PTLabels button radius large-4 medium-3 small-3" ID="registerEditorBTN" Text="Register" ValidationGroup="registerEditor" Onclick="registerEditorBTN_Click"/>
 
         </div>
     </div>

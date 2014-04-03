@@ -8,5 +8,7 @@
         <br />
         <audio controls="controls">
         </audio>
+        <br />
+        <asp:Button runat="server" ID="spelaBTN" OnClick="spelaBTN_Click" CssClass="link" Text="Spela"/>
     </div>
 </asp:Content>

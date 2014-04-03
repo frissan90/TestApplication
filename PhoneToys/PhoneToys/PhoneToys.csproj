@@ -166,6 +166,8 @@
     <Content Include="Admin.aspx" />
     <Content Include="AdminLogin.aspx" />
     <Content Include="Adminsida.aspx" />
+    <Content Include="Bekraftelse.aspx" />
+    <Content Include="Betala.aspx" />
     <Content Include="Connect.aspx" />
     <Content Include="Content\foundation.css" />
     <Content Include="Content\MasterCSS.css" />
@@ -407,6 +409,20 @@
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Bekraftelse.aspx.cs">
+      <DependentUpon>Bekraftelse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bekraftelse.aspx.designer.cs">
+      <DependentUpon>Bekraftelse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Betala.aspx.cs">
+      <DependentUpon>Betala.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Betala.aspx.designer.cs">
+      <DependentUpon>Betala.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Connect.aspx.cs">
       <DependentUpon>Connect.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

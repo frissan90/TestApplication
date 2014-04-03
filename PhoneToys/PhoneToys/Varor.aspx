@@ -48,13 +48,6 @@
 
          <asp:Label ID="totalPrisLB" runat="server" CssClass="row-hoger" Text="123"></asp:Label>
         </div>
-
-        <%--<div class="large-20" style="border: solid;">
-            <h3>Hej</h3>
-        </div>
-
-        <div class="large-20" style="border: solid;">
-            <h3>Hej</h3>
-        </div>--%>
+        <asp:Button runat="server" PostBackUrl="~/Betala" />
     </div>
 </asp:Content>

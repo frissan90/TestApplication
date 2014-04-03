@@ -25,7 +25,7 @@
     <div class="row">
                     <div class="row-vanster">
                         <div class="large-12 medium-10 small-6">
-        <asp:Image runat="server" ID="Vargbild" Imageurl="Images/vargen.png" /></div>
+        <asp:Image runat="server" ID="Vargbild" Imageurl="Images/vargen2.png" /></div>
         </div>
 
                 <br />
@@ -52,12 +52,12 @@
 
           <div class="large-2 medium-2 small-12 columns">
               <div class="label PTLabels">Lösenord</div>
-              <asp:TextBox ID="PWTB" runat="server"></asp:TextBox>
+              <asp:TextBox ID="PWTB" runat="server" TextMode="Password"></asp:TextBox>
 
     </div>
     <div class="large-2 medium-2 small-12 columns">
                       <div class="label PTLabels">Bekräfta lösenord</div>
-              <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+              <asp:TextBox ID="TextBox4" TextMode="Password" runat="server"></asp:TextBox>
 
     </div>
 
