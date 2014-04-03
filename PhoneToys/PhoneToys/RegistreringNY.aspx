@@ -38,7 +38,7 @@
         
   <div class="row">
     <div class="large-2 medium-2 small-12 columns">
-                              <div class="label PTLabels">Användarnamn</div>
+                              <div class="label PTLabels">Användartnamn</div>
               <asp:TextBox ID="UnameTB" runat="server"></asp:TextBox>    </div>
 <%--      <label style="color:darkred;">Användarnamn
         <input type="text" placeholder="" />
