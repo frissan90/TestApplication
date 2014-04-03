@@ -25,7 +25,7 @@
     <div class="row">
                     <div class="row-vanster">
                         <div class="large-12 medium-10 small-6">
-        <asp:Image runat="server" ID="Vargbild" Imageurl="Images/vargen2.png" /></div>
+        <asp:Image runat="server" ID="Vargbild" Imageurl="~/Images/vargen2.png" /></div>
         </div>
 
                 <br />
