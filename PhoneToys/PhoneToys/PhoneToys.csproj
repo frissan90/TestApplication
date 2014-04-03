@@ -264,6 +264,7 @@
     <Content Include="Images\startPageIMG2.png" />
     <Content Include="Images\startPageIMG3.png" />
     <Content Include="Images\vargen.png" />
+    <Content Include="Images\vargen2.png" />
     <Content Include="Index.aspx" />
     <Content Include="js\foundation.min.js" />
     <Content Include="js\foundation\foundation.abide.js" />
