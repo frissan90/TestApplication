@@ -16,6 +16,11 @@ namespace PhoneToys
 
         protected void Page_Load(object sender, EventArgs sagoNamn)
         {
+            if (Request.QueryString["Saga"] == null)
+            {
+                Response.Redirect("RedigeraSagor1");
+            }
+
             Saga sagan = data.geteditSaga(Request.QueryString["Saga"]);
 
             editNamntbx.Text = sagan.Namn;

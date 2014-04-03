@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PhoneToysFinal.Master" AutoEventWireup="true" CodeBehind="Adminsida.aspx.cs" Inherits="PhoneToys.Adminsida" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminFinal.Master" AutoEventWireup="true" CodeBehind="Adminsida.aspx.cs" Inherits="PhoneToys.Adminsida" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
@@ -44,7 +44,7 @@
             </div>
 
             <asp:ValidationSummary DisplayMode="List" ID="ValidationSummary1A" runat="server" ValidationGroup="registerEditor" />
-            <asp:Button runat="server" CssClass="button radius large-4 medium-3 small-3" ID="registerEditorBTN" Text="Register" ValidationGroup="registerEditor" Onclick="registerEditorBTN_Click"/>
+            <asp:Button runat="server" CssClass=" PTLabels button radius large-4 medium-3 small-3" ID="registerEditorBTN" Text="Register" ValidationGroup="registerEditor" Onclick="registerEditorBTN_Click"/>
 
         </div>
     </div>

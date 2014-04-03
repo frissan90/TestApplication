@@ -31,9 +31,6 @@ namespace PhoneToys
             editor.Lname = LnameATB.Text;
 
             data.Register(editor);
-            Session["Username"] = EmailATB.Text;
-
-
         }
     }
 }

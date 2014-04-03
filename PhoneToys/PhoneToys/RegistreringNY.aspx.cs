@@ -27,6 +27,12 @@ namespace PhoneToys
             user.Email = EmailTB.Text;
 
             data.Register(user);
+
+            Session["username"] = UnameTB.Text;
+
+            Session["varukorg"] = new List<Varukorgen>();
+
+            Response.Redirect("Hem");
         }
     }
 }

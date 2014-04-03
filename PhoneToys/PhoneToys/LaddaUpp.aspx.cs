@@ -17,7 +17,10 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Session["Editor"] == null)
+            {
+                Response.Redirect("LoginNY");
+            }
         }
 
         protected void uploadBTN_Click(object sender, EventArgs e)
@@ -31,7 +34,7 @@ namespace PhoneToys
             sagan.Namn = Path.GetFileName(minUpload.PostedFile.FileName).Split('.').ElementAt(0);
             sagan.Beskrivning = BeskrivningTB.Text;
             sagan.Pris = Convert.ToInt32(PrisTB.Text);
-            sagan.Redaktor = "Editor001";
+            sagan.Redaktor = Session["Editor"].ToString();
 
             BinaryReader sagaReader = new BinaryReader(minUpload.PostedFile.InputStream);
 

@@ -8,7 +8,7 @@
             <asp:TextBox ID="userTB" runat="server"></asp:TextBox>
 
             <asp:Label runat="server" ID="Label1" Text="Lösenord"></asp:Label>
-            <asp:TextBox ID="passwordTB" runat="server"></asp:TextBox>
+            <asp:TextBox ID="passwordTB" TextMode="Password" runat="server"></asp:TextBox>
 
            <asp:ImageButton ID="LoginBtn" runat="server" imageUrl="Images/Login.png" Borderwidth="0" OnClick="LoginBtn_Click"/>
 

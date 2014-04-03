@@ -61,7 +61,7 @@ namespace PhoneToys
 
             Session["varukorg"] = varor;
 
-            Response.Redirect("Sagor");
+            Response.Redirect("SagorNY");
         }
     }
 }
