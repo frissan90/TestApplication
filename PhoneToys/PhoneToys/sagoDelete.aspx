@@ -29,7 +29,7 @@
                                 <td><%#Eval("Pris") %></td>
                                
                                 <td class="uploadSagaRemoveBTN">
-                                    <asp:LinkButton ID="LinkButton2" CssClass="uploadSagaRemoveBTN button radius" CommandName="remove" runat="server" Text="Ta bort"></asp:LinkButton></td>
+                                    <asp:LinkButton OnClientClick="return confirm('Vill du verkligen ta bort sagan??')" ID="LinkButton2" CssClass="uploadSagaRemoveBTN button radius" CommandName="remove" runat="server" Text="Ta bort"></asp:LinkButton></td>
                             </tr>
                         </ItemTemplate>
                         <SeparatorTemplate>

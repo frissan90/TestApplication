@@ -40,6 +40,7 @@
     <script src="js/Jquery.js"></script>
     <%--<link href="Content/themes/style.css" rel="stylesheet" />--%>
     <script src="js/script.js"></script>
+    <script src="js/PhoneToysScript.js"></script>
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 
