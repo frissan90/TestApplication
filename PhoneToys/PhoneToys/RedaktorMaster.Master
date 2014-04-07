@@ -57,9 +57,9 @@
                         <li class="menuitem">
                             <asp:Button ID="Button3" BackColor="Red" CssClass="link" runat="server" Text="Ladda upp saga" PostBackUrl="~/LaddaUpp"></asp:Button></li>
                         <li class="menuitem">
-                            <asp:Button ID="Button2" BackColor="Red" CssClass="link" runat="server" Text="Redigera saga" PostBackUrl="~/RedigeraSagor"></asp:Button></li>
+                            <asp:Button ID="Button2" BackColor="Red" CssClass="link" runat="server" Text="Redigera saga" PostBackUrl="~/RedigeraSagor1"></asp:Button></li>
                         <li class="menuitem">
-                            <asp:Button ID="Button1" BackColor="Red" CssClass="link" runat="server" Text="Ta bort sagor" OnClick="Button1_Click"></asp:Button></li>
+                            <asp:Button ID="Button1" BackColor="Red" CssClass="link" runat="server" Text="Ta bort sagor" PostBackUrl="~/sagoDelete"></asp:Button></li>
                     </ul>
                 </div>
             </div>

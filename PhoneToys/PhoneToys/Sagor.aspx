@@ -68,7 +68,7 @@
             <asp:PlaceHolder ID="groupPlaceholder" runat="server"></asp:PlaceHolder>
         </LayoutTemplate>
         <GroupTemplate>
-            <div class="large-8 columns" id="itemPlaceholder" runat="server">
+            <div class="large-8" id="itemPlaceholder" runat="server">
                 <div class="row">
 
                 </div>

@@ -14,7 +14,13 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
+            HttpCookie ourCookie = Request.Cookies["PTKAKA"];
 
+            if (ourCookie != null)
+            {
+                Session["username"] = ourCookie["Username"];
+                Response.Redirect("Hem");
+            }
         }
 
         protected void LoginBtn_Click(object sender, ImageClickEventArgs e)
@@ -24,6 +30,14 @@ namespace PhoneToys
                 Session["username"] = userTB.Text;
 
                 Session["varukorg"] = new List<Varukorgen>();
+
+                HttpCookie PhoneToysCookie = new HttpCookie("PTKAKA");
+
+                PhoneToysCookie["Username"] = userTB.Text;
+
+                PhoneToysCookie.Expires = DateTime.Now.AddDays(30);
+
+                Response.Cookies.Add(PhoneToysCookie);
 
                 Response.Redirect("Hem");
             }

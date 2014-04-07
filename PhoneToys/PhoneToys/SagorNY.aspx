@@ -10,16 +10,16 @@
                 <asp:PlaceHolder ID="groupPlaceholder" runat="server"></asp:PlaceHolder>
             </LayoutTemplate>
             <GroupTemplate>
-                <div class="large-8n" id="itemPlaceholder" runat="server">
-                    <div class="row">
+                <div class="large-8" id="itemPlaceholder" runat="server">
+                    <%--<div class="row">
 
-                    </div>
+                    </div>--%>
                 </div>
             </GroupTemplate>
             <ItemTemplate>
 
                 <div class="large-8 medium-6 small-12">
-                    <img src='<%#Eval("bilden") %>' id="Image1" runat="server" class="large-4 medium-4 small-6" />
+                    <img src='<%#Eval("bilden") %>' id="Image1" runat="server" style="border: 1px solid black" class="large-4 medium-4 small-6" />
                     <div class="panel large-4 medium-4 small-6" style="background-color:grey;">
                         <h5>
                             <asp:Label CssClass="large-1 medium-1 small-1 tiny" runat="server" ID="text" Text='<%#Eval("Namn") %>' Style="color: whitesmoke"></asp:Label></h5>
