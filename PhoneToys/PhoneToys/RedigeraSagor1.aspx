@@ -14,7 +14,7 @@
         </GroupTemplate>
         <ItemTemplate>
             <div class="large-8 medium-6 small-12 columns">
-              <Img ID="Image1" runat="server" CssClass="large-4 medium-4 small-6" src='<%#Eval("bilden") %>' />
+              <Img ID="Image1" runat="server" class="large-4 medium-4 small-6" src='<%#Eval("bilden") %>' />
               <div class="panel large-4 medium-4 small-6" style="background-color:grey;">
                 <h5><asp:Label CssClass="large-1 medium-1 small-1 tiny" runat="server" ID="text" Text='<%#Eval("Namn") %>' style="color:whitesmoke"></asp:Label></h5>
                 <h6 class="subheader"><asp:Label runat="server" ID="pris" Text='<%#Eval("Pris") + " kr/st" %>' style="color:whitesmoke"></asp:Label></h6>
