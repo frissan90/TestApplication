@@ -31,6 +31,27 @@ namespace PhoneToys
                 sagoRepeater.DataSource = Sagor;
                 sagoRepeater.DataBind();
             }
+            sagoRepeater.ItemCommand += new RepeaterCommandEventHandler(this.sagoRepeater_ItemCommand);
+        }
+
+        protected void sagoRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            if (e.CommandName == "edit")
+            {
+                string saga = ((Label)e.Item.FindControl("Namn")).Text;
+
+                Response.Redirect("RedigeraSagor2?Saga=" + saga);
+            }
+
+            if (e.CommandName == "remove")
+            {
+                string sagan = ((Label)e.Item.FindControl("Namn")).Text;
+
+                data.removeSaga(sagan);
+
+                sagoRepeater.DataSource = data.getSaga();
+            }
+            sagoRepeater.DataBind();
         }
     }
 }

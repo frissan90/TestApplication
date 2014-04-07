@@ -7,6 +7,8 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using Entities;
 using System.Web;
+using System.ComponentModel;
+using System.Drawing;
 
 namespace DataAccessLayer
 {
@@ -300,7 +302,7 @@ namespace DataAccessLayer
 
         public List<Saga> getSaga()
         {
-            List<Saga> sagor = new List<Saga>();
+            List<Saga> Sagor = new List<Saga>();
 
             SqlDataReader reader = null;
 
@@ -324,8 +326,17 @@ namespace DataAccessLayer
                     sagan.Beskrivning = (string)reader["Beskrivning"];
                     sagan.bild = (byte[])reader["Bild"];
 
-                    sagor.Add(sagan);
+                    Sagor.Add(sagan);
                 }
+
+                for (int i = 0; i < Sagor.Count; i++)
+                {
+                    TypeConverter converter = TypeDescriptor.GetConverter(typeof(Bitmap));
+                    Bitmap bild = (Bitmap)converter.ConvertFrom(Sagor[i].bild);
+                    string imgString = Convert.ToBase64String(Sagor[i].bild);
+                    Sagor[i].bilden = String.Format("data:image/Bmp;base64,{0}\"", imgString);
+                }
+
             }
             catch (Exception ex)
             {
@@ -342,7 +353,7 @@ namespace DataAccessLayer
                 }
             }
 
-            return sagor;
+            return Sagor;
 
         }
 

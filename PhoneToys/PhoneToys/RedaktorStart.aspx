@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
     <div class="row">
-        <asp:Repeater runat="server" ID="sagoRepeater">
+        <asp:Repeater runat="server" ID="sagoRepeater" OnItemCommand="sagoRepeater_ItemCommand">
             <HeaderTemplate>
                 <table class="large-10 medium-8 small-6">
                     <tr>
@@ -12,7 +12,7 @@
                         <th align="left">Namn</th>
                         <th align="left">Antal</th>
                         <th align="left">Pris</th>
-
+                        <th align="left">Beskrivning</th>
                     </tr>
             </HeaderTemplate>
             <ItemTemplate>
@@ -20,7 +20,7 @@
                     <td>
                         <Img src='<%#Eval("bilden") %>' ID="Image1" runat="server" Width="30" Height="30" /></td>
                     <td>
-                        <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Sagolink" Text='<%#Eval("Namn") %>' ForeColor="Black"></asp:LinkButton>
+                        <asp:Label ID="Namn" runat="server" CommandName="Sagolink" Text='<%#Eval("Namn") %>' ForeColor="Black"></asp:Label>
 
                     <td>
                         <asp:Label runat="server" ID="antal" Text='<%#Eval("Langd") %>'></asp:Label></td>

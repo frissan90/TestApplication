@@ -45,7 +45,7 @@ namespace PhoneToys
             if(data.authenticateEditor(userTB.Text, passwordTB.Text))
             {
                 Session["Editor"] = userTB.Text;
-                Response.Redirect("LaddaUpp");
+                Response.Redirect("RedaktorStart");
             }
 
             if (data.authenticateAdmin(userTB.Text, passwordTB.Text))
