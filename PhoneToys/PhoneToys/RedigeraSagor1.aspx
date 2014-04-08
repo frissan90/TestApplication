@@ -3,6 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
     <div class="row">
+        <asp:Image runat="server" ImageUrl="~/Images/nySaga.png" CssClass="row-hoger" />
     <asp:ListView runat="server" ID="SagorEditLoad" GroupItemCount="1" OnItemCommand="SagorEditLoad_ItemCommand">
         <LayoutTemplate>
             <asp:PlaceHolder ID="groupPlaceholder" runat="server"></asp:PlaceHolder>
