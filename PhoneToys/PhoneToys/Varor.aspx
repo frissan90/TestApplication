@@ -18,6 +18,7 @@
                 </HeaderTemplate>
 
                 <ItemTemplate>
+                    
                     <tr>
                         <td>
                             <asp:Image ID="Image1" runat="server" Width="30px" Height="30px" ImageUrl="http://lorempixel.com/150/120/technics/" /></td>
@@ -31,7 +32,7 @@
 
                         <td><asp:LinkButton runat="server" ID="varukorgRemoveBTN" Text="Ta bort" CommandName="Remove"></asp:LinkButton></td>
                     </tr>
-
+                        
                 </ItemTemplate>
                 <SeparatorTemplate>
                     <tr>

@@ -4,10 +4,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
     <div class="row">
-        <asp:ImageButton ID="Image2" runat="server" ImageUrl="~/Images/nySaga.png" PostBackUrl="~/LaddaUpp" />
         <asp:Repeater runat="server" ID="sagoRepeater" OnItemCommand="sagoRepeater_ItemCommand">
-                        <HeaderTemplate>
-                <table class="large-10 medium-8 small-6">
+            <HeaderTemplate>
+                <asp:ImageButton ID="Image2" runat="server" CssClass="newSagaIMG large-2 medium-4 small-2" ImageUrl="~/Images/nySaga.png" ToolTip="Ny saga" PostBackUrl="~/LaddaUpp" />
+
+                <table class="large-10 medium-8 small-12">
                     <tr>
                         <th align="left"></th>
                         <th align="left">Namn</th>
@@ -17,27 +18,28 @@
                     </tr>
             </HeaderTemplate>
             <ItemTemplate>
-                <tr>
-                    <td>
-                        <Img src='<%#Eval("bilden") %>' ID="Image1" runat="server" Width="30" Height="30" /></td>
-                    <td>
-                        <asp:Label ID="Namn" runat="server" CommandName="Sagolink" Text='<%#Eval("Namn") %>' ForeColor="Black"></asp:Label>
+                <div class="large-10 medium-8 small-12">
+                    <tr>
+                        <td>
+                            <img src='<%#Eval("bilden") %>' id="Image1" runat="server" width="30" height="30" /></td>
+                        <td>
+                            <asp:Label ID="Namn" runat="server" CommandName="Sagolink" Text='<%#Eval("Namn") %>' ForeColor="Black"></asp:Label>
 
-                    <td>
-                        <asp:Label runat="server" ID="antal" Text='<%#Eval("Langd") %>'></asp:Label></td>
-                    <td>
-                        <asp:Label runat="server" ID="pris" Text='<%#Eval("Pris") %>'></asp:Label></td>
-                    <td>
-                        <asp:TextBox runat="server" TextMode="MultiLine" Text='<%#Eval("Beskrivning") %>'></asp:TextBox>
-                    </td>
-                    <td>
-                        <asp:ImageButton runat="server" ID="sagaEditimg" CommandName="edit" ImageUrl="~/Images/gtk-edit.png" />
-                    </td>
-                    <td>
-                        <asp:ImageButton runat="server" ID="sagaRemoveimg" Width="30px" Height="30px" ImageUrl="~/Images/deleteIMG.png" CommandName="remove" OnClientClick="return confirm('Vill du verkligen ta bort sagan?')" />
+                        <td>
+                            <asp:Label runat="server" ID="antal" Text='<%#Eval("Langd") %>'></asp:Label></td>
+                        <td>
+                            <asp:Label runat="server" ID="pris" Text='<%#Eval("Pris") %>'></asp:Label></td>
+                        <td>
+                            <asp:TextBox runat="server" TextMode="MultiLine" Text='<%#Eval("Beskrivning") %>'></asp:TextBox>
                         </td>
-                </tr>
-
+                        <td>
+                            <asp:ImageButton runat="server" ID="sagaEditimg" CommandName="edit" ImageUrl="~/Images/gtk-edit.png" ToolTip="Redigera saga" />
+                        </td>
+                        <td>
+                            <asp:ImageButton runat="server" ID="sagaRemoveimg" Width="30px" Height="30px" ImageUrl="~/Images/deleteIMG.png" ToolTip="Ta bort saga" CommandName="remove" OnClientClick="return confirm('Vill du verkligen ta bort sagan?')" />
+                        </td>
+                    </tr>
+                </div>
             </ItemTemplate>
             <SeparatorTemplate>
                 <tr>
@@ -47,8 +49,8 @@
                 </tr>
             </SeparatorTemplate>
             <FooterTemplate>
-                    </table>
-                </FooterTemplate>
+                </table>
+            </FooterTemplate>
         </asp:Repeater>
     </div>
 </asp:Content>
