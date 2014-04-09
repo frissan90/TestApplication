@@ -50,7 +50,7 @@
         <div class="row large-12 medium-12">
             <header class="row small-12">
                 <%--<div class="row small-12">--%>
-                    <asp:Image runat="server" ImageUrl="~/Images/PhoneToysHeader.png" CssClass="headerIMG" />
+                    <asp:ImageButton PostBackUrl="~/Hem" runat="server" ImageUrl="~/Images/PhoneToysHeader.png" CssClass="headerIMG" />
                 <%--</div>--%>
             </header>
             <div class="row">

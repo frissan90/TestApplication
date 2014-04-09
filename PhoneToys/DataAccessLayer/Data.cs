@@ -661,9 +661,51 @@ namespace DataAccessLayer
                 {
                     con.Close();
                 }
+            }
+        }
 
+        public Bamse getBamseInfo(string BamseID)
+        {
+            Bamse bamsen = new Bamse();
+
+            string Query = @"select * from Bamse where BamseID = @BamseID";
+
+            SqlDataReader reader = null;
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                SqlParameter param = new SqlParameter("@BamseID", BamseID);
+                cmd.Parameters.Add(param);
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    bamsen.BamseId = (string)reader["BamseID"];
+                    bamsen.DeviceID = (string)reader["DeviceID"];
+                    bamsen.Token = (string)reader["Token"];
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+                if (reader != null)
+                {
+                    reader.Close();
+                }
             }
 
+            return bamsen;
         }
     }
 }

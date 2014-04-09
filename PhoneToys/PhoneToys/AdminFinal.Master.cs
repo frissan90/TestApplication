@@ -11,7 +11,11 @@ namespace PhoneToys
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            HttpCookie kaka = Request.Cookies["ADMINKAKA"];
+            if (kaka == null)
+            {
+                Response.Redirect("Loginny");
+            }
         }
     }
 }

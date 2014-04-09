@@ -6,19 +6,18 @@
     <div class="row">
         <asp:Repeater runat="server" ID="sagoRepeater" OnItemCommand="sagoRepeater_ItemCommand">
             <HeaderTemplate>
-                <asp:ImageButton ID="Image2" runat="server" CssClass="newSagaIMG large-2 medium-4 small-2" ImageUrl="~/Images/nySaga.png" ToolTip="Ny saga" PostBackUrl="~/LaddaUpp" />
-
-                <table class="large-10 medium-8 small-12">
+                <table class="large-10 medium-10 small-10">
                     <tr>
-                        <th align="left"></th>
-                        <th align="left">Namn</th>
-                        <th align="left">Antal</th>
-                        <th align="left">Pris</th>
-                        <th align="left">Beskrivning</th>
+                        <asp:ImageButton ID="Image2" runat="server" CssClass="newSagaIMG" ImageUrl="~/Images/nySaga.png" ToolTip="Ny saga" PostBackUrl="~/LaddaUpp" />
+                        <th></th>
+                        <th>Namn</th>
+                        <th>Längd</th>
+                        <th>Pris</th>
+                        <th>Beskrivning</th>
                     </tr>
             </HeaderTemplate>
             <ItemTemplate>
-                <div class="large-10 medium-8 small-12">
+                <div>
                     <tr>
                         <td>
                             <img src='<%#Eval("bilden") %>' id="Image1" runat="server" width="30" height="30" /></td>
@@ -36,7 +35,7 @@
                             <asp:ImageButton runat="server" ID="sagaEditimg" CommandName="edit" ImageUrl="~/Images/gtk-edit.png" ToolTip="Redigera saga" />
                         </td>
                         <td>
-                            <asp:ImageButton runat="server" ID="sagaRemoveimg" Width="30px" Height="30px" ImageUrl="~/Images/deleteIMG.png" ToolTip="Ta bort saga" CommandName="remove" OnClientClick="return confirm('Vill du verkligen ta bort sagan?')" />
+                            <asp:ImageButton runat="server" ID="sagaRemoveimg" Width="30px" Height="30px" ImageUrl="~/Images/remove.png" ToolTip="Ta bort saga" CommandName="remove" OnClientClick="return confirm('Vill du verkligen ta bort sagan?')" />
                         </td>
                     </tr>
                 </div>

@@ -14,10 +14,10 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Admin"] == null)
-            {
-                Response.Redirect("LoginNY");
-            }
+            //if (Session["Admin"] == null)
+            //{
+            //    Response.Redirect("LoginNY");
+            //}
         }
 
         protected void registerEditorBTN_Click(object sender, EventArgs e)

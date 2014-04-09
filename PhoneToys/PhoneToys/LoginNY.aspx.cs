@@ -18,16 +18,16 @@ namespace PhoneToys
 
             if (ourCookie != null)
             {
-                Session["username"] = ourCookie["Username"];
                 Response.Redirect("Hem");
             }
+            
         }
 
         protected void LoginBtn_Click(object sender, ImageClickEventArgs e)
         {
             if(data.authenticateUser(userTB.Text, passwordTB.Text))
             {
-                Session["username"] = userTB.Text;
+                //Session["username"] = userTB.Text;
 
                 Session["varukorg"] = new List<Varukorgen>();
 
@@ -44,13 +44,21 @@ namespace PhoneToys
 
             if(data.authenticateEditor(userTB.Text, passwordTB.Text))
             {
-                Session["Editor"] = userTB.Text;
+                HttpCookie cheeseCake = new HttpCookie("EDITORKAKA");
+                cheeseCake["Editor"] = userTB.Text;
+                cheeseCake.Expires = DateTime.Now.AddDays(30);
+                Response.Cookies.Add(cheeseCake);
+                //Session["Editor"] = userTB.Text;
                 Response.Redirect("RedaktorStart");
             }
 
             if (data.authenticateAdmin(userTB.Text, passwordTB.Text))
             {
-                Session["Admin"] = userTB.Text;
+                HttpCookie chocolateChipCookie = new HttpCookie("ADMINKAKA");
+                chocolateChipCookie["Admin"] = userTB.Text;
+                chocolateChipCookie.Expires = DateTime.Now.AddDays(30);
+                Response.Cookies.Add(chocolateChipCookie);
+                //Session["Admin"] = userTB.Text;
                 Response.Redirect("Adminsida");
             }
         }

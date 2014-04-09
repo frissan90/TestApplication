@@ -70,6 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bamse.cs" />
     <Compile Include="Editor.cs" />
     <Compile Include="Saga.cs" />
     <Compile Include="Test.cs" />

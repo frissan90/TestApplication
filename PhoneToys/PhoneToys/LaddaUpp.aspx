@@ -4,6 +4,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
 
+    <script>
+        $('#uploadBTN').click( alert('Knapp tryckt'));
+    </script>
+
     <div class="center">
         <br />
         <br />
@@ -20,9 +24,9 @@
             <asp:FileUpload runat="server" ID="bildUpload" BackColor="White" />
             <br />
             <asp:Button runat="server" BackColor="Red" Text="Ladda upp" ID="uploadBTN" CssClass="link" OnClick="uploadBTN_Click" />
-            <div class="progress">
-                <div class="meter"></div>
-            </div>
+
+            <div class="progress meter pb"></div>
+
         </div>
     </div>
 </asp:Content>

@@ -260,6 +260,7 @@
     <Content Include="Global.asax" />
     <Content Include="Images\PhoneToysHeader.png" />
     <Content Include="Images\play.gif" />
+    <Content Include="Images\remove.png" />
     <Content Include="Images\Shellman.png" />
     <Content Include="Images\startPageIMG.png" />
     <Content Include="Images\startPageIMG2.png" />
