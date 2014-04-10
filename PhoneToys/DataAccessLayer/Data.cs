@@ -129,6 +129,9 @@ namespace DataAccessLayer
                 param9.Value = user.Uname;
                 cmd.Parameters.Add(param9);
 
+                SqlParameter param10 = new SqlParameter("@Bamse", user.Bamse);
+                cmd.Parameters.Add(param10);
+
                 cmd.ExecuteNonQuery();
 
             }

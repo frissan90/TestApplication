@@ -30,6 +30,7 @@ namespace PhoneToys
             user.Uname = UnameTB.Text;
             user.Password = PWTB.Text;
             user.Email = EmailTB.Text;
+            user.Bamse = Request.Cookies["BAMSE"].Value;
 
             data.Register(user);
 
