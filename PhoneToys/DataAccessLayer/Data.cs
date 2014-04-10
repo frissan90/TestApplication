@@ -75,7 +75,7 @@ namespace DataAccessLayer
         /// <param name="user">Info about the new user</param>
         public void Register(User user)
         {
-            string Query = @"insert into Member values(@Uname, @Email, @PW, null, null, null, null, null, null)";
+            string Query = @"insert into Member values(@Uname, @Email, @PW, null, null, null, null, null, null, @Bamse)";
 
             try
             {
