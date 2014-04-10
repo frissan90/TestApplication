@@ -14,10 +14,6 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (HttpContext.Current.Request.Cookies["PTKAKA"] != null)
-            {
-                Response.Redirect("Hem");
-            }
             
         }
 
@@ -25,12 +21,11 @@ namespace PhoneToys
         {
             if(data.authenticateUser(userTB.Text, passwordTB.Text))
             {
-                //Session["username"] = userTB.Text;
+                Session["username"] = userTB.Text;
 
                 Session["varukorg"] = new List<Varukorgen>();
 
-                HttpCookie PhoneToysCookie = new HttpCookie("PTKAKA");
-                PhoneToysCookie["Username"] = userTB.Text;
+                HttpCookie PhoneToysCookie = new HttpCookie("PTKAKA", "inloggad");
 
                 PhoneToysCookie.Expires = DateTime.Now.AddDays(30);
 
@@ -41,21 +36,19 @@ namespace PhoneToys
 
             if(data.authenticateEditor(userTB.Text, passwordTB.Text))
             {
-                HttpCookie cheeseCake = new HttpCookie("EDITORKAKA");
-                cheeseCake["Editor"] = userTB.Text;
+                HttpCookie cheeseCake = new HttpCookie("EDITORKAKA", "inloggad");
                 cheeseCake.Expires = DateTime.Now.AddDays(30);
                 Response.Cookies.Add(cheeseCake);
-                //Session["Editor"] = userTB.Text;
+                Session["Editor"] = userTB.Text;
                 Response.Redirect("RedaktorStart");
             }
 
             if (data.authenticateAdmin(userTB.Text, passwordTB.Text))
             {
-                HttpCookie chocolateChipCookie = new HttpCookie("ADMINKAKA");
-                chocolateChipCookie["Admin"] = userTB.Text;
+                HttpCookie chocolateChipCookie = new HttpCookie("ADMINKAKA", "inloggad");
                 chocolateChipCookie.Expires = DateTime.Now.AddDays(30);
                 Response.Cookies.Add(chocolateChipCookie);
-                //Session["Admin"] = userTB.Text;
+                Session["Admin"] = userTB.Text;
                 Response.Redirect("Adminsida");
             }
         }

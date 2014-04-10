@@ -14,34 +14,18 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (HttpContext.Current.Request.Cookies["PTKAKA"] != null && HttpContext.Current.Request.Cookies["PTKAKA"].Value == "utloggad")
+            {
+                Response.Redirect("Loginny");
+            }
+
+            if (HttpContext.Current.Request.Cookies["PTKAKA"] == null)
+            {
+                Response.Redirect("Registerellerlogin");
+            }
+
             if (!Page.IsPostBack)
             {
-                //Test test = new Test();
-                //Test test2 = new Test();
-                //Test test3 = new Test();
-
-                //List<Test> testet = new List<Test>();
-
-                //test.Bild = "~/Images/bamse.jpg";
-                //test.pris = 123;
-                //test.text = "MinGrid";
-                //test2.Bild = "~/Images/bamse.jpg";
-                //test2.pris = 250;
-                //test2.text = "Mineyed";
-                //test3.Bild = "~/Images/bamse.jpg";
-                //test3.pris = 156;
-                //test3.text = "Minerereeeid";
-
-                //testet.Add(test);
-                //testet.Add(test);
-                //testet.Add(test);
-                //testet.Add(test2);
-                //testet.Add(test2);
-                //testet.Add(test2);
-                //testet.Add(test3);
-                //testet.Add(test3);
-                //testet.Add(test3);
-
                 List<Saga> Sagor = data.getSaga();
 
                 SagoView.DataSource = Sagor;

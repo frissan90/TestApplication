@@ -11,12 +11,14 @@ namespace PhoneToys
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
+            if (HttpContext.Current.Request.Cookies["PTKAKA"] != null && HttpContext.Current.Request.Cookies["PTKAKA"].Value == "utloggad")
             {
-                if (HttpContext.Current.Request.Cookies["PTKAKA"] == null)
-                {
-                    Response.Redirect("Loginny");
-                }
+                Response.Redirect("Loginny");
+            }
+
+            if (HttpContext.Current.Request.Cookies["PTKAKA"] == null)
+            {
+                Response.Redirect("Registerellerlogin");
             }
         }
     }

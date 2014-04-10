@@ -4,10 +4,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
 
-    <script>
-        $('#uploadBTN').click( alert('Knapp tryckt'));
-    </script>
-
     <div class="center">
         <br />
         <br />

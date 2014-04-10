@@ -298,7 +298,6 @@
     <Content Include="LaddaUpp.aspx" />
     <Content Include="LoginNY.aspx" />
     <Content Include="packages.config" />
-    <Content Include="Phonetoys.Master" />
     <Content Include="RedigeraSagor1.aspx" />
     <Content Include="RedigeraSagor2.aspx" />
     <Content Include="RegisterEllerLogin.aspx" />
@@ -306,7 +305,6 @@
     <Content Include="sagoDelete.aspx" />
     <Content Include="Sagor.aspx" />
     <Content Include="SagorNY.aspx" />
-    <Content Include="Phonetoys2.Master" />
     <Content Include="Content\PhoneToysFinal.css" />
     <Content Include="Spelasaga.aspx" />
     <Content Include="Testakoppling.aspx" />
@@ -351,9 +349,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\_references.js" />
-    <Content Include="Site.Mobile.Master" />
-    <Content Include="SiteAdmin.Master" />
-    <Content Include="SiteEditor.Master" />
+    <Content Include="StartMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -438,20 +434,6 @@
     <Compile Include="LoginNY.aspx.designer.cs">
       <DependentUpon>LoginNY.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Phonetoys.Master.cs">
-      <DependentUpon>Phonetoys.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Phonetoys.Master.designer.cs">
-      <DependentUpon>Phonetoys.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Phonetoys2.Master.cs">
-      <DependentUpon>Phonetoys2.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Phonetoys2.Master.designer.cs">
-      <DependentUpon>Phonetoys2.Master</DependentUpon>
-    </Compile>
     <Compile Include="PhoneToysFinal.Master.cs">
       <DependentUpon>PhoneToysFinal.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -516,40 +498,19 @@
     <Compile Include="SagorNY.aspx.designer.cs">
       <DependentUpon>SagorNY.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
-    <Compile Include="SiteAdmin.Master.cs">
-      <DependentUpon>SiteAdmin.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SiteAdmin.Master.designer.cs">
-      <DependentUpon>SiteAdmin.Master</DependentUpon>
-    </Compile>
-    <Compile Include="SiteEditor.Master.cs">
-      <DependentUpon>SiteEditor.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SiteEditor.Master.designer.cs">
-      <DependentUpon>SiteEditor.Master</DependentUpon>
-    </Compile>
     <Compile Include="Spelasaga.aspx.cs">
       <DependentUpon>Spelasaga.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Spelasaga.aspx.designer.cs">
       <DependentUpon>Spelasaga.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StartMaster.Master.cs">
+      <DependentUpon>StartMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StartMaster.Master.designer.cs">
+      <DependentUpon>StartMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Testakoppling.aspx.cs">
       <DependentUpon>Testakoppling.aspx</DependentUpon>
@@ -586,7 +547,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
-    <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">

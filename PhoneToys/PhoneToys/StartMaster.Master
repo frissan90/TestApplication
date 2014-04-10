@@ -1,9 +1,9 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PhoneToysFinal.master.cs" Inherits="PhoneToys.PhoneToysFinal" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="StartMaster.master.cs" Inherits="PhoneToys.StartMaster" %>
 
 <!DOCTYPE html>
 
 <html lang="en">
-<head runat="server">
+<head id="Head1" runat="server">
     <title>Phonetoys.se</title>
     <link href="Content/foundation.css" rel="stylesheet" />
     <link href="Content/PhoneToysFinal.css" rel="stylesheet" type="text/css" />
@@ -46,14 +46,14 @@
 
 </head>
 <body class="large-12">
-    <form runat="server">
+    <form id="Form1" runat="server">
         <div class="row large-12 medium-12">
             <header class="row small-12">
                 <%--<div class="row small-12">--%>
-                <asp:ImageButton PostBackUrl="~/Hem" runat="server" ImageUrl="~/Images/PhoneToysHeader.png" CssClass="headerIMG" />
+                <asp:ImageButton ID="ImageButton1" PostBackUrl="~/Hem" runat="server" ImageUrl="~/Images/PhoneToysHeader.png" CssClass="headerIMG" />
                 <%--</div>--%>
             </header>
-            <div class="row">
+            <%--<div class="row">
                 <div class="large-centered large-12 medium-12 small-12 columns">
 
                     <ul class="center button-group">
@@ -67,10 +67,10 @@
                             <asp:Button ID="Button1" BackColor="Red" CssClass="link" runat="server" Text="Sagor" PostBackUrl="~/SagorNY"></asp:Button></li>
 
                         <li class="menuitem">
-                            <asp:Button CssClass="link" BackColor="Red" runat="server" Text="Varukorg" PostBackUrl="Varor"></asp:Button></li>
+                            <asp:Button ID="Button4" CssClass="link" BackColor="Red" runat="server" Text="Varukorg" PostBackUrl="Varor"></asp:Button></li>
                     </ul>
                 </div>
-            </div>
+            </div>--%>
             <div id="bodyContent">
                 <asp:ContentPlaceHolder runat="server" ID="body" />
             </div>
@@ -90,3 +90,4 @@
     <script src="js/ResponsiveImgMap.js"></script>
 </body>
 </html>
+

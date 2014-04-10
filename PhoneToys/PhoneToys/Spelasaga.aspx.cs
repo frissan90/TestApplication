@@ -12,7 +12,15 @@ namespace PhoneToys
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (HttpContext.Current.Request.Cookies["PTKAKA"] != null && HttpContext.Current.Request.Cookies["PTKAKA"].Value == "utloggad")
+            {
+                Response.Redirect("Loginny");
+            }
 
+            if (HttpContext.Current.Request.Cookies["PTKAKA"] == null)
+            {
+                Response.Redirect("Registerellerlogin");
+            }
         }
 
         protected void spelaBTN_Click(object sender, EventArgs e)

@@ -14,7 +14,12 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (HttpContext.Current.Request.Cookies["BAMSE"] == null)
+            {
+                Response.Redirect("Registerellerlogin");
+            }
 
+            
         }
 
 

@@ -16,31 +16,35 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] != null)
+            if (HttpContext.Current.Request.Cookies["PTKAKA"] != null && HttpContext.Current.Request.Cookies["PTKAKA"].Value == "utloggad")
             {
-                if (!Page.IsPostBack)
+                Response.Redirect("Loginny");
+            }
+
+            if (HttpContext.Current.Request.Cookies["PTKAKA"] == null)
+            {
+                Response.Redirect("Registerellerlogin");
+            }
+
+            if (!Page.IsPostBack)
+            {
+
+                List<Saga> Sagor = data.getSaga();
+
+                for (int i = 0; i < Sagor.Count; i++)
                 {
-
-                    List<Saga> Sagor = data.getSaga();
-
-                    for (int i = 0; i < Sagor.Count; i++)
-                    {
-                        TypeConverter converter = TypeDescriptor.GetConverter(typeof(Bitmap));
-                        Bitmap bild = (Bitmap)converter.ConvertFrom(Sagor[i].bild);
-                        string imgString = Convert.ToBase64String(Sagor[i].bild);
-                        Sagor[i].bilden = String.Format("data:image/Bmp;base64,{0}\"", imgString);
-                    }
-
-                    SagorLoad.DataSource = Sagor;
-                    SagorLoad.DataBind();
+                    TypeConverter converter = TypeDescriptor.GetConverter(typeof(Bitmap));
+                    Bitmap bild = (Bitmap)converter.ConvertFrom(Sagor[i].bild);
+                    string imgString = Convert.ToBase64String(Sagor[i].bild);
+                    Sagor[i].bilden = String.Format("data:image/Bmp;base64,{0}\"", imgString);
                 }
 
-                SagorLoad.ItemCommand += new EventHandler<ListViewCommandEventArgs>(this.SagorLoad_ItemCommand);
+                SagorLoad.DataSource = Sagor;
+                SagorLoad.DataBind();
             }
-            else
-            {
-                Response.Redirect("LoginNY");
-            }
+            
+            SagorLoad.ItemCommand += new EventHandler<ListViewCommandEventArgs>(this.SagorLoad_ItemCommand);
+            
         }
 
         protected void SagorLoad_ItemCommand(object sender, ListViewCommandEventArgs e)

@@ -20,7 +20,7 @@ background-size: cover;
 }
 
 .center {
-    margin-left:30%;
+    margin-left: 30%;
 }
 
 
@@ -117,4 +117,8 @@ float: left;
     float:left;
     margin-right: 170px;
     margin-top: 30px;
+}
+
+.menuitem {
+    margin: 0 0 20px 0;
 }

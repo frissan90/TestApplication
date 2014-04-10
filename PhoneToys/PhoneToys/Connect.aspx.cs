@@ -15,7 +15,10 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (HttpContext.Current.Request.Cookies["PTKAKA"] != null && HttpContext.Current.Request.Cookies["PTKAKA"].Value == "utloggad")
+            {
+                Response.Redirect("Loginny");
+            }
         }
 
         protected void imgBtn_Click(object sender, ImageClickEventArgs e)
@@ -37,6 +40,12 @@ namespace PhoneToys
             request.RequestFormat = DataFormat.Json;
 
             IRestResponse result = restClient.Execute(request);
+
+            System.Web.HttpCookie BamseID = new System.Web.HttpCookie("BAMSE", TextBox1.Text);
+
+            BamseID.Expires = DateTime.Now.AddDays(30);
+
+            Response.Cookies.Add(BamseID);
 
             Response.Redirect("RegistreringNY");
         }
