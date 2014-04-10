@@ -14,9 +14,7 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-            HttpCookie ourCookie = Request.Cookies["PTKAKA"];
-
-            if (ourCookie != null)
+            if (HttpContext.Current.Request.Cookies["PTKAKA"] != null)
             {
                 Response.Redirect("Hem");
             }
@@ -32,7 +30,6 @@ namespace PhoneToys
                 Session["varukorg"] = new List<Varukorgen>();
 
                 HttpCookie PhoneToysCookie = new HttpCookie("PTKAKA");
-
                 PhoneToysCookie["Username"] = userTB.Text;
 
                 PhoneToysCookie.Expires = DateTime.Now.AddDays(30);

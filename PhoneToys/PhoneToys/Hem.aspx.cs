@@ -11,7 +11,13 @@ namespace PhoneToys
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {
+                if (HttpContext.Current.Request.Cookies["PTKAKA"] == null)
+                {
+                    Response.Redirect("Loginny");
+                }
+            }
         }
     }
 }
