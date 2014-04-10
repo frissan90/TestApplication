@@ -39,6 +39,7 @@ namespace PhoneToys
             Session["varukorg"] = new List<Varukorgen>();
 
             HttpCookie kaka = new HttpCookie("PTKAKA", "inloggad");
+            Response.Cookies.Add(kaka);
 
             Response.Redirect("Hem");
         }
