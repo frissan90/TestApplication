@@ -39,6 +39,9 @@ namespace PhoneToys
             Session["varukorg"] = new List<Varukorgen>();
 
             HttpCookie kaka = new HttpCookie("PTKAKA", "inloggad");
+
+            kaka.Expires = DateTime.Now.AddDays(30);
+
             Response.Cookies.Add(kaka);
 
             Response.Redirect("Hem");
