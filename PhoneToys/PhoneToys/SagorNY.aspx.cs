@@ -67,5 +67,10 @@ namespace PhoneToys
 
             Response.Redirect("SagorNY");
         }
+
+        protected void BetalaBTN_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Betala2");
+        }
     }
 }

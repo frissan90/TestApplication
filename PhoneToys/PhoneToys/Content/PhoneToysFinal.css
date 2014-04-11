@@ -122,3 +122,40 @@ float: left;
 .menuitem {
     margin: 0 0 20px 0;
 }
+
+.gbtn {
+    margin:auto;
+    width : 150px;
+    height : 100px;
+    font-weight : bold;
+    font-size : 15px;
+    background-color : #6bd851;
+    color : white;
+}
+.avbrytBtn {
+    width : 140px;
+    height : 100px;
+    font-weight : bold;
+    font-size : 15px;
+    background-color :#e5e5e5; 
+     border-width: 1px;
+}
+/*.betalaBTN {
+    width : 150px;
+    height : 100px;
+    background-color : #fe4e4e;*/
+
+.payIMG {
+    margin-left: 500px;
+    height : 50px;
+}
+
+.BetButton {
+    margin:auto;
+    width : 150px;
+    height : 100px;
+    /*font-weight : bold;*/
+    font-size : 15px;
+    background-color : #1231ee;
+    color : white;
+}

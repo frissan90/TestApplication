@@ -166,6 +166,7 @@
     <Content Include="Adminsida.aspx" />
     <Content Include="Bekraftelse.aspx" />
     <Content Include="Betala.aspx" />
+    <Content Include="Betala2.aspx" />
     <Content Include="Connect.aspx" />
     <Content Include="Content\foundation.css" />
     <Content Include="Content\MasterCSS.css" />
@@ -395,6 +396,13 @@
     </Compile>
     <Compile Include="Betala.aspx.designer.cs">
       <DependentUpon>Betala.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Betala2.aspx.cs">
+      <DependentUpon>Betala2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Betala2.aspx.designer.cs">
+      <DependentUpon>Betala2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connect.aspx.cs">
       <DependentUpon>Connect.aspx</DependentUpon>
