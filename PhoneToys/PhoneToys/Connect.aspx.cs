@@ -43,7 +43,7 @@ namespace PhoneToys
 
             System.Web.HttpCookie BamseID = new System.Web.HttpCookie("BAMSE", TextBox1.Text);
 
-            BamseID.Expires = DateTime.Now.AddDays(30);
+            //BamseID.Expires = DateTime.Now.AddDays(30);
 
             Response.Cookies.Add(BamseID);
 
