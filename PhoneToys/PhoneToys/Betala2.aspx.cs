@@ -14,10 +14,6 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            vkorg.DataSource = new List<string>();
-            vkorg.DataBind();
-
             DropdownList1.Items.Add("VISA");
             DropdownList1.Items.Add("Mastercard");
             DropdownList1.Items.Add("American Express Card");
