@@ -3,67 +3,39 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-
     <div class="row">
-        <asp:Repeater ID="sagorep" runat="server">
-            <HeaderTemplate>
-                <div class="sagor">
+        <div class="panelW">
+            <div class="row">
+                <asp:ListView runat="server" ID="SagorLoad" GroupItemCount="2" OnItemCommand="SagorLoad_ItemCommand">
+                    <LayoutTemplate>
+                        <div class="ItemTemp">
+                            <asp:PlaceHolder ID="groupPlaceholder" runat="server"></asp:PlaceHolder>
+                        </div>
+                    </LayoutTemplate>
+                    <GroupTemplate>
+                        <div class="large-8" id="itemPlaceholder" runat="server">
+                        </div>
+                    </GroupTemplate>
+                    <ItemTemplate>
 
+                        <div class="large-8 medium-6 small-12">
+                            <img src='<%#Eval("bilden") %>' id="Image1" runat="server" style="border: 1px solid black" class="large-4 medium-4 small-6" />
+                            <div class="panel large-4 medium-4 small-6" style="background-color: grey;">
+                                <h5>
+                                    <asp:Label CssClass="large-1 medium-1 small-1 tiny" runat="server" ID="text" Text='<%#Eval("Namn") %>' Style="color: whitesmoke"></asp:Label></h5>
+                                <h6 class="subheader">
+                                    <asp:Label runat="server" ID="pris" Text='<%#Eval("Pris") + " kr/st" %>' Style="color: whitesmoke"></asp:Label></h6>
+                                <br />
+                                <asp:Button ID="Button1" CssClass="button radius large-4 medium-2 small-1 tiny" CommandName="kop" ValidateRequestMode="Disabled" runat="server" Text="Köp" Style="background-color: turquoise; color: crimson;" />
+                            </div>
+                        </div>
+
+                    </ItemTemplate>
+                </asp:ListView>
+                <div class="large-8 large-offset-8 medium-6 small-8">
+                    <asp:Button runat="server" ID="BetalaBTN" Text="Betala" CssClass="BetButton" OnClick="BetalaBTN_Click" />
                 </div>
-            </HeaderTemplate>
-            <ItemTemplate>
-                <div class="detalj">
-                    <div>Name:<strong><%# Eval("Namn")%></strong></div>
-                    <div>Beskrivning:<strong><%# Eval("Beskrivning") %></strong></div> 
-                    <div>Pris:<strong><%# Eval("Pris")%></strong></div>
-                </div>
-
-                </div>
-
-
-            </ItemTemplate>
-
-        </asp:Repeater>
-
-
-
-
-
-
-
-    </div>
-<%--    <div class="panelW">
-    <div class="row">
-        <asp:ListView runat="server" ID="SagorLoad" GroupItemCount="2" OnItemCommand="SagorLoad_ItemCommand">
-            <LayoutTemplate>
-                <div class="ItemTemp">
-                <asp:PlaceHolder ID="groupPlaceholder" runat="server"></asp:PlaceHolder>
-                    </div>
-            </LayoutTemplate>
-            <GroupTemplate>
-                <div class="large-8" id="itemPlaceholder" runat="server">
-                  
-                </div>
-            </GroupTemplate>
-            <ItemTemplate>
-                
-                <div class="large-8 medium-6 small-12">
-                   <%-- <img src='<%#Eval("bilden") %>' id="Image1" runat="server" style="border: 1px solid black" class="large-4 medium-4 small-6" />--%>
-        <%--            <div class="panel large-4 medium-4 small-6" style="background-color:grey;">
-                        <h5>
-                            <asp:Label CssClass="large-1 medium-1 small-1 tiny" runat="server" ID="text" Text='<%#Eval("Namn") %>' Style="color: whitesmoke"></asp:Label></h5>
-                        <h6 class="subheader">
-                            <asp:Label runat="server" ID="pris" Text='<%#Eval("Pris") + " kr/st" %>' Style="color: whitesmoke"></asp:Label></h6>
-                        <br />
-                        <asp:Button ID="Button1" CssClass="button radius large-4 medium-2 small-1 tiny" CommandName="kop" ValidateRequestMode="Disabled" runat="server" Text="Köp" Style="background-color: turquoise; color: crimson;" />
-                    </div>
-                </div>
-
-            </ItemTemplate>
-        </asp:ListView>
-        <div class="large-8 large-offset-8 medium-6 small-8">
-            <asp:Button runat="server" ID="BetalaBTN" Text="Betala" CssClass="BetButton" OnClick="BetalaBTN_Click" />
+            </div>
         </div>
     </div>
-</div>--%>--%>
 </asp:Content>
