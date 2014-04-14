@@ -23,7 +23,7 @@
     
     <%--Panel för Betalinformation --%>
 
-    <div class="panel">
+    <div class="panelW">
 
         <div class="row" style="border: none">
             <div class="large-4 medium-6 small-10">
@@ -44,9 +44,11 @@
             <div class="large-1 medium-2 small-3">
 
 
-                <asp:Label runat="server" ID="Label3" CssClass="PTLabels label">Giltighetsdatum ÅÅ / MM</asp:Label>
+                <asp:Label runat="server" ID="Label3" CssClass="PTLabels label">Giltighetsdatum MM / ÅÅ</asp:Label>
 
-                <asp:DropDownList runat="server" ID="DropdownList2"></asp:DropDownList><asp:DropDownList runat="server" ID="DropdownList3"></asp:DropDownList>
+                
+                <asp:DropDownList runat="server" ID="DropdownList3"></asp:DropDownList>
+                <asp:DropDownList runat="server" ID="DropdownList2"></asp:DropDownList>
 
                 <br />
                 <br />

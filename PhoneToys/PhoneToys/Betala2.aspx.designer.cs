@@ -94,15 +94,6 @@ namespace PhoneToys {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// DropdownList2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropdownList2;
-        
-        /// <summary>
         /// DropdownList3 control.
         /// </summary>
         /// <remarks>
@@ -110,6 +101,15 @@ namespace PhoneToys {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropdownList3;
+        
+        /// <summary>
+        /// DropdownList2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropdownList2;
         
         /// <summary>
         /// CVClbl control.

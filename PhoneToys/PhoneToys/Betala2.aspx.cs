@@ -54,7 +54,7 @@ namespace PhoneToys
         {
             data.kopSagor(Session["username"].ToString(), (List<Varukorgen>)Session["varukorg"]);
 
-            Response.Redirect("Bekraftelse");
+            Response.Redirect("Betala2");
         }
 
         protected void Button1_Click(object sender, EventArgs e)

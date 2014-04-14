@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-    <div class="row large-7 columns medium-7">
+    <div class="row large-7 large-offset-5 columns medium-7 medium-offset-5" aria-haspopup="True">
         <div class="panel">
             <asp:Label runat="server" ID="Login" Text="Användarnamn"></asp:Label>
             <asp:TextBox ID="userTB" runat="server"></asp:TextBox>

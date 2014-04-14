@@ -13,21 +13,12 @@ namespace PhoneToys {
     public partial class SagorNY {
         
         /// <summary>
-        /// SagorLoad control.
+        /// sagorep control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView SagorLoad;
-        
-        /// <summary>
-        /// BetalaBTN control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BetalaBTN;
+        protected global::System.Web.UI.WebControls.Repeater sagorep;
     }
 }
