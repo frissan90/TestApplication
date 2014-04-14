@@ -6,7 +6,6 @@
         <div class="large-8">
             <asp:Repeater runat="server" ID="VarukorgRepeater" OnItemCommand="VarukorgRepeater_ItemCommand">
                 <HeaderTemplate>
-
                     <table class="large-10 medium-8 small-6">
                         <tr>
                             <th align="left"></th>
@@ -16,9 +15,7 @@
 
                         </tr>
                 </HeaderTemplate>
-
                 <ItemTemplate>
-                    
                     <tr>
                         <td>
                             <asp:Image ID="Image1" runat="server" Width="30px" Height="30px" ImageUrl="http://lorempixel.com/150/120/technics/" /></td>
@@ -32,7 +29,6 @@
 
                         <td><asp:LinkButton runat="server" ID="varukorgRemoveBTN" Text="Ta bort" CommandName="Remove"></asp:LinkButton></td>
                     </tr>
-                        
                 </ItemTemplate>
                 <SeparatorTemplate>
                     <tr>
