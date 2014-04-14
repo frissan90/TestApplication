@@ -6,7 +6,7 @@
     
     <%--Repeater för de sagor som avses betalas--%>
     
-    <asp:Repeater runat="server" ID="vkorg">
+    <%--<asp:Repeater runat="server" ID="vkorg">
         <HeaderTemplate>
 
             <tr>
@@ -19,7 +19,7 @@
 
     </asp:Repeater>
 
-    <hr />
+    <hr />--%>
     
     <%--Panel för Betalinformation --%>
 
