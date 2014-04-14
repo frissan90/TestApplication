@@ -10,7 +10,7 @@
             <asp:Label runat="server" ID="Label1" Text="Lösenord"></asp:Label>
             <asp:TextBox ID="passwordTB" TextMode="Password" runat="server"></asp:TextBox>
 
-           <asp:ImageButton OnClientClick="return Confirm('Vill du logga in??')" ID="LoginBtn" runat="server" imageUrl="Images/Login.png" Borderwidth="0" OnClick="LoginBtn_Click"/>
+           <asp:ImageButton OnClientClick="return Confirm('Vill du logga in')" ID="LoginBtn" runat="server" imageUrl="Images/Login.png" Borderwidth="0" OnClick="LoginBtn_Click"/>
 
         </div>
 
