@@ -26,6 +26,13 @@ namespace PhoneToys
                 Response.Redirect("Registerellerlogin");
             }
 
+            if (Session["varukorg"] == null)
+            {
+                Session["varukorg"] = new List<Varukorgen>();
+            }
+
+            Session["username"] = Kryptering.decryptUser(HttpContext.Current.Request.Cookies["KyrpteradKaka"]);
+
             if (!Page.IsPostBack)
             {
 

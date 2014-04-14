@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Entities;
 
 namespace PhoneToys
 {
@@ -20,6 +21,13 @@ namespace PhoneToys
             {
                 Response.Redirect("Registerellerlogin");
             }
+
+            if (Session["varukorg"] == null)
+            {
+                Session["varukorg"] = new List<Varukorgen>();
+            }
+            
+            Session["username"] = Kryptering.decryptUser(HttpContext.Current.Request.Cookies["KyrpteradKaka"]);
         }
     }
 }

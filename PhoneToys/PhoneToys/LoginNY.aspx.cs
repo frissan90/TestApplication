@@ -31,6 +31,12 @@ namespace PhoneToys
 
                 Response.Cookies.Add(PhoneToysCookie);
 
+                HttpCookie user = new HttpCookie("KrypteradKaka", userTB.Text);
+
+                user = Kryptering.encryptUser(user);
+
+                Response.Cookies.Add(user);
+
                 Response.Redirect("Hem");
             }
 

@@ -428,6 +428,7 @@
     <Compile Include="Kassa.aspx.designer.cs">
       <DependentUpon>Kassa.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Kryptering.cs" />
     <Compile Include="LaddaUpp.aspx.cs">
       <DependentUpon>LaddaUpp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
