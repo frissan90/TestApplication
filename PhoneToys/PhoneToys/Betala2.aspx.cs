@@ -41,9 +41,24 @@ namespace PhoneToys
                     DropdownList3.Items.Add(i.ToString());
                 }
 
-
+                
             }
 
+            if (!Page.IsPostBack)
+            {
+                BetalningsRepeater.DataSource = Session["varukorg"];
+                BetalningsRepeater.DataBind();
+            }
+            BetalningsRepeater.ItemCommand += new RepeaterCommandEventHandler(this.BetalningsRepeater_ItemCommand);
+
+            double totalPris = 0;
+
+            foreach (Varukorgen i in (List<Varukorgen>)Session["varukorg"])
+            {
+                totalPris += i.Pris;
+            }
+            
+            totPrisLBL.Text = "Totalpris: " + totalPris + " :-";
         }
 
         protected void BetalaBTN_Click(object sender, EventArgs e)

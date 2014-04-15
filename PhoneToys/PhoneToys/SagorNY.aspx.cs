@@ -58,7 +58,7 @@ namespace PhoneToys
         {
             List<Varukorgen> varor = (List<Varukorgen>)Session["varukorg"];
             int index = e.Item.DataItemIndex;
-
+            
             string sagoNamn = ((Label)SagorLoad.Items[index].FindControl("text")).Text;
 
             int pris = Convert.ToInt32((((Label)SagorLoad.Items[index].FindControl("pris")).Text).Split(' ').ElementAt(0));

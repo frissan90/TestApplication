@@ -442,7 +442,7 @@ namespace DataAccessLayer
 
             SqlDataReader reader = null;
 
-            string Query = @"Select * from Saga join SagorMedlem on SagorMedlem.Member = Member.Username where SagorMedlem.Member = @User";
+            string Query = @"Select * from Saga join SagorMedlem on SagorMedlem.Saga = Saga.Namn where SagorMedlem.Member = @User";
 
             try
             {

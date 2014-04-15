@@ -5,16 +5,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
     
     <%--Repeater för de sagor som avses betalas--%>
-<<<<<<< HEAD
     <div class="panelW">
      <asp:Repeater runat="server" ID="BetalningsRepeater" OnItemCommand="BetalningsRepeater_ItemCommand">
                 <HeaderTemplate>
 
                     <table class="large-10 medium-8 small-6">
                         <tr>
-                            <th align="left"></th>
                             <th align="left">Namn</th>
-                            <th align="left">Antal</th>
                             <th align="left">Pris</th>
 
                         </tr>
@@ -26,13 +23,11 @@
                         
                         <td>
                             <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Sagolink" Text='<%#Eval("Saga") %>' ForeColor="Black"></asp:LinkButton>
-
-                        <td>
-                            <asp:Label runat="server" ID="antal" Text='<%#Eval("Antal") %>'></asp:Label></td>
                         <td>
                             <asp:Label runat="server" ID="pris" Text='<%#Eval("Pris") %>'></asp:Label></td>
 
-                        <td><asp:LinkButton runat="server" ID="varukorgRemoveBTN" Text="Ta bort" CommandName="Remove"></asp:LinkButton></td>
+                        <td><%--<asp:LinkButton runat="server" ID="varukorgRemoveBTN" Text="Ta bort" CommandName="Remove"></asp:LinkButton>--%>
+                        <asp:ImageButton runat="server" ID="sagaRemoveimg" Width="30px" Height="30px" ImageUrl="~/Images/remove.png" ToolTip="Ta bort saga" CommandName="remove" OnClientClick="return confirm('Vill du verkligen ta bort sagan?')" /></td>
                     </tr>
                         
                 </ItemTemplate>
@@ -45,11 +40,12 @@
                 </SeparatorTemplate>
                 <FooterTemplate>
                     </table>
+                    
                 </FooterTemplate>
                 
             </asp:Repeater>
+        <asp:Label runat="server" ID="totPrisLBL" CssClass="right PTLabels"></asp:Label>
         </div>
-=======
     
     <%--<asp:Repeater runat="server" ID="vkorg">
         <HeaderTemplate>
