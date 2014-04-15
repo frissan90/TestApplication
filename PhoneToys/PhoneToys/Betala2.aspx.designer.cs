@@ -13,7 +13,6 @@ namespace PhoneToys {
     public partial class Betala2 {
         
         /// <summary>
-<<<<<<< HEAD
         /// BetalningsRepeater control.
         /// </summary>
         /// <remarks>
@@ -23,8 +22,6 @@ namespace PhoneToys {
         protected global::System.Web.UI.WebControls.Repeater BetalningsRepeater;
         
         /// <summary>
-=======
->>>>>>> 518ec97bf3f63b5d6b5db6dfd7ade01685de4e0a
         /// KorttypLBL control.
         /// </summary>
         /// <remarks>

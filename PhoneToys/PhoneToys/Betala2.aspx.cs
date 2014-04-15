@@ -14,12 +14,6 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-
-           
-
-=======
->>>>>>> 518ec97bf3f63b5d6b5db6dfd7ade01685de4e0a
             DropdownList1.Items.Add("VISA");
             DropdownList1.Items.Add("Mastercard");
             DropdownList1.Items.Add("American Express Card");
