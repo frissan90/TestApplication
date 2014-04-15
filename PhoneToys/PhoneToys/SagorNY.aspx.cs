@@ -49,8 +49,7 @@ namespace PhoneToys
                 SagorLoad.DataSource = Sagor;
                 SagorLoad.DataBind();
             }
-            
-            SagorLoad.ItemCommand += new EventHandler<ListViewCommandEventArgs>(this.SagorLoad_ItemCommand);
+            //SagorLoad.ItemCommand += new EventHandler<ListViewCommandEventArgs>(this.SagorLoad_ItemCommand);
             
         }
 
@@ -73,6 +72,8 @@ namespace PhoneToys
             Session["varukorg"] = varor;
 
             ClientScript.RegisterStartupScript(Page.GetType(), "alert", "javascript:alert('Vara tillagd i varukorgen');", true);
+
+            //Response.Redirect("SagorNY");
         }
 
         protected void BetalaBTN_Click(object sender, EventArgs e)
