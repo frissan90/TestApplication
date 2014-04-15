@@ -13,13 +13,13 @@ namespace PhoneToys {
     public partial class Betala2 {
         
         /// <summary>
-        /// vkorg control.
+        /// BetalningsRepeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater vkorg;
+        protected global::System.Web.UI.WebControls.Repeater BetalningsRepeater;
         
         /// <summary>
         /// KorttypLBL control.

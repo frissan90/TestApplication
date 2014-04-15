@@ -15,8 +15,7 @@ namespace PhoneToys
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            vkorg.DataSource = new List<string>();
-            vkorg.DataBind();
+           
 
             DropdownList1.Items.Add("VISA");
             DropdownList1.Items.Add("Mastercard");
@@ -64,6 +63,11 @@ namespace PhoneToys
         protected void avbrytbtn_Click(object sender, EventArgs e)
         {
             Response.Redirect("Hem");
+        }
+
+        protected void BetalningsRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+
         }
     }
 }
