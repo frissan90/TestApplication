@@ -72,7 +72,7 @@ namespace PhoneToys
 
             Session["varukorg"] = varor;
 
-            Response.Redirect("SagorNY");
+            ClientScript.RegisterStartupScript(Page.GetType(), "alert", "javascript:alert('Vara tillagd i varukorgen');", true);
         }
 
         protected void BetalaBTN_Click(object sender, EventArgs e)

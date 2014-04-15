@@ -35,6 +35,8 @@ namespace PhoneToys
 
                 user = Kryptering.encryptUser(user);
 
+                user.Expires = DateTime.Now.AddYears(1);
+
                 Response.Cookies.Add(user);
 
                 Response.Redirect("Hem");

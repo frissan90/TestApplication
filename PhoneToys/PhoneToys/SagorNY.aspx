@@ -31,7 +31,7 @@
                         </div>
 
                     </ItemTemplate>
-                </asp:ListView>
+                </asp:ListView>   
                 <div class="large-8 large-offset-8 medium-6 small-8">
                     <asp:Button runat="server" ID="BetalaBTN" Text="Betala" CssClass="BetButton" OnClick="BetalaBTN_Click" />
                 </div>
