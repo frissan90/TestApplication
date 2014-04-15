@@ -5,6 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
     
     <%--Repeater för de sagor som avses betalas--%>
+<<<<<<< HEAD
     <div class="panelW">
      <asp:Repeater runat="server" ID="BetalningsRepeater" OnItemCommand="BetalningsRepeater_ItemCommand">
                 <HeaderTemplate>
@@ -48,8 +49,23 @@
                 
             </asp:Repeater>
         </div>
+=======
+    
+    <%--<asp:Repeater runat="server" ID="vkorg">
+        <HeaderTemplate>
 
-    <hr />
+            <tr>
+                <th>Saga</th>
+                <th>Pris</th>
+            </tr>
+        </HeaderTemplate>
+
+
+
+    </asp:Repeater>
+>>>>>>> 518ec97bf3f63b5d6b5db6dfd7ade01685de4e0a
+
+    <hr />--%>
     
     <%--Panel för Betalinformation --%>
 
