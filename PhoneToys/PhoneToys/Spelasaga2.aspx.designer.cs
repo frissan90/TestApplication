@@ -10,7 +10,7 @@
 namespace PhoneToys {
     
     
-    public partial class Spelasaga {
+    public partial class Spelasaga2 {
         
         /// <summary>
         /// spelaBTN control.
