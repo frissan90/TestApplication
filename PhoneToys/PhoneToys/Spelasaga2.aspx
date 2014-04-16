@@ -12,6 +12,6 @@
         <audio controls="controls">
         </audio>
         <br />
-        <asp:Button runat="server" ID="spelaBTN" OnClick="" CssClass="button link" Style="background-color:red;" Text="Spela"/>
+        <asp:Button runat="server" ID="spelaBTN" CssClass="button link" Style="background-color:red;" Text="Spela"/>
     </div>
 </asp:Content>
