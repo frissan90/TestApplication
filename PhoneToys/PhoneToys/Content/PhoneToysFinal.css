@@ -1,5 +1,5 @@
 ﻿body{
-background: url('http://i.imgur.com/g3YGFON.jpg') center center fixed;
+background: url('http://i.imgur.com/x0ESsU4.jpg') center center fixed;
 -webkit-background-size:cover;
 -moz-background-size:cover;
 background-size: cover;
@@ -190,4 +190,213 @@ float: left;
 .ItemTemp {
     width : auto;
       background-color : #a3fc65;
+}
+
+.textbox2 {
+background: #D3D3D3; 
+background: -moz-linear-gradient(top, #D3D3D3 0%, #D9D9D9 38%, #E5E5E5 82%, #E7E7E7 100%); 
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#D3D3D3), color-stop(38%,#D9D9D9), color-stop(82%,#E5E5E5), color-stop(100%,#E7E7E7)); 
+background: -webkit-linear-gradient(top, #D3D3D3 0%,#D9D9D9 38%,#E5E5E5 82%,#E7E7E7 100%); 
+background: -o-linear-gradient(top, #D3D3D3 0%,#D9D9D9 38%,#E5E5E5 82%,#E7E7E7 100%); 
+background: -ms-linear-gradient(top, #D3D3D3 0%,#D9D9D9 38%,#E5E5E5 82%,#E7E7E7 100%); 
+background: linear-gradient(to bottom, #D3D3D3 0%,#D9D9D9 38%,#E5E5E5 82%,#E7E7E7 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d3d3', endColorstr='#e7e7e7',GradientType=0 ); 
+display: block; 
+padding: 12px 10px; 
+color: #999; 
+font-size: 1.2em; 
+font-weight: bold; 
+text-shadow: 1px 1px 1px  	#9ACD32; 
+border: 1px solid rgba(16, 103, 133, 0.6); 
+box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5), inset 0px 1px 4px rgba(0, 0, 0, 0.2); 
+border-radius: 8px; 
+ outline:0; 
+width:270px; 
+}
+
+
+.textbox { 
+    background-color: #D7EFFF; 
+    border: solid 1px #646464; 
+    outline: none; 
+    padding: 2px 2px; 
+    border-radius:8px;
+} 
+
+.textbox:hover { 
+    background-color: #FF0; 
+} 
+
+.textbox:focus { 
+    background-color: #6FFF62; 
+} 
+.textbox:active { 
+    background-color: #EB8D00; 
+}
+
+.font1 {
+    font-family:Verdana;
+    font-weight:bolder;
+
+}
+
+.labeladmin {
+color: #B4886B;
+font-weight: bolder;
+display: block;
+width: 270px;
+height:70px;
+float: left;
+background-color: 	 	#1E90FF;
+color:#F5FFFA;
+font-size:x-large;
+margin-bottom:20px;
+margin-top:50px;
+border:2px solid;
+border-radius:20px;
+text-align:center;
+box-shadow: 10px 10px 5px #888888;
+}
+
+.labeladmin:after { content: ":" }
+
+.bamsen {
+/*background:url('Images/bamse.jpg');*/
+width:150px;
+border:red solid;
+box-shadow: 10px 10px 5px black;
+border-radius:7px;
+}
+
+.labelbamse {
+color:  	 	#FF8C00;
+font-weight: bolder;
+display: block;
+width:240px;
+height:100px;
+border:2px solid white;
+border-radius:25px;
+background-color: 	 	#8B4513;
+margin-bottom:50px;
+margin-top:50px;
+font-size:xx-large;
+text-align:center;
+padding-top:10px;
+box-shadow: 10px 10px 5px black;
+}
+
+.height2 {
+    height:100px;
+}
+
+.bamseOnrepeat {
+    border:5px solid LimeGreen;
+    border-radius:10px;
+background-color:  	#585858 ;
+}
+
+.text1 {
+    text-shadow: 1px 1px 0px rgba(156, 202, 255, 1);
+    font-size:large;
+    font-weight:bold;
+    color:  	#F8F8F8 ;
+}
+.Spelauppknapp {
+
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #0b3026;
+   font-size: 14px;
+   font-family: Georgia, Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   border:1px solid black;
+   box-shadow:5px 5px 5px black;
+   }
+.Speluppknapp:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+.Spelauppknapp:active {
+   border-top-color: #d7dee3;
+   background: #d7dee3;
+   }
+
+.td1 {
+    background-color:LightSteelBlue ;
+
+}
+
+/*Esams CSS*/
+
+.content {
+display: inline-block;
+
+
+}
+
+
+.listaProdukt {
+width: 1024px;
+height: auto;
+
+
+}
+.produkt {
+display: inline-block;
+border-radius: 6px;
+box-shadow: 1px 1px 1px 1px grey;
+margin-top: 20px;
+margin-left: 4px;
+}
+
+
+.esamsknapp {
+    height: 50px;
+    border-radius:5px;
+    text-shadow:white;
+    font-weight:bold;
+    background-color: #3CB371;
+
+    color:white;
+    /*box-shadow:2px 2px 2px #1089C8;*/
+}
+.betalaknapp {
+height: 60px;
+width: 100px;
+border-radius: 5px;
+background-color: #3CB371;
+font-weight: bold;
+text-shadow: white;
+color: white;
+
+}
+.esamsknapp:hover {
+background-color:#459e6b;
+
+}
+.betalaknapp:hover {
+background-color:#459e6b;
+
+}
+
+.betala {
+height:80px;
+width:120px;
+margin-bottom:10px;
+
 }

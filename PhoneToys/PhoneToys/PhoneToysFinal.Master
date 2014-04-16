@@ -61,7 +61,7 @@
                             <asp:Button ID="Button3" BackColor="Red" CssClass="link" runat="server" Text="Hem" PostBackUrl="Hem"></asp:Button></li>
 
                         <li class="menuitem">
-                            <asp:Button ID="Button2" BackColor="Red" CssClass="link" runat="server" Text="Spela Sagor" PostBackUrl="~/Spelasaga"></asp:Button></li>
+                            <asp:Button ID="Button2" BackColor="Red" CssClass="link" runat="server" Text="Spela Sagor" PostBackUrl="~/Spela"></asp:Button></li>
 
                         <li class="menuitem">
                             <asp:Button ID="Button1" BackColor="Red" CssClass="link" runat="server" Text="Sagor" PostBackUrl="~/SagorNY"></asp:Button></li>

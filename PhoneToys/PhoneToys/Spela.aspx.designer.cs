@@ -10,7 +10,7 @@
 namespace PhoneToys {
     
     
-    public partial class Spelsaga {
+    public partial class Spela {
         
         /// <summary>
         /// MinaSagorRepeater control.

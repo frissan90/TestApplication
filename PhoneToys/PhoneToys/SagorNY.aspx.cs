@@ -35,7 +35,7 @@ namespace PhoneToys
 
             if (!Page.IsPostBack)
             {
-
+                
                 List<Saga> Sagor = data.getSaga();
 
                 for (int i = 0; i < Sagor.Count; i++)

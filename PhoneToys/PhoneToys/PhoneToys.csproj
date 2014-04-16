@@ -307,7 +307,10 @@
     <Content Include="Sagor.aspx" />
     <Content Include="SagorNY.aspx" />
     <Content Include="Content\PhoneToysFinal.css" />
+    <Content Include="Spela.aspx" />
+    <Content Include="Spela2.aspx" />
     <Content Include="Spelasaga.aspx" />
+    <Content Include="Spelasaga2.aspx" />
     <Content Include="Testakoppling.aspx" />
     <Content Include="Varor.aspx" />
     <Content Include="PhoneToysFinal.Master" />
@@ -500,12 +503,33 @@
     <Compile Include="SagorNY.aspx.designer.cs">
       <DependentUpon>SagorNY.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Spela.aspx.cs">
+      <DependentUpon>Spela.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Spela.aspx.designer.cs">
+      <DependentUpon>Spela.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Spela2.aspx.cs">
+      <DependentUpon>Spela2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Spela2.aspx.designer.cs">
+      <DependentUpon>Spela2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Spelasaga.aspx.cs">
       <DependentUpon>Spelasaga.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Spelasaga.aspx.designer.cs">
       <DependentUpon>Spelasaga.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Spelasaga2.aspx.cs">
+      <DependentUpon>Spelasaga2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Spelasaga2.aspx.designer.cs">
+      <DependentUpon>Spelasaga2.aspx</DependentUpon>
     </Compile>
     <Compile Include="StartMaster.Master.cs">
       <DependentUpon>StartMaster.Master</DependentUpon>

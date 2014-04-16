@@ -12,7 +12,7 @@ using RestSharp;
 
 namespace PhoneToys
 {
-    public partial class Spelasaga : System.Web.UI.Page
+    public partial class Spela : System.Web.UI.Page
     {
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
@@ -31,9 +31,11 @@ namespace PhoneToys
                 Session["varukorg"] = new List<Varukorgen>();
             }
 
+            Session["username"] = Kryptering.decryptUser(HttpContext.Current.Request.Cookies["KrypteradKaka"]);
+
             if (!Page.IsPostBack)
             {
-                List<Saga> Sagor = data.getSagorByUser("Member001");
+                List<Saga> Sagor = data.getSagorByUser(Session["username"].ToString());
 
                 for (int i = 0; i < Sagor.Count; i++)
                 {
@@ -42,12 +44,10 @@ namespace PhoneToys
                     string imgString = Convert.ToBase64String(Sagor[i].bild);
                     Sagor[i].bilden = String.Format("data:image/Bmp;base64,{0}\"", imgString);
                 }
-
-                //MinaSagorRepeater.DataSource = Sagor;
-                //MinaSagorRepeater.DataBind();
-            }
-
-            Session["username"] = Kryptering.decryptUser(HttpContext.Current.Request.Cookies["KrypteradKaka"]);
+                
+                MinaSagorRepeater.DataSource = Sagor;
+                MinaSagorRepeater.DataBind();
+            } 
         }
 
         protected void MinaSagorRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
@@ -56,7 +56,7 @@ namespace PhoneToys
             {
                 string sagonamn = ((LinkButton)e.Item.FindControl("LinkButton1")).Text;
 
-                Response.Redirect("SpelaSaga2?Saga=" + sagonamn);
+                Response.Redirect("Spela2?Saga=" + sagonamn);
             }
         }
 
@@ -67,7 +67,7 @@ namespace PhoneToys
         //    var restClient = new RestClient(klient);
 
         //    var request = new RestRequest(Method.POST);
-           
+
         //    //var response = new RestResponse();
 
         //    //string test = response.Content;

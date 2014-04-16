@@ -1,10 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PhoneToysFinal.Master" AutoEventWireup="true" CodeBehind="Spelasaga.aspx.cs" Inherits="PhoneToys.Spelsaga" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PhoneToysFinal.Master" AutoEventWireup="true" CodeBehind="Spela.aspx.cs" Inherits="PhoneToys.Spela" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-    <div class="row large-offset-2 medium-offset-2 small-offset-0">
-            <asp:Repeater runat="server" ID="MinaSagorRepeater" OnItemCommand="MinaSagorRepeater_ItemCommand">
-                <HeaderTemplate>
+    <asp:Repeater runat="server" ID="MinaSagorRepeater" OnItemCommand="MinaSagorRepeater_ItemCommand">
+        <HeaderTemplate>
 
                     <table class="large-10 medium-8 small-6 bamseOnrepeat">
                         <tr>
@@ -25,11 +24,7 @@
                         <td class="td1"> <asp:Label ID="Label1" runat="server" Text='<%#Eval("Langd") %>'></asp:Label></td>
 
                         <td class="td1"><asp:LinkButton runat="server" ID="PlayBTN" CommandName="Spela upp" Text="Spela Upp" CssClass="Spelauppknapp"></asp:LinkButton></td>
-
-                        
                     </tr>
-
-
                 </ItemTemplate>
                 <SeparatorTemplate>
                     <tr>
@@ -41,7 +36,5 @@
                 <FooterTemplate>
                     </table>
                 </FooterTemplate>
-                
-            </asp:Repeater>
-</div>
+    </asp:Repeater>
 </asp:Content>

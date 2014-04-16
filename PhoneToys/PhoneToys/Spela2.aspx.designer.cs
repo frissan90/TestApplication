@@ -10,15 +10,15 @@
 namespace PhoneToys {
     
     
-    public partial class Spelsaga {
+    public partial class Spela2 {
         
         /// <summary>
-        /// MinaSagorRepeater control.
+        /// spelaBTN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater MinaSagorRepeater;
+        protected global::System.Web.UI.WebControls.Button spelaBTN;
     }
 }

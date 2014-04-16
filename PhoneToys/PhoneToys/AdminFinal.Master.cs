@@ -17,5 +17,12 @@ namespace PhoneToys
                 Response.Redirect("Loginny");
             }
         }
+
+        protected void AdminLoggaUt_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+
+            Response.Redirect("Loginny");
+        }
     }
 }

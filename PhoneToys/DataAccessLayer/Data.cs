@@ -464,6 +464,7 @@ namespace DataAccessLayer
                     sagan.Namn = (string)reader["Namn"];
                     sagan.Langd = (string)reader["Langd"];
                     sagan.Beskrivning = (string)reader["Beskrivning"];
+                    sagan.bild = (byte[])reader["Bild"];
 
                     sagorna.Add(sagan);
                 }
