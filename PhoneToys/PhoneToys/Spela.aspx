@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
+    <div class="row large-offset-2 medium-offset-2 small-offset-0">
     <asp:Repeater runat="server" ID="MinaSagorRepeater" OnItemCommand="MinaSagorRepeater_ItemCommand">
         <HeaderTemplate>
 
@@ -37,4 +38,5 @@
                     </table>
                 </FooterTemplate>
     </asp:Repeater>
+        </div>
 </asp:Content>

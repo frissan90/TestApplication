@@ -309,7 +309,6 @@
     <Content Include="Content\PhoneToysFinal.css" />
     <Content Include="Spela.aspx" />
     <Content Include="Spela2.aspx" />
-    <Content Include="Spelasaga.aspx" />
     <Content Include="Spelasaga2.aspx" />
     <Content Include="Testakoppling.aspx" />
     <Content Include="Varor.aspx" />
@@ -516,13 +515,6 @@
     </Compile>
     <Compile Include="Spela2.aspx.designer.cs">
       <DependentUpon>Spela2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Spelasaga.aspx.cs">
-      <DependentUpon>Spelasaga.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Spelasaga.aspx.designer.cs">
-      <DependentUpon>Spelasaga.aspx</DependentUpon>
     </Compile>
     <Compile Include="Spelasaga2.aspx.cs">
       <DependentUpon>Spelasaga2.aspx</DependentUpon>
