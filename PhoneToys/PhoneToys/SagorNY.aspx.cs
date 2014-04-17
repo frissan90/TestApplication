@@ -48,6 +48,21 @@ namespace PhoneToys
 
                 SagorLoad.DataSource = Sagor;
                 SagorLoad.DataBind();
+                
+                // Gör knappen Disabled efter man köp
+                for (int i = 0; i < Sagor.Count; i++)
+                {
+                    for (int sagoobjekt = 0; sagoobjekt < ((List<Varukorgen>)Session["varukorg"]).Count; sagoobjekt++)
+                    {
+                        if(Sagor[i].Namn == ((List<Varukorgen>)Session["varukorg"])[sagoobjekt].Saga)
+                        {
+                            ((Button)SagorLoad.Items[i].FindControl("Button1")).Enabled = false;
+                            ((Button)SagorLoad.Items[i].FindControl("Button1")).Text = "Köpt";
+                            ((Button)SagorLoad.Items[i].FindControl("Button1")).BackColor = Color.Tomato;
+                        }
+                    }
+                }
+                
             }
             //SagorLoad.ItemCommand += new EventHandler<ListViewCommandEventArgs>(this.SagorLoad_ItemCommand);
             
@@ -59,15 +74,6 @@ namespace PhoneToys
             int index = e.Item.DataItemIndex;
             
             string sagoNamn = ((Label)SagorLoad.Items[index].FindControl("text")).Text;
-
-            foreach (Varukorgen v in varor)
-            {
-                if (v.Saga == sagoNamn)
-                {
-                    ClientScript.RegisterStartupScript(Page.GetType(), "alert", "javascript:alert('Varan finns redan i varukorgen');", true);
-                    goto Slut;
-                }
-            }
 
             int pris = Convert.ToInt32((((Label)SagorLoad.Items[index].FindControl("pris")).Text).Split(' ').ElementAt(0));
 
@@ -82,7 +88,9 @@ namespace PhoneToys
 
             ClientScript.RegisterStartupScript(Page.GetType(), "alert", "javascript:alert('Vara tillagd i varukorgen');", true);
 
-        Slut:;
+            ((Button)SagorLoad.Items[index].FindControl("Button1")).Enabled = false;
+            ((Button)SagorLoad.Items[index].FindControl("Button1")).Text = "Köpt";
+            ((Button)SagorLoad.Items[index].FindControl("Button1")).BackColor = Color.Tomato;
 
             //Response.Redirect("SagorNY");
         }
