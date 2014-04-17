@@ -15,9 +15,12 @@ namespace DataAccessLayer
     public class Data
     {
         private SqlConnection con = new SqlConnection(@"Server=8d39074f-5e10-44d3-8873-a2d700fd349e.sqlserver.sequelizer.com;Database=db8d39074f5e1044d38873a2d700fd349e;User ID=dmicdnhhfwonwldo;Password=63wShho5KRp8faNbodMSvxyrcQWE3mEwJqxVPbj8qxByprmnnGqYVxnGCfPztQcy;");
+        
 
-
-
+        /// <summary>
+        /// Registrerar en ny redaktör
+        /// </summary>
+        /// <param name="editor">Info om den nya Redaktören</param>
         public void Register(Editor editor)
         {
             string Query = @"insert into Redaktor values(@Uname, @PW, @Email, @Fname, @Lname)";
@@ -70,9 +73,9 @@ namespace DataAccessLayer
         }
 
         /// <summary>
-        /// Create a new account for a new user
+        /// Registrerar en ny användare
         /// </summary>
-        /// <param name="user">Info about the new user</param>
+        /// <param name="user">Info om den nya medlemmen</param>
         public void Register(User user)
         {
             string Query = @"insert into Member values(@Uname, @Email, @PW, null, null, null, null, null, null, @Bamse)";
@@ -148,11 +151,11 @@ namespace DataAccessLayer
         }
 
         /// <summary>
-        /// Authenticates a user 
+        /// Verifierar en medlemms inloggningsuppgifter
         /// </summary>
-        /// <param name="Email">Email inserted by the user</param>
-        /// <param name="Password">Password inserted by the user</param>
-        /// <returns>Returns the result</returns>
+        /// <param name="Email">Den inmatade mailadressen</param>
+        /// <param name="Password">Det inmatade lösenordet</param>
+        /// <returns>Resultatet</returns>
         public bool authenticateUser(string Username, string Password)
         {
             string Query = @"select count(*) from Member where Username = @Username and Password = @PW";
@@ -195,11 +198,11 @@ namespace DataAccessLayer
         }
 
         /// <summary>
-        /// Authenticates an Admin
+        /// Verifierar en Admins inloggningsuppgifter
         /// </summary>
-        /// <param name="Email">Email inserted by the user</param>
-        /// <param name="Password">Password inserted by the user</param>
-        /// <returns>Returns the result</returns>
+        /// <param name="Email">Den inmatade mailadressen</param>
+        /// <param name="Password">Det inmatade lösenordet</param>
+        /// <returns>Resultatet</returns>
         public bool authenticateAdmin(string Username, string Password)
         {
             string Query = @"select count(*) from Admin where Username = @Username and Password = @PW";
@@ -241,8 +244,10 @@ namespace DataAccessLayer
             return result;
         }
 
-
-
+        /// <summary>
+        /// Lägger till en ny saga
+        /// </summary>
+        /// <param name="sagan">Info om den nya sagan</param>
         public void addSaga(Saga sagan)
         {
             string Query = @"insert into Saga values(@Namn, @Beskrivning, @Data, @Langd, @Pris, GETDATE(), @UpplagdAv, 0, @Bild)";
@@ -303,6 +308,10 @@ namespace DataAccessLayer
             }
         }
 
+        /// <summary>
+        /// Hämtar alla sagor
+        /// </summary>
+        /// <returns>Lista med alla sagor</returns>
         public List<Saga> getSaga()
         {
             List<Saga> Sagor = new List<Saga>();
@@ -361,10 +370,10 @@ namespace DataAccessLayer
         }
 
         /// <summary>
-        /// Authenticates an Editor
+        /// Verifierar en Redaktörs inloggningsuppgifter
         /// </summary>
-        /// <param name="Email">Email inserted by the user</param>
-        /// <param name="Password">Password inserted by the user</param>
+        /// <param name="Email">Den inmatade mailadressen</param>
+        /// <param name="Password">Det inmatade lösenordet</param>
         /// <returns>Returns the result</returns>
         public bool authenticateEditor(string Username, string Password)
         {
@@ -407,6 +416,10 @@ namespace DataAccessLayer
             return result;
         }
 
+        /// <summary>
+        /// Tar bort en saga
+        /// </summary>
+        /// <param name="Namn">Namnet på sagan som skall tas bort</param>
         public void removeSaga(string Namn)
         {
             string Query = @"delete from Saga where Namn = @Namn";
@@ -436,6 +449,11 @@ namespace DataAccessLayer
             }
         }
 
+        /// <summary>
+        /// Hämtar alla sagor som en användare har köpt
+        /// </summary>
+        /// <param name="Username">Användarens användarnamn</param>
+        /// <returns>Lista med alla sagor</returns>
         public List<Saga> getSagorByUser(string Username)
         {
             List<Saga> sagorna = new List<Saga>();
@@ -486,6 +504,11 @@ namespace DataAccessLayer
             return sagorna;
         }
 
+        /// <summary>
+        /// Slutför ett köp av sagor
+        /// </summary>
+        /// <param name="currentMember">Användaren som köpt sagorna</param>
+        /// <param name="varor">Lista med sagorna som har köpts</param>
         public void kopSagor(string currentMember, List<Varukorgen> varor)
         {
 
@@ -524,6 +547,12 @@ namespace DataAccessLayer
             }
         }
 
+
+        /// <summary>
+        /// Hämtar en saga i binär form
+        /// </summary>
+        /// <param name="sagoNamn">Namnet på sagan som skall hämtas</param>
+        /// <returns>Sagan</returns>
         public byte[] getSagaData(string sagoNamn)
         {
             string Query = @"Select Data from Saga where Namn = @Saga";
@@ -557,6 +586,12 @@ namespace DataAccessLayer
             return Data;
         }
 
+
+        /// <summary>
+        /// Hämtar info om en specifik saga
+        /// </summary>
+        /// <param name="saga">Namnet på sagan</param>
+        /// <returns>Info om Sagan</returns>
         public Saga geteditSaga(string saga)
         {
             String Query = @"Select * from Saga where Namn = @Saga";
@@ -612,6 +647,12 @@ namespace DataAccessLayer
             }
             return saga2;
         }
+
+        /// <summary>
+        /// Redigerar en saga
+        /// </summary>
+        /// <param name="Namn">Namnet på sagan som skall redigeras</param>
+        /// <param name="saga">Info om sagan</param>
         public void editSaga(string Namn, Saga saga)
         {
             String query = "Update Saga set Namn = @Namn, Beskrivning = @Beskrivning, Pris = @Pris, Bild = @Bild where Namn = @Namnet";
@@ -668,6 +709,12 @@ namespace DataAccessLayer
             }
         }
 
+
+        /// <summary>
+        /// Hämtar info om en specifik bamse
+        /// </summary>
+        /// <param name="BamseID">BamseIDt</param>
+        /// <returns>Info om Bamsen</returns>
         public Bamse getBamseInfo(string BamseID)
         {
             Bamse bamsen = new Bamse();

@@ -310,7 +310,6 @@
     <Content Include="Spela.aspx" />
     <Content Include="Spela2.aspx" />
     <Content Include="Spelasaga2.aspx" />
-    <Content Include="Testakoppling.aspx" />
     <Content Include="Varor.aspx" />
     <Content Include="PhoneToysFinal.Master" />
     <Content Include="Images\startPageIMG.psd" />
@@ -529,13 +528,6 @@
     </Compile>
     <Compile Include="StartMaster.Master.designer.cs">
       <DependentUpon>StartMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Testakoppling.aspx.cs">
-      <DependentUpon>Testakoppling.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Testakoppling.aspx.designer.cs">
-      <DependentUpon>Testakoppling.aspx</DependentUpon>
     </Compile>
     <Compile Include="Varor.aspx.cs">
       <DependentUpon>Varor.aspx</DependentUpon>

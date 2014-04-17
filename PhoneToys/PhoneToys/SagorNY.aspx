@@ -75,9 +75,6 @@
             <br />
 
             <asp:Button runat="server" ID="BetalaBTN" Text="Betala" CssClass="betalaknapp large-offset-8 " OnClick="BetalaBTN_Click" />
-
         </div>
-
-    </div>
-    
+    </div>  
 </asp:Content>
