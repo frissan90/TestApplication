@@ -41,7 +41,7 @@
         </script>
     </div>--%>
 
-    <div class="row small-12">
+    <div class="row small-12"
         <div class="listaProdukt">
 
             <asp:ListView runat="server" ID="SagorLoad" GroupItemCount="3" OnItemCommand="SagorLoad_ItemCommand">
@@ -49,10 +49,10 @@
                     <asp:PlaceHolder ID="groupPlaceholder" runat="server"></asp:PlaceHolder>
                 </LayoutTemplate>
                 <GroupTemplate>
-                    <div class="" id="itemPlaceholder" runat="server">
-                        <div class="row">
+                    <div class="row" id="itemPlaceholder" runat="server">
+                        <%--<div class="row">
 
-                    </div>
+                    </div>--%>
                     </div>
                 </GroupTemplate>
                 <ItemTemplate>

@@ -60,6 +60,15 @@ namespace PhoneToys
             
             string sagoNamn = ((Label)SagorLoad.Items[index].FindControl("text")).Text;
 
+            foreach (Varukorgen v in varor)
+            {
+                if (v.Saga == sagoNamn)
+                {
+                    ClientScript.RegisterStartupScript(Page.GetType(), "alert", "javascript:alert('Varan finns redan i varukorgen');", true);
+                    goto Slut;
+                }
+            }
+
             int pris = Convert.ToInt32((((Label)SagorLoad.Items[index].FindControl("pris")).Text).Split(' ').ElementAt(0));
 
             Varukorgen varan = new Varukorgen();
@@ -72,6 +81,8 @@ namespace PhoneToys
             Session["varukorg"] = varor;
 
             ClientScript.RegisterStartupScript(Page.GetType(), "alert", "javascript:alert('Vara tillagd i varukorgen');", true);
+
+        Slut:;
 
             //Response.Redirect("SagorNY");
         }
