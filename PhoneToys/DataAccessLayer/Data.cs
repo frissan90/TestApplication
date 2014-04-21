@@ -78,7 +78,7 @@ namespace DataAccessLayer
         /// <param name="user">Info om den nya medlemmen</param>
         public void Register(User user)
         {
-            string Query = @"insert into Member values(@Uname, @Email, @PW, null, null, null, null, null, null, @Bamse)";
+            string Query = @"insert into Member values(@Uname, null, @PW, null, null, null, null, null, null, @Bamse)";
 
             try
             {
@@ -87,10 +87,10 @@ namespace DataAccessLayer
 
                 SqlCommand cmd = new SqlCommand(Query, con);
 
-                SqlParameter param = new SqlParameter();
-                param.ParameterName = "@Email";
-                param.Value = user.Email;
-                cmd.Parameters.Add(param);
+                //SqlParameter param = new SqlParameter();
+                //param.ParameterName = "@Email";
+                //param.Value = user.Email;
+                //cmd.Parameters.Add(param);
 
                 SqlParameter param2 = new SqlParameter();
                 param2.ParameterName = "@PW";
@@ -757,6 +757,84 @@ namespace DataAccessLayer
             }
 
             return bamsen;
+        }
+
+        public List<Saga> gratisSagor()
+        {
+            String Query = @"Select top 3 Namn from Saga";
+
+            List<Saga> sagor = new List<Saga>();
+
+            SqlDataReader minReader = null;
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                minReader = cmd.ExecuteReader();
+
+                while (minReader.Read())
+                {
+                    Saga s = new Saga();
+                    s.Namn = (string)minReader["Namn"];
+
+                    sagor.Add(s);
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+                if (minReader != null)
+                {
+                    minReader.Close();
+                }
+            }
+            return sagor;
+        }
+
+        public void gratisSagor(string Username)
+        {
+            string Query = @"insert into Sagormedlem values(@User, @Saga)";
+
+            List<Saga> sagor = gratisSagor();
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                SqlParameter param = new SqlParameter("@User", Username);
+                cmd.Parameters.Add(param);
+
+                SqlParameter param2 = new SqlParameter();
+                param2.ParameterName = "@Saga";
+                cmd.Parameters.Add(param2);
+
+                foreach (Saga s in sagor)
+                {
+                    param2.Value = s.Namn;
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
         }
     }
 }

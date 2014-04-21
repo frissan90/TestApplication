@@ -43,6 +43,16 @@ namespace PhoneToys
 
             Response.Cookies.Add(kaka);
 
+            HttpCookie kryptCookie = new HttpCookie("Krypteradkaka", UnameTB.Text);
+
+            kryptCookie = Kryptering.encryptUser(kryptCookie);
+
+            kryptCookie.Expires = DateTime.Now.AddDays(30);
+
+            Response.Cookies.Add(kryptCookie);
+
+            data.gratisSagor(UnameTB.Text);
+
             Response.Redirect("Hem");
         }
     }
