@@ -14,7 +14,7 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-            data.getSagorByUser("member001");
+            
         }
 
         protected void LoginBtn_Click(object sender, ImageClickEventArgs e)
@@ -39,7 +39,7 @@ namespace PhoneToys
 
                 Response.Cookies.Add(user);
 
-                Response.Redirect("Hem");
+                Response.Redirect("Spela");
             }
 
             if(data.authenticateEditor(userTB.Text, passwordTB.Text))

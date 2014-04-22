@@ -48,26 +48,26 @@
 <body class="large-12">
     <form runat="server">
         <div class="row large-12 medium-12">
-            <header class="row small-12">
+            <header class="row small-12  large-offset-1">
                 <%--<div class="row small-12">--%>
                 <asp:ImageButton PostBackUrl="~/Hem" runat="server" ImageUrl="~/Images/PhoneToysHeader.png" CssClass="headerIMG" />
                 <%--</div>--%>
             </header>
             <div class="row">
-                <div class="large-centered large-12 medium-12 small-12 columns">
-
+                <div class="large-12 medium-12 small-12 columns large-offset-0">
+                     
                     <ul class="center button-group">
                         <li class="menuitem">
-                            <asp:Button ID="m1" BackColor="Red" CssClass="link" runat="server" Text="Hem" PostBackUrl="Hem"></asp:Button></li>
+                            <asp:Button ID="m1" BackColor="Red" CssClass="button link" runat="server" Text="Hem" PostBackUrl="Hem"></asp:Button></li>
 
                         <li class="menuitem">
-                            <asp:Button ID="m2" BackColor="Red" CssClass="link" runat="server" Text="Spela Sagor" PostBackUrl="~/Spela"></asp:Button></li>
+                            <asp:Button ID="m2" BackColor="Red" CssClass="button link" runat="server" Text="Spela Sagor" PostBackUrl="~/Spela"></asp:Button></li>
 
                         <li class="menuitem">
-                            <asp:Button ID="m3" BackColor="Red" CssClass="link" runat="server" Text="Sagor" PostBackUrl="~/SagorNY"></asp:Button></li>
+                            <asp:Button ID="m3" BackColor="Red" CssClass="button link" runat="server" Text="Sagor" PostBackUrl="~/SagorNY"></asp:Button></li>
 
                         <li class="menuitem">
-                            <asp:Button ID="m4" CssClass="link" BackColor="Red" runat="server" Text="Varukorg" PostBackUrl="Varor"></asp:Button></li>
+                            <asp:Button ID="m4" CssClass="button link" BackColor="Red" runat="server" Text="Varukorg" PostBackUrl="Varor"></asp:Button></li>
                     </ul>
                 </div>
             </div>

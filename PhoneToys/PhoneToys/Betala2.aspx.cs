@@ -74,7 +74,8 @@ namespace PhoneToys
 
         protected void avbrytbtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Hem");
+            Session["varukorg"] = new List<Varukorgen>();
+            Response.Redirect("SagorNY");
         }
 
         protected void BetalningsRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)

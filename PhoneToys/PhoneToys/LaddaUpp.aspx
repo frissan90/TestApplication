@@ -9,9 +9,9 @@
         <br />
         <div class="large-6 medium-6 columns">
             <asp:Label runat="server" Text="Beskrivning" CssClass="label PTLabels"></asp:Label>
-            <asp:TextBox runat="server" ID="BeskrivningTB" placeholder="Beskrivning"></asp:TextBox>
+            <asp:TextBox runat="server" CssClass="textbox2" ID="BeskrivningTB" placeholder="Beskrivning"></asp:TextBox>
             <asp:Label runat="server" Text="Pris" CssClass="label PTLabels"></asp:Label>
-            <asp:TextBox runat="server" ID="PrisTB" placeholder="Pris"></asp:TextBox>
+            <asp:TextBox runat="server" CssClass="textbox2" ID="PrisTB" placeholder="Pris"></asp:TextBox>
             <br />
             <asp:Label runat="server" Text="Välj Fil" CssClass="label PTLabels"></asp:Label>
             <asp:FileUpload runat="server" ID="minUpload" BackColor="White" />

@@ -5,10 +5,10 @@
     <div class="row large-7 large-offset-5 columns medium-7 medium-offset-5" aria-haspopup="True">
         <div class="panel">
             <asp:Label runat="server" ID="Login" Text="Användarnamn"></asp:Label>
-            <asp:TextBox ID="userTB" runat="server"></asp:TextBox>
+            <asp:TextBox ID="userTB" CssClass="textbox" runat="server"></asp:TextBox>
 
             <asp:Label runat="server" ID="Label1" Text="Lösenord"></asp:Label>
-            <asp:TextBox ID="passwordTB" TextMode="Password" runat="server"></asp:TextBox>
+            <asp:TextBox ID="passwordTB" TextMode="Password" CssClass="textbox" runat="server"></asp:TextBox>
 
            <asp:ImageButton ID="LoginBtn" runat="server" imageUrl="Images/Login.png" Borderwidth="0" OnClick="LoginBtn_Click"/>
 

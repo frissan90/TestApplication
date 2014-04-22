@@ -53,7 +53,7 @@ namespace PhoneToys
 
             data.gratisSagor(UnameTB.Text);
 
-            Response.Redirect("Hem");
+            Response.Redirect("Spela");
         }
     }
 }
