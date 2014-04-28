@@ -14,7 +14,15 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if(HttpContext.Current.Request.Cookies["PTKAKA"] == null)
+            {
+                Response.Redirect("Registerellerlogin");
+            }
+
+            if (HttpContext.Current.Request.Cookies["PTKAKA"].Value == "inloggad")
+            {
+                Response.Redirect("Spela");
+            }
         }
 
         protected void LoginBtn_Click(object sender, ImageClickEventArgs e)

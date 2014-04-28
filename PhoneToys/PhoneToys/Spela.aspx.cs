@@ -54,9 +54,32 @@ namespace PhoneToys
         {
             if (e.CommandName == "Spela upp")
             {
+                ((ImageButton)e.Item.FindControl("PlayBTN")).CommandName = "Pausa";
+
+                ((ImageButton)e.Item.FindControl("PlayBTN")).ImageUrl = "~/Images/Pause.png";
+
                 string sagonamn = ((LinkButton)e.Item.FindControl("LinkButton1")).Text;
 
-                Response.Redirect("Spela2?Saga=" + sagonamn);
+                for (int i = 0; i < MinaSagorRepeater.Items.Count; i++)
+                {
+                    if (i != e.Item.ItemIndex)
+                    {
+                        ((ImageButton)MinaSagorRepeater.Items[i].FindControl("PlayBTN")).Enabled = false;
+                    }
+                }
+
+                //Response.Redirect("Spela2?Saga=" + sagonamn);
+            }
+
+            if (e.CommandName == "Pausa")
+            {
+                ((ImageButton)e.Item.FindControl("PlayBTN")).CommandName = "Spela upp";
+                ((ImageButton)e.Item.FindControl("PlayBTN")).ImageUrl = "~/Images/SpelaLiten.png";
+
+                for (int i = 0; i < MinaSagorRepeater.Items.Count; i++)
+                {
+                        ((ImageButton)MinaSagorRepeater.Items[i].FindControl("PlayBTN")).Enabled = true;
+                }
             }
         }
 

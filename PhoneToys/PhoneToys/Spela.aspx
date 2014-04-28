@@ -24,7 +24,9 @@
 
                         <td class="td1"> <asp:Label ID="Label1" runat="server" Text='<%#Eval("Langd") %>'></asp:Label></td>
 
-                        <td class="td1"><asp:LinkButton runat="server" ID="PlayBTN" CommandName="Spela upp" Text="Spela Upp" CssClass="Spelauppknapp"></asp:LinkButton></td>
+                        <td class="td1"><%--<asp:LinkButton runat="server" ID="PlayBTN" CommandName="Spela upp" Text="Spela Upp" CssClass="Spelauppknapp"></asp:LinkButton>--%>
+                            <asp:ImageButton runat="server" ID="PlayBTN" CommandName="Spela upp" ImageUrl="~/Images/SpelaLiten.png" />
+                        </td>
                     </tr>
                 </ItemTemplate>
                 <SeparatorTemplate>

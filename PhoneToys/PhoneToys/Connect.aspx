@@ -8,7 +8,7 @@
                 <asp:Label ID="Label1" runat="server" Text="Skriv ditt Bamse-ID" Font-Size="Large" Font-Bold="true"></asp:Label><br />
            
             <asp:TextBox ID="TextBox1" runat="server" CssClass="textbox" Placeholder="exempel 1520"></asp:TextBox>
-            <asp:ImageButton ID="imgBtn" runat="server" imageurl="Images/play.gif" Borderwidth="0" OnClick="imgBtn_Click" />
+            <asp:ImageButton ID="imgBtn" runat="server" imageurl="~/Images/Spela1.png" Borderwidth="0" OnClick="imgBtn_Click" />
             
                 
         </div>

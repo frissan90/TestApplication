@@ -13,5 +13,12 @@ namespace PhoneToys
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            HttpContext.Current.Request.Cookies["PTKAKA"].Value = "utloggad";
+            Session.Clear();
+            Response.Redirect("LoginNY");
+        }
     }
 }

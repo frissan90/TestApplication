@@ -57,7 +57,7 @@ namespace PhoneToys
                         if(Sagor[i].Namn == ((List<Varukorgen>)Session["varukorg"])[sagoobjekt].Saga)
                         {
                             ((Button)SagorLoad.Items[i].FindControl("Button1")).Enabled = false;
-                            ((Button)SagorLoad.Items[i].FindControl("Button1")).Text = "Köpt";
+                            ((Button)SagorLoad.Items[i].FindControl("Button1")).Text = "Lagd i Varukorgen";
                             ((Button)SagorLoad.Items[i].FindControl("Button1")).BackColor = Color.Tomato;
                         }
                     }
@@ -86,10 +86,10 @@ namespace PhoneToys
 
             Session["varukorg"] = varor;
 
-            ClientScript.RegisterStartupScript(Page.GetType(), "alert", "javascript:alert('Vara tillagd i varukorgen');", true);
+            //ClientScript.RegisterStartupScript(Page.GetType(), "alert", "javascript:alert('Vara tillagd i varukorgen');", true);
 
             ((Button)SagorLoad.Items[index].FindControl("Button1")).Enabled = false;
-            ((Button)SagorLoad.Items[index].FindControl("Button1")).Text = "Köpt";
+            ((Button)SagorLoad.Items[index].FindControl("Button1")).Text = "Lagd i varukorg";
             ((Button)SagorLoad.Items[index].FindControl("Button1")).BackColor = Color.Tomato;
 
             //Response.Redirect("SagorNY");
