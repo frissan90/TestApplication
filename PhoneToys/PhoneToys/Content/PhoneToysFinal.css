@@ -19,9 +19,6 @@ background-size: cover;
     /*height: 200px;*/
 }
 
-.center {
-    margin-left: 30%;
-}
 
 
 
@@ -390,5 +387,11 @@ background-color:#459e6b;
 height:80px;
 width:120px;
 margin-bottom:10px;
+
+}
+
+.Img {
+
+    background-image:url('~/Images/PhoneToysHeader.png');
 
 }
