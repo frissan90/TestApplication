@@ -23,7 +23,7 @@ namespace PhoneToys
                 Response.Redirect("Loginny");
             }
 
-            /*Session["username"]*/string h = Kryptering.decryptUser(HttpContext.Current.Request.Cookies["Krypteradkaka"]);
+            Session["username"] = Kryptering.decryptUser(HttpContext.Current.Request.Cookies["Krypteradkaka"]);
 
             DropdownList1.Items.Add("VISA");
             DropdownList1.Items.Add("Mastercard");

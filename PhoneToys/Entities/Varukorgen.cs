@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
+    /// <summary>
+    /// Varukorgsklassen
+    /// </summary>
     public class Varukorgen
     {
         public string Saga { get; set; }

@@ -24,6 +24,8 @@ namespace PhoneToys
                 Response.Redirect("Registerellerlogin");
             }
 
+            Session["username"] = Kryptering.decryptUser(HttpContext.Current.Request.Cookies["Krypteradkaka"]);
+
             if (!Page.IsPostBack)
             {
                 List<Saga> Sagor = data.getSaga();

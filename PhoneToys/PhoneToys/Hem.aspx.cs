@@ -27,7 +27,7 @@ namespace PhoneToys
                 Session["varukorg"] = new List<Varukorgen>();
             }
 
-            Session["username"] = Kryptering.decryptUser(HttpContext.Current.Request.Cookies["KrypteradKaka"]);
+            Session["username"] = Kryptering.decryptUser(HttpContext.Current.Request.Cookies["Krypteradkaka"]);
         }
     }
 }

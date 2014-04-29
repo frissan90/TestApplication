@@ -39,7 +39,7 @@ namespace PhoneToys
 
                 Response.Cookies.Add(PhoneToysCookie);
 
-                HttpCookie user = new HttpCookie("KrypteradKaka", userTB.Text);
+                HttpCookie user = new HttpCookie("Krypteradkaka", userTB.Text);
 
                 user = Kryptering.encryptUser(user);
 

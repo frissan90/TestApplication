@@ -16,6 +16,10 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Editor"] == null)
+            {
+                Response.Redirect("Loginny");
+            }
             if (!Page.IsPostBack)
             {
                 List<Saga> Sagor = data.getSaga();

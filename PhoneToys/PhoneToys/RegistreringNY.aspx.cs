@@ -18,8 +18,6 @@ namespace PhoneToys
             {
                 Response.Redirect("Registerellerlogin");
             }
-
-            
         }
 
 
