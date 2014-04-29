@@ -47,10 +47,10 @@
 </head>
 <body class="large-12">
     <form id="Form1" runat="server">
-        <div class="row large-12 medium-12">
-            <header class="row small-12">
+        <div class="row large-12 medium-12 small-12">
+            <header class="row small-12 large-offset-1 medium-offset-1 small-offset-1">
                 <%--<div class="row small-12">--%>
-                <asp:ImageButton ID="ImageButton1" PostBackUrl="~/Hem" runat="server" ImageUrl="~/Images/PhoneToysHeader.png" CssClass="headerIMG" />
+                <div class="large-12 small-10 medium-10"><asp:HyperLink ID="HyperLink1" runat="server" ImageUrl="~/Images/PhoneToysHeader.png" NavigateUrl="~/Hem"></asp:HyperLink></div>
                 <%--</div>--%>
             </header>
             <%--<div class="row">

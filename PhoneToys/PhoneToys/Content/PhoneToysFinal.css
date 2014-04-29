@@ -125,6 +125,7 @@ float: left;
     background-color : #6bd851;
     color : white;
     border-width: 5px;
+    cursor:pointer;
 }
 .avbrytBtn {
     width : 160px;
@@ -133,6 +134,7 @@ float: left;
     font-size : 15px;
     background-color :#e5e5e5; 
     border-width: 5px;
+    cursor:pointer;
 }
 
 
@@ -360,7 +362,7 @@ margin-left: 4px;
     text-shadow:white;
     font-weight:bold;
     background-color: #3CB371;
-
+    cursor:pointer;
     color:white;
     /*box-shadow:2px 2px 2px #1089C8;*/
 }
@@ -372,6 +374,7 @@ background-color: #3CB371;
 font-weight: bold;
 text-shadow: white;
 color: white;
+cursor:pointer;
 
 }
 .esamsknapp:hover {

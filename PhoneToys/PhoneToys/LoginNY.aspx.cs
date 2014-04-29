@@ -14,12 +14,12 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(HttpContext.Current.Request.Cookies["PTKAKA"] == null)
-            {
-                Response.Redirect("Registerellerlogin");
-            }
+            //if(HttpContext.Current.Request.Cookies["PTKAKA"] == null)
+            //{
+            //    Response.Redirect("Registerellerlogin");
+            //}
 
-            if (HttpContext.Current.Request.Cookies["PTKAKA"].Value == "inloggad")
+            if (HttpContext.Current.Request.Cookies["PTKAKA"] != null && HttpContext.Current.Request.Cookies["PTKAKA"].Value == "inloggad")
             {
                 Response.Redirect("Spela");
             }
@@ -52,18 +52,12 @@ namespace PhoneToys
 
             if(data.authenticateEditor(userTB.Text, passwordTB.Text))
             {
-                HttpCookie cheeseCake = new HttpCookie("EDITORKAKA", "inloggad");
-                cheeseCake.Expires = DateTime.Now.AddDays(30);
-                Response.Cookies.Add(cheeseCake);
                 Session["Editor"] = userTB.Text;
                 Response.Redirect("RedaktorStart");
             }
 
             if (data.authenticateAdmin(userTB.Text, passwordTB.Text))
             {
-                HttpCookie chocolateChipCookie = new HttpCookie("ADMINKAKA", "inloggad");
-                chocolateChipCookie.Expires = DateTime.Now.AddDays(30);
-                Response.Cookies.Add(chocolateChipCookie);
                 Session["Admin"] = userTB.Text;
                 Response.Redirect("Adminsida");
             }

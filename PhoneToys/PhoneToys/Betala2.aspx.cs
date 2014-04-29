@@ -14,6 +14,17 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (HttpContext.Current.Request.Cookies["PTKAKA"] == null)
+            {
+                Response.Redirect("Registerellerlogin");
+            }
+            if (HttpContext.Current.Request.Cookies["PTKAKA"] != null && HttpContext.Current.Request.Cookies["PTKAKA"].Value == "utloggad")
+            {
+                Response.Redirect("Loginny");
+            }
+
+            /*Session["username"]*/string h = Kryptering.decryptUser(HttpContext.Current.Request.Cookies["Krypteradkaka"]);
+
             DropdownList1.Items.Add("VISA");
             DropdownList1.Items.Add("Mastercard");
             DropdownList1.Items.Add("American Express Card");

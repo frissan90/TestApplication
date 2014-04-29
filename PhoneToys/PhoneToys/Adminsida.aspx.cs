@@ -14,7 +14,7 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (HttpContext.Current.Request.Cookies["ADMINKAKA"] == null || HttpContext.Current.Request.Cookies["ADMINKAKA"].Value == "utloggad")
+            if (Session["Admin"] == null)
             {
                 Response.Redirect("Loginny");
             }
