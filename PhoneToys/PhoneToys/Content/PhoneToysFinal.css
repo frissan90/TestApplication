@@ -468,3 +468,8 @@ margin-bottom:10px;
     box-shadow: 3px 3px 3px 3px black;
     border-radius: 15px;
 }
+
+.tvatt {
+    font-weight:bolder;
+    font-size:x-large;
+}

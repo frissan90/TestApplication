@@ -85,7 +85,9 @@ namespace PhoneToys
 
         protected void BetalningsRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
-
+            if (e.CommandName == "Remove")
+            {
+            }
         }
 
         protected void godkännbtn_Click(object sender, EventArgs e)

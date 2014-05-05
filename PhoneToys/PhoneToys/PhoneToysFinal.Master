@@ -1,4 +1,6 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PhoneToysFinal.master.cs" Inherits="PhoneToys.PhoneToysFinal" %>
+﻿
+
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PhoneToysFinal.master.cs" Inherits="PhoneToys.PhoneToysFinal" %>
 
 <!DOCTYPE html>
 
