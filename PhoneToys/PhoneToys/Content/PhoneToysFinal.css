@@ -19,6 +19,9 @@ background-size: cover;
     /*height: 200px;*/
 }
 
+.center {
+    margin-left: 30%;
+}
 
 
 
@@ -83,13 +86,43 @@ background-size: cover;
     z-index:1;
 }*/
 
-.PTLabels {
-    background-color: white;
-    color: black;
+.KortypLBL {    color: black !important;
     font-family : Verdana;
     font-weight : bold;
+    font-size : 12px;
+   
+     padding-top : 15px;
 }
 
+.KortNummer {
+       color: black !important;
+    font-family : Verdana;
+    font-weight : bold;
+    font-size : 12px;
+   position : relative;
+  
+}
+KortNumBox {
+    position : relative;
+}
+
+.PTLabels {
+   
+    color: black !important;
+    font-family : Verdana;
+    font-weight : bold;
+    font-size : 12px;
+    
+     padding-top : 10px;
+}
+
+.TackF {
+    font-family: Verdana, Arial;
+    font-size : xx-large;
+    font-weight : bold;
+    color : #646363;
+    
+}
 .row-hoger {
 float:right;
 
@@ -104,6 +137,8 @@ float: left;
 
 .panel {
     opacity: 0.9;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 3px black;
 }
 
 .newSagaIMG {
@@ -118,23 +153,31 @@ float: left;
 
 .gbtn {
     margin:auto;
-    width : 170px;
-    height : 80px;
+    width : 130px;
+    height : 70px;
     font-weight : bold;
     font-size : 15px;
     background-color : #6bd851;
     color : white;
-    border-width: 5px;
-    cursor:pointer;
+    border-width: 2px;
+}
+.gbtn2 {
+     
+    width : 170px;
+    height : 70px;
+    font-weight : bold;
+    font-size : 15px;
+    background-color : #6bd851;
+    color : white;
+    border-width: 2px;
 }
 .avbrytBtn {
-    width : 160px;
-    height : 80px;
+    width : 120px;
+    height : 70px;
     font-weight : bold;
     font-size : 15px;
     background-color :#e5e5e5; 
-    border-width: 5px;
-    cursor:pointer;
+    border-width: 2px;
 }
 
 
@@ -362,7 +405,7 @@ margin-left: 4px;
     text-shadow:white;
     font-weight:bold;
     background-color: #3CB371;
-    cursor:pointer;
+
     color:white;
     /*box-shadow:2px 2px 2px #1089C8;*/
 }
@@ -374,7 +417,6 @@ background-color: #3CB371;
 font-weight: bold;
 text-shadow: white;
 color: white;
-cursor:pointer;
 
 }
 .esamsknapp:hover {
@@ -392,9 +434,37 @@ width:120px;
 margin-bottom:10px;
 
 }
+.DDL {
+    max-width: 240px;
+    min-width: 240px;
+    width: 240px !important;
+    /*position : absolute;*/
+   overflow : hidden;
+   margin-top : 10px;
+}
+.DDL2 {
+    max-width: 70px;
+    min-width: 70px;
+    width: 70px !important;
+    /*position : absolute;*/
+   overflow : hidden;
+   margin-top : 10px;
+}
+.blueRow
+      {
+            background-color: lightgrey;
+            color: black;
+	        }
+.whiteRow
+      {
+            background-color: white;
+            color: black;
+	        }
 
-.Img {
 
-    background-image:url('~/Images/PhoneToysHeader.png');
 
+.bground {
+    background-color: #DCDCDC;
+    box-shadow: 3px 3px 3px 3px black;
+    border-radius: 15px;
 }

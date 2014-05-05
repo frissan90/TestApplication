@@ -22,7 +22,7 @@
 
     </div>
 </div>
-    <div class="row">
+    <div class="row bground" style="border: 1px solid; border-color:lime">
                     <div class="row-vanster">
                         <div class="large-12 medium-10 small-6">
         <asp:Image runat="server" ID="Vargbild" Imageurl="~/Images/vargen2.png" /></div>

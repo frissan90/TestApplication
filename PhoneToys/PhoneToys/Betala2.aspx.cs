@@ -14,16 +14,10 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (HttpContext.Current.Request.Cookies["PTKAKA"] == null)
-            {
-                Response.Redirect("Registerellerlogin");
-            }
-            if (HttpContext.Current.Request.Cookies["PTKAKA"] != null && HttpContext.Current.Request.Cookies["PTKAKA"].Value == "utloggad")
-            {
-                Response.Redirect("Loginny");
-            }
-
-            Session["username"] = Kryptering.decryptUser(HttpContext.Current.Request.Cookies["Krypteradkaka"]);
+             if(Session["varukorg"]==null)
+             {
+                 List<Varukorgen> Varukorgen = new List<Varukorgen>(); 
+             }
 
             DropdownList1.Items.Add("VISA");
             DropdownList1.Items.Add("Mastercard");
@@ -76,7 +70,7 @@ namespace PhoneToys
         {
             data.kopSagor(Session["username"].ToString(), (List<Varukorgen>)Session["varukorg"]);
 
-            Response.Redirect("Betala2");
+            Response.Redirect("TackForDittKop");
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -90,6 +84,11 @@ namespace PhoneToys
         }
 
         protected void BetalningsRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+
+        }
+
+        protected void godkännbtn_Click(object sender, EventArgs e)
         {
 
         }

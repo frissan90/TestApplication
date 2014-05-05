@@ -316,6 +316,7 @@
     <Content Include="Spela.aspx" />
     <Content Include="Spela2.aspx" />
     <Content Include="Spelasaga2.aspx" />
+    <Content Include="TackForDittKop.aspx" />
     <Content Include="Varor.aspx" />
     <Content Include="PhoneToysFinal.Master" />
     <Content Include="Images\startPageIMG.psd" />
@@ -534,6 +535,13 @@
     </Compile>
     <Compile Include="StartMaster.Master.designer.cs">
       <DependentUpon>StartMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TackForDittKop.aspx.cs">
+      <DependentUpon>TackForDittKop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TackForDittKop.aspx.designer.cs">
+      <DependentUpon>TackForDittKop.aspx</DependentUpon>
     </Compile>
     <Compile Include="Varor.aspx.cs">
       <DependentUpon>Varor.aspx</DependentUpon>
