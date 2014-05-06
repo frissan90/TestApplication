@@ -22,7 +22,7 @@ namespace PhoneToys
             }
 
             Saga sagan = data.geteditSaga(Request.QueryString["Saga"]);
-
+            
             editNamntbx.Text = sagan.Namn;
             editBeskrivningtbx.Text = sagan.Beskrivning;
             editPristbx.Text = sagan.Pris.ToString(); ;

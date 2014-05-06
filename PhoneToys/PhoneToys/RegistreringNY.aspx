@@ -25,7 +25,7 @@
     <div class="row bground" style="border: 1px solid; border-color:lime">
                     <div class="row-vanster">
                         <div class="large-12 medium-10 small-6">
-        <asp:Image runat="server" ID="Vargbild" Imageurl="~/Images/vargen2.png" /></div>
+        <asp:Image runat="server" ID="Vargbild" Imageurl="~/Images/vargen.png" /></div>
         </div>
 
                 <br />
@@ -36,7 +36,7 @@
                 <br />
                 
         
-  <div class="row">
+  <div class="row" style="margin-top:100px">
     <div class="large-2 medium-2 small-12 columns">
                               <div class="label PTLabels font1">Användarnamn</div>
         <asp:TextBox runat="server" ID="UnameTB" CssClass="textbox"></asp:TextBox>

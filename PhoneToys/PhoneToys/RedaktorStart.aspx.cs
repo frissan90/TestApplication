@@ -8,6 +8,9 @@ using DataAccessLayer;
 using Entities;
 using System.ComponentModel;
 using System.Drawing;
+using NAudio.Utils;
+using NAudio.Wave;
+using System.IO;
 
 namespace PhoneToys
 {
@@ -16,6 +19,7 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (Session["Editor"] == null)
             {
                 Response.Redirect("Loginny");
@@ -26,6 +30,7 @@ namespace PhoneToys
 
                 for (int i = 0; i < Sagor.Count; i++)
                 {
+                    
                     TypeConverter converter = TypeDescriptor.GetConverter(typeof(Bitmap));
                     Bitmap bild = (Bitmap)converter.ConvertFrom(Sagor[i].bild);
                     string imgString = Convert.ToBase64String(Sagor[i].bild);
@@ -36,15 +41,26 @@ namespace PhoneToys
                 sagoRepeater.DataBind();
             }
             sagoRepeater.ItemCommand += new RepeaterCommandEventHandler(this.sagoRepeater_ItemCommand);
+
+            if (Session["SagaNamn"] != null && Session["SagaPris"] != null && Session["SagaBes"] != null)
+            {
+                SagaNamnTB.Text = Session["SagaNamn"].ToString();
+                SagaPrisTB.Text = Session["SagaPris"].ToString();
+                SagaBeskrivningTB.Text = Session["SagaBes"].ToString();
+            }
         }
 
         protected void sagoRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             if (e.CommandName == "edit")
             {
-                string saga = ((Label)e.Item.FindControl("Namn")).Text;
+                Saga saga = data.geteditSaga(((Label)e.Item.FindControl("Namn")).Text);
 
-                Response.Redirect("RedigeraSagor2?Saga=" + saga);
+                Session["SagaNamn"] = saga.Namn;
+                Session["SagaPris"] = saga.Pris;
+                Session["SagaBes"] = saga.Beskrivning;
+
+                Response.Redirect("RedaktorStart#openModal");
             }
 
             if (e.CommandName == "remove")
@@ -54,8 +70,52 @@ namespace PhoneToys
                 data.removeSaga(sagan);
 
                 sagoRepeater.DataSource = data.getSaga();
+
+                
             }
             sagoRepeater.DataBind();
+        }
+
+        protected void Spara_Click(object sender, EventArgs e)
+        {
+            Saga sagan = new Saga();
+            sagan.Namn = SagaNamnTB.Text;
+            sagan.Pris = Convert.ToInt32(SagaPrisTB.Text);
+            sagan.Beskrivning = SagaBeskrivningTB.Text;
+            string namn = Session["SagaNamn"].ToString();
+            Session["SagaNamn"] = null;
+            data.editSaga(namn, sagan);
+
+            
+            Session["SagaPris"] = null;
+            Session["SagaBes"] = null;
+
+        }
+
+        protected void uploadBTN_Click(object sender, EventArgs e)
+        {
+            Saga sagan = new Saga();
+
+            Mp3FileReader reader = new Mp3FileReader(minUpload.PostedFile.InputStream);
+            TimeSpan span = reader.TotalTime;
+
+            sagan.Langd = span.Minutes.ToString() + ":" + span.Seconds.ToString();
+            sagan.Namn = Namn.Text;
+            sagan.Beskrivning = BeskrivningTB.Text;
+            sagan.Pris = Convert.ToInt32(PrisTB.Text);
+            sagan.Redaktor = Session["Editor"].ToString();
+
+            BinaryReader sagaReader = new BinaryReader(minUpload.PostedFile.InputStream);
+
+            sagan.Data = sagaReader.ReadBytes((int)minUpload.PostedFile.InputStream.Length);
+
+            BinaryReader bildReader = new BinaryReader(bildUpload.PostedFile.InputStream);
+
+            sagan.bild = bildReader.ReadBytes((int)bildUpload.PostedFile.InputStream.Length);
+
+            data.addSaga(sagan);
+
+            Response.Redirect("RedaktorStart");
         }
     }
 }

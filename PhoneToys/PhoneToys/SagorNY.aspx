@@ -74,7 +74,7 @@
             </asp:ListView>
             <br />
 
-            <asp:Button runat="server" ID="BetalaBTN" Text="Betala" CssClass="betalaknapp large-offset-8 " OnClick="BetalaBTN_Click" />
+            <asp:Button runat="server" ID="BetalaBTN" Text="Gå till varukorgen" CssClass="betalaknapp large-offset-8 " OnClick="BetalaBTN_Click" />
         </div>
     </div>  
 </asp:Content>

@@ -6,7 +6,7 @@
      
         <div class="row"><asp:Label ID="Tack" runat="server" Text="Tack För Ditt Köp" CssClass="TackF"></asp:Label></div>
     <br />
-    <div class)="row"> <asp:Label ID="Nyttköp" runat="server" Text="Dina nya sagor finns nu tillgängliga att spela" CssClass="PTLabels"></asp:Label></div>
+    <div class)="row"> <asp:Label ID="Nyttköp" runat="server" Text="Dina nya sagor finns nu tillgängliga att spela"></asp:Label></div>
        <br />
 
     <asp:Button ID="gbtn2" runat="server" CssClass="gbtn2" Text="Gå till spela sagor" OnClick="gbtn_Click1" />

@@ -70,6 +70,8 @@ namespace PhoneToys
         {
             data.kopSagor(Session["username"].ToString(), (List<Varukorgen>)Session["varukorg"]);
 
+            Session["varukorg"] = new List<Varukorgen>();
+
             Response.Redirect("TackForDittKop");
         }
 
@@ -87,7 +89,31 @@ namespace PhoneToys
         {
             if (e.CommandName == "Remove")
             {
+                string sagan = ((LinkButton)e.Item.FindControl("LinkButton1")).Text;
+
+                List<Varukorgen> varor = (List<Varukorgen>)Session["varukorg"];
+
+                for (int i = 0; i < varor.Count; i++)
+                {
+                    if (varor[i].Saga == sagan)
+                    {
+                        varor.RemoveAt(i);
+                    }
+                }
+                Session["varukorg"] = varor;
             }
+
+            double totalPris = 0;
+
+            foreach (Varukorgen i in (List<Varukorgen>)Session["varukorg"])
+            {
+                totalPris += i.Pris;
+            }
+
+            totPrisLBL.Text = "Totalpris: " + totalPris + " :-";
+
+            BetalningsRepeater.DataSource = Session["varukorg"];
+            BetalningsRepeater.DataBind();
         }
 
         protected void godkännbtn_Click(object sender, EventArgs e)

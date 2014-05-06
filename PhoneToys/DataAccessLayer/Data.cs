@@ -592,6 +592,7 @@ namespace DataAccessLayer
         /// </summary>
         /// <param name="saga">Namnet på sagan</param>
         /// <returns>Info om Sagan</returns>
+        
         public Saga geteditSaga(string saga)
         {
             String Query = @"Select * from Saga where Namn = @Saga";
@@ -655,7 +656,7 @@ namespace DataAccessLayer
         /// <param name="saga">Info om sagan</param>
         public void editSaga(string Namn, Saga saga)
         {
-            String query = "Update Saga set Namn = @Namn, Beskrivning = @Beskrivning, Pris = @Pris, Bild = @Bild where Namn = @Namnet";
+            String query = "Update Saga set Namn = @Namn, Beskrivning = @Beskrivning, Pris = @Pris where Namn = @Namnet";
 
 
             try
@@ -681,14 +682,14 @@ namespace DataAccessLayer
                 param3.Value = saga.Pris;
                 cmd.Parameters.Add(param3);
 
-                SqlParameter param4 = new SqlParameter();
-                param4.ParameterName = "@Bild";
-                param4.Value = saga.bild;
-                cmd.Parameters.Add(param4);
+                //SqlParameter param4 = new SqlParameter();
+                //param4.ParameterName = "@Bild";
+                //param4.Value = saga.bild;
+                //cmd.Parameters.Add(param4);
 
                 SqlParameter param5 = new SqlParameter();
                 param5.ParameterName = "@Namnet";
-                param5.Value = saga.Namn;
+                param5.Value = Namn;
                 cmd.Parameters.Add(param5);
 
                 cmd.ExecuteNonQuery();
@@ -824,6 +825,119 @@ namespace DataAccessLayer
                     param2.Value = s.Namn;
                     cmd.ExecuteNonQuery();
                 }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        public List<Editor> getEditors()
+        {
+            string Query = @"select * from Redaktor";
+
+            List<Editor> redaktorer = new List<Editor>();
+
+            SqlDataReader reader = null;
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Editor ed = new Editor();
+
+                    ed.Uname = (string)reader["Username"];
+                    ed.Email = (string)reader["Email"];
+                    ed.Fname = (string)reader["Fname"];
+                    ed.Lname = (string)reader["Lname"];
+
+                    redaktorer.Add(ed);
+                }
+
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+            }
+
+            return redaktorer;
+        }
+
+        public void removeEditor(string editor)
+        {
+            string Query = @"delete from Redaktor where Username = @Uname";
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                SqlParameter param = new SqlParameter("@Uname", editor);
+                cmd.Parameters.Add(param);
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        public void editEditor(string editorn, Editor editor)
+        {
+            string Query = @"Update Redaktor set Username = @Uname, Fname = @Fname, Lname = @Lname, Email = @Email where Username = @User";
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                SqlParameter param = new SqlParameter("@Uname", editor.Uname);
+                cmd.Parameters.Add(param);
+
+                SqlParameter param2 = new SqlParameter("@Fname", editor.Fname);
+                cmd.Parameters.Add(param2);
+
+                SqlParameter param3 = new SqlParameter("@Lname", editor.Lname);
+                cmd.Parameters.Add(param3);
+
+                SqlParameter param4 = new SqlParameter("@Email", editor.Email);
+                cmd.Parameters.Add(param4);
+
+                SqlParameter param5 = new SqlParameter("@User", editorn);
+                cmd.Parameters.Add(param5);
+
+                cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
