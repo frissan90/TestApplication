@@ -62,8 +62,24 @@ namespace PhoneToys
                         }
                     }
                 }
+
+                List<string> UserSagor = data.getSagaNamnByUser(Session["username"].ToString());
+
+                for (int i = 0; i < UserSagor.Count; i++)
+                {
+                    for (int saga = 0; saga < Sagor.Count; saga++)
+                    {
+                        if (UserSagor[i] == Sagor[saga].Namn)
+                        {
+                            ((Button)SagorLoad.Items[saga].FindControl("Button1")).Enabled = false;
+                            ((Button)SagorLoad.Items[saga].FindControl("Button1")).Text = "Redan köpt";
+                            ((Button)SagorLoad.Items[saga].FindControl("Button1")).BackColor = Color.Tomato;
+                        }
+                    }
+                }
                 
             }
+ 
             //SagorLoad.ItemCommand += new EventHandler<ListViewCommandEventArgs>(this.SagorLoad_ItemCommand);
             
         }

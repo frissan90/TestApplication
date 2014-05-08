@@ -17,6 +17,8 @@ namespace PhoneToys
     public partial class WebForm1 : System.Web.UI.Page
     {
         private Data data = new Data();
+
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -42,11 +44,14 @@ namespace PhoneToys
             }
             sagoRepeater.ItemCommand += new RepeaterCommandEventHandler(this.sagoRepeater_ItemCommand);
 
-            if (Session["SagaNamn"] != null && Session["SagaPris"] != null && Session["SagaBes"] != null)
+            if (Session["Sagonamn"] != null && Session["Sagopris"] != null && Session["SagoBes"] != null)
             {
-                SagaNamnTB.Text = Session["SagaNamn"].ToString();
-                SagaPrisTB.Text = Session["SagaPris"].ToString();
-                SagaBeskrivningTB.Text = Session["SagaBes"].ToString();
+                SagaNamnTB.Text = Session["Sagonamn"].ToString();
+                SagaPrisTB.Text = Session["Sagopris"].ToString();
+                SagaBeskrivningTB.Text = Session["SagoBes"].ToString();
+                Session["Sagonamn"] = null;
+                Session["Sagopris"] = null;
+                Session["SagoBes"] = null;
             }
         }
 
@@ -55,12 +60,12 @@ namespace PhoneToys
             if (e.CommandName == "edit")
             {
                 Saga saga = data.geteditSaga(((Label)e.Item.FindControl("Namn")).Text);
+                Session["CurrentSaga"] = saga.Namn;
+                Session["Sagonamn"] = saga.Namn;
+                Session["Sagopris"] = saga.Pris;
+                Session["SagoBes"] = saga.Beskrivning;
 
-                Session["SagaNamn"] = saga.Namn;
-                Session["SagaPris"] = saga.Pris;
-                Session["SagaBes"] = saga.Beskrivning;
-
-                Response.Redirect("RedaktorStart#openModal");
+                Response.Redirect("RedaktorStart#openModal", false);
             }
 
             if (e.CommandName == "remove")
@@ -82,8 +87,8 @@ namespace PhoneToys
             sagan.Namn = SagaNamnTB.Text;
             sagan.Pris = Convert.ToInt32(SagaPrisTB.Text);
             sagan.Beskrivning = SagaBeskrivningTB.Text;
-            string namn = Session["SagaNamn"].ToString();
-            Session["SagaNamn"] = null;
+            string namn = Session["CurrentSaga"].ToString();
+            Session["CurrentSaga"] = null;
             data.editSaga(namn, sagan);
 
             

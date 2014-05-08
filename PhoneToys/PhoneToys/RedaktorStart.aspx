@@ -79,7 +79,7 @@
 	<div>
 		<a href="#close" title="Close" class="close">X</a>
 		<div class="row">
-        <h2>Redigera Saga</h2> 
+        <h2>Ny Saga</h2> 
         <hr />
             <asp:Label ID="Label8" runat="server" Text="Namn" CssClass="label PTLabels"></asp:Label>
             <asp:TextBox runat="server" CssClass="textbox2" ID="Namn" placeholder="Namn"></asp:TextBox>

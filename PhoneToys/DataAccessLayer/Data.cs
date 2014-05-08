@@ -950,6 +950,49 @@ namespace DataAccessLayer
                 }
             }
         }
+
+        public List<string> getSagaNamnByUser(string User)
+        {
+            string Query = @"Select Namn from saga join SagorMedlem on SagorMedlem.Saga = Saga.Namn join Member on Member.Username = SagorMedlem.Member where Member.Username = @User";
+
+            List<string> sagor = new List<string>();
+
+            SqlDataReader reader = null;
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                SqlParameter param = new SqlParameter("@User", User);
+                cmd.Parameters.Add(param);
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string Sagan = (string)reader["Namn"];
+
+                    sagor.Add(Sagan);
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+            }
+            return sagor;
+        }
     }
 }
 
