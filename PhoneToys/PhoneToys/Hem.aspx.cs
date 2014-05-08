@@ -5,11 +5,14 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Entities;
+using DataAccessLayer;
 
 namespace PhoneToys
 {
     public partial class Hem : System.Web.UI.Page
     {
+
+        private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (HttpContext.Current.Request.Cookies["PTKAKA"] != null && HttpContext.Current.Request.Cookies["PTKAKA"].Value == "utloggad")
@@ -28,6 +31,10 @@ namespace PhoneToys
             }
 
             Session["username"] = Kryptering.decryptUser(HttpContext.Current.Request.Cookies["Krypteradkaka"]);
+
+            List<Saga> LatestSagor = data.getLatestSaga();
+
+            List<Saga> PopularSaga = data.getTop5Sagor();
         }
     }
 }

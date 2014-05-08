@@ -512,7 +512,9 @@ namespace DataAccessLayer
         public void kopSagor(string currentMember, List<Varukorgen> varor)
         {
 
-            string Query = "insert into SagorMedlem values(@Medlem, @Saga)";
+            string Query = @"insert into SagorMedlem values(@Medlem, @Saga)";
+
+            string Query2 = @"update Saga set Nedladdningar = (Nedladdningar + 1) where Namn = @Saga";
 
             try
             {
@@ -531,6 +533,15 @@ namespace DataAccessLayer
                     param2.ParameterName = "@Saga";
                     param2.Value = varor[i].Saga;
                     cmd.Parameters.Add(param2);
+
+                    cmd.ExecuteNonQuery();
+                }
+                for (int i = 0; i < varor.Count; i++)
+                {
+                    SqlCommand cmd = new SqlCommand(Query2, con);
+
+                    SqlParameter param = new SqlParameter("@Saga", varor[i].Saga);
+                    cmd.Parameters.Add(param);
 
                     cmd.ExecuteNonQuery();
                 }
@@ -760,6 +771,10 @@ namespace DataAccessLayer
             return bamsen;
         }
 
+        /// <summary>
+        /// Ger nya medlemmar tre gratis sagor
+        /// </summary>
+        /// <returns>Sagor</returns>
         public List<Saga> gratisSagor()
         {
             String Query = @"Select top 3 Namn from Saga";
@@ -951,6 +966,11 @@ namespace DataAccessLayer
             }
         }
 
+        /// <summary>
+        /// Hämtar namnet på sagorna som en specifik användare har köpt
+        /// </summary>
+        /// <param name="User"></param>
+        /// <returns></returns>
         public List<string> getSagaNamnByUser(string User)
         {
             string Query = @"Select Namn from saga join SagorMedlem on SagorMedlem.Saga = Saga.Namn join Member on Member.Username = SagorMedlem.Member where Member.Username = @User";
@@ -991,6 +1011,104 @@ namespace DataAccessLayer
                     reader.Close();
                 }
             }
+            return sagor;
+        }
+
+        /// <summary>
+        /// Hämtar de 5 mest köpta sagorna
+        /// </summary>
+        /// <returns>5 Sagor</returns>
+        public List<Saga> getTop5Sagor()
+        {
+            string Query = @"select top 5 * from saga where Nedladdningar in (select top 5 Nedladdningar from Saga) order by nedladdningar desc";
+
+            List<Saga> sagor = new List<Saga>();
+
+            SqlDataReader reader = null;
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Saga sagan = new Saga();
+
+                    sagan.Namn = (string)reader["Namn"];
+                    sagan.Pris = (int)reader["Pris"];
+                    sagan.Langd = (string)reader["Langd"];
+
+                    sagor.Add(sagan);
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+            }
+
+            return sagor;
+        }
+
+        /// <summary>
+        /// Hämtar de 5 senast uppladdade sagorna
+        /// </summary>
+        /// <returns>5 Sagor</returns>
+        public List<Saga> getLatestSaga()
+        {
+            string Query = @"select top 5 * from saga where Upplagd in (select top 5 Upplagd from Saga) order by Upplagd desc";
+
+            List<Saga> sagor = new List<Saga>();
+
+            SqlDataReader reader = null;
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Saga sagan = new Saga();
+
+                    sagan.Namn = (string)reader["Namn"];
+                    sagan.Pris = (int)reader["Pris"];
+                    sagan.Langd = (string)reader["Langd"];
+
+                    sagor.Add(sagan);
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+            }
+
             return sagor;
         }
     }

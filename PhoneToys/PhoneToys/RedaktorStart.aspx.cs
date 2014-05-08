@@ -94,6 +94,7 @@ namespace PhoneToys
             
             Session["SagaPris"] = null;
             Session["SagaBes"] = null;
+            Response.Redirect("RedaktorStart");
 
         }
 

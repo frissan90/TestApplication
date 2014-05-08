@@ -10,13 +10,11 @@
             <asp:Repeater runat="server" ID="BetalningsRepeater" OnItemCommand="BetalningsRepeater_ItemCommand">
                 <HeaderTemplate>
 
-                    <table class="large-10 medium-8 small-6">
-                        <tr class="blueRow">
+                    <table class="large-10 medium-8 small-6" style="border-collapse:collapse">
+                        <tr class="blueRow" style="border-bottom: 1px solid black">
                             <th align="left">Namn</th>
                             <th align="left">Pris</th>
                             <th align="left">Ta bort</th>
-
-
                         </tr>
                 </HeaderTemplate>
 
@@ -29,19 +27,18 @@
                         <td class="whiteRow">
                             <asp:Label runat="server" ID="pris" Text='<%#Eval("Pris") %>'></asp:Label></td>
 
-                        <td><%--<asp:LinkButton runat="server" ID="varukorgRemoveBTN" Text="Ta bort" CommandName="Remove"></asp:LinkButton>--%>
+                        <td>
                             <asp:ImageButton runat="server" ID="sagaRemoveimg" Width="30px" Height="30px" ImageUrl="~/Images/trash_can.png" ToolTip="Ta bort saga" CommandName="Remove" OnClientClick="return confirm('Vill du verkligen ta bort sagan?')" /></td>
                     </tr>
-
+                    
                 </ItemTemplate>
-                <%--<SeparatorTemplate>
-                    <tr class="blueRow">
-                        <td colspan="0">
-                            <hr />
-                        </td>
-                    </tr>
-                </SeparatorTemplate>--%>
-
+                <SeparatorTemplate>
+                    <tr>
+                    <td colspan="3">
+                        <hr />
+                    </td>
+                        </tr>
+                </SeparatorTemplate>
                 <FooterTemplate>
                     </table>
                     
