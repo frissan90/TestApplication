@@ -250,7 +250,7 @@ namespace DataAccessLayer
         /// <param name="sagan">Info om den nya sagan</param>
         public void addSaga(Saga sagan)
         {
-            string Query = @"insert into Saga values(@Namn, @Beskrivning, @Data, @Langd, @Pris, GETDATE(), @UpplagdAv, 0, @Bild)";
+            string Query = @"insert into Saga values(@Namn, @Beskrivning, @Data, @Langd, @Pris, GETDATE(), 0, @Bild)";
 
             try
             {
@@ -283,10 +283,10 @@ namespace DataAccessLayer
                 param5.Value = sagan.Pris;
                 cmd.Parameters.Add(param5);
 
-                SqlParameter param6 = new SqlParameter();
-                param6.ParameterName = "@UpplagdAv";
-                param6.Value = sagan.Redaktor;
-                cmd.Parameters.Add(param6);
+                //SqlParameter param6 = new SqlParameter();
+                //param6.ParameterName = "@UpplagdAv";
+                //param6.Value = sagan.Redaktor;
+                //cmd.Parameters.Add(param6);
 
                 SqlParameter param7 = new SqlParameter();
                 param7.ParameterName = "@Bild";
@@ -1110,6 +1110,52 @@ namespace DataAccessLayer
             }
 
             return sagor;
+        }
+
+        public Editor getEditorInfo(string editor)
+        {
+            string Query = @"Select * from Redaktor where Username = @Editor";
+
+            Editor editorn = new Editor();
+
+            SqlDataReader reader = null;
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                SqlParameter param = new SqlParameter("@Editor", editor);
+
+                cmd.Parameters.Add(param);
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    editorn.Uname = (string)reader["Username"];
+                    editorn.Email = (string)reader["Email"];
+                    editorn.Fname = (string)reader["Fname"];
+                    editorn.Lname = (string)reader["Lname"];
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+            }
+
+            return editorn;
         }
     }
 }

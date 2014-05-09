@@ -239,11 +239,13 @@
     <Content Include="Images\BamsenHeader.gif" />
     <Content Include="Images\BamsenHeader2.png" />
     <Content Include="Images\bullet.png" />
+    <Content Include="Images\cvc.png" />
     <Content Include="Images\deleteIMG.png" />
     <Content Include="Images\dupSbtr.gif" />
     <Content Include="Images\gtk-edit.png" />
     <Content Include="Images\heroAccent.png" />
     <Content Include="Images\Login.png" />
+    <Content Include="Images\mastercard-securecode.png" />
     <Content Include="Images\nySaga.png" />
     <Content Include="Images\NyStartbild.png" />
     <Content Include="Images\orderedList0.png" />
@@ -275,6 +277,8 @@
     <Content Include="Images\tvättlapp6b.PNG" />
     <Content Include="Images\vargen.png" />
     <Content Include="Images\vargen2.png" />
+    <Content Include="Images\verified-by-visa.png" />
+    <Content Include="Images\visa.png" />
     <Content Include="js\foundation.min.js" />
     <Content Include="js\foundation\foundation.abide.js" />
     <Content Include="js\foundation\foundation.accordion.js" />

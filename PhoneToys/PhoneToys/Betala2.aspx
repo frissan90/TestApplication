@@ -85,9 +85,9 @@
             </div>
 
 
-            <div class="large-3 medium-6 large-offset-4 columns">
+          
                 <asp:Label runat="server" ID="CVClbl" CssClass="PTLabels2">CVC</asp:Label>
-            </div>
+            
             <br />
             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="Textbox2" ValidationExpression="^[0-9]$"></asp:RegularExpressionValidator>
         </div>
@@ -112,7 +112,8 @@
 
         <hr />
         <div class="large-offset-1">
-            <img src="Images/cards.png" />
+            <img src="Images/verified-by-visa.png" />
+            <img src="Images/mastercard-securecode.png" />
         </div>
     </div>
 

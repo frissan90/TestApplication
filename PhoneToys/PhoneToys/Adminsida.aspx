@@ -77,7 +77,7 @@
                         <td class="whiteRow">
                             <asp:Label runat="server" ID="Label2" Text='<%#Eval("Email") %>'></asp:Label></td>
                         <td><%--<asp:LinkButton runat="server" ID="varukorgRemoveBTN" Text="Ta bort" CommandName="Remove"></asp:LinkButton>--%>
-                             <a href="#openModal" class="newSagaIMG"><img src="Images/gtk-edit.png"></img></a><%--<asp:ImageButton runat="server" ID="redaktorEditimg" CommandName="edit" ImageUrl="~/Images/gtk-edit.png" ToolTip="Redigera redaktor" />--%>
+                             <%--<a href="#openModal" class="newSagaIMG"><img src="Images/gtk-edit.png"></img></a>--%><asp:ImageButton runat="server" ID="redaktorEditimg" CommandName="edit" ImageUrl="~/Images/gtk-edit.png" ToolTip="Redigera redaktor" />
                         <asp:ImageButton runat="server" ID="sagaRemoveimg" Width="30px" Height="30px" ImageUrl="~/Images/trash_can.png" ToolTip="Ta bort redaktor" CommandName="remove" OnClientClick="return confirm('Vill du verkligen ta bort redaktören?')" /></td>
                     </tr>
                         
@@ -105,7 +105,7 @@
 	<div>
 		<a href="#close" title="Close" class="close">X</a>
 		<div class="row">
-        <h2>Ny Redaktör</h2> 
+        <h2>Redigera Redaktör</h2> 
         <hr />
 
             <div class=" large-6 medium-6 small-12">

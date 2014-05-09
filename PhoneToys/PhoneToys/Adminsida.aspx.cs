@@ -24,6 +24,18 @@ namespace PhoneToys
                 RedaktorRepeater.DataBind();
             }
             RedaktorRepeater.ItemCommand += new RepeaterCommandEventHandler(this.RedaktorRepeater_ItemCommand);
+
+            if (Session["EditorUname"] != null && Session["EditorEmail"] != null && Session["EditorFname"] != null && Session["EditorLname"] != null)
+            {
+                UnameTB.Text = Session["EditorUname"].ToString();
+                EmailTB.Text = Session["EditorEmail"].ToString();
+                FnameTB.Text = Session["EditorFname"].ToString();
+                LnameTB.Text = Session["EditorLname"].ToString();
+                Session["EditorUname"] = null;
+                Session["EditorEmail"] = null;
+                Session["EditorFname"] = null;
+                Session["EditorLname"] = null;
+            }
         }
 
         protected void registerEditorBTN_Click(object sender, EventArgs e)
@@ -45,17 +57,15 @@ namespace PhoneToys
             {
                 string redaktor = ((LinkButton)e.Item.FindControl("LinkButton1")).Text;
 
-                Editor editor = new Editor();
+                Editor editor = data.getEditorInfo(redaktor);
 
-                editor.Uname = UnameATB.Text;
-                editor.Fname = FnameATB.Text;
-                editor.Lname = LnameATB.Text;
-                editor.Email = EmailATB.Text;
+                Session["CurrentEditor"] = editor.Uname;
+                Session["EditorUname"] = editor.Uname;
+                Session["EditorEmail"] = editor.Email;
+                Session["EditorFname"] = editor.Fname;
+                Session["EditorLname"] = editor.Lname;
 
-                data.editEditor(redaktor, editor);
-
-                RedaktorRepeater.DataSource = data.getEditors();
-                RedaktorRepeater.DataBind();
+                Response.Redirect("Adminsida#openModal");
             }
 
             if (e.CommandName == "remove")
@@ -71,7 +81,7 @@ namespace PhoneToys
 
         protected void Spara_Click(object sender, EventArgs e)
         {
-            string edit = UnameTB.Text;
+            string edit = Session["CurrentEditor"].ToString();
             Editor editor = new Editor();
             editor.Uname = UnameTB.Text;
             editor.Email = EmailTB.Text;
@@ -79,6 +89,9 @@ namespace PhoneToys
             editor.Lname = LnameTB.Text;
 
             data.editEditor(edit, editor);
+            Session["CurrentEditor"] = null;
+
+            Response.Redirect("Adminsida");
         }
     }
 }
