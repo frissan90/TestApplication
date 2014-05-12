@@ -164,7 +164,6 @@
   <ItemGroup>
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Adminsida.aspx" />
-    <Content Include="Bekraftelse.aspx" />
     <Content Include="Betala2.aspx" />
     <Content Include="Connect.aspx" />
     <Content Include="Content\foundation.css" />
@@ -230,7 +229,6 @@
     <Content Include="css\foundation.css" />
     <Content Include="css\foundation.min.css" />
     <Content Include="css\normalize.css" />
-    <Content Include="Hem.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\Bamseimg.gif" />
     <Content Include="Images\bamse.jpg" />
@@ -306,23 +304,14 @@
     <Content Include="js\vendor\jquery.js" />
     <Content Include="js\vendor\modernizr.js" />
     <Content Include="js\vendor\placeholder.js" />
-    <Content Include="Kassa.aspx" />
-    <Content Include="LaddaUpp.aspx" />
     <Content Include="LoginNY.aspx" />
     <Content Include="packages.config" />
-    <Content Include="RedigeraSagor1.aspx" />
-    <Content Include="RedigeraSagor2.aspx" />
     <Content Include="RegisterEllerLogin.aspx" />
     <Content Include="RegistreringNY.aspx" />
-    <Content Include="sagoDelete.aspx" />
-    <Content Include="Sagor.aspx" />
     <Content Include="SagorNY.aspx" />
     <Content Include="Content\PhoneToysFinal.css" />
     <Content Include="Spela.aspx" />
-    <Content Include="Spela2.aspx" />
-    <Content Include="Spelasaga2.aspx" />
     <Content Include="TackForDittKop.aspx" />
-    <Content Include="Varor.aspx" />
     <Content Include="PhoneToysFinal.Master" />
     <Content Include="Images\startPageIMG.psd" />
     <Content Include="RedaktorMaster.Master" />
@@ -396,13 +385,6 @@
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Bekraftelse.aspx.cs">
-      <DependentUpon>Bekraftelse.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Bekraftelse.aspx.designer.cs">
-      <DependentUpon>Bekraftelse.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Betala2.aspx.cs">
       <DependentUpon>Betala2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -420,28 +402,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Hem.aspx.cs">
-      <DependentUpon>Hem.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Hem.aspx.designer.cs">
-      <DependentUpon>Hem.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Kassa.aspx.cs">
-      <DependentUpon>Kassa.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Kassa.aspx.designer.cs">
-      <DependentUpon>Kassa.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Kryptering.cs" />
-    <Compile Include="LaddaUpp.aspx.cs">
-      <DependentUpon>LaddaUpp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LaddaUpp.aspx.designer.cs">
-      <DependentUpon>LaddaUpp.aspx</DependentUpon>
-    </Compile>
     <Compile Include="LoginNY.aspx.cs">
       <DependentUpon>LoginNY.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -464,20 +425,6 @@
     <Compile Include="RedaktorMaster.Master.designer.cs">
       <DependentUpon>RedaktorMaster.Master</DependentUpon>
     </Compile>
-    <Compile Include="RedigeraSagor1.aspx.cs">
-      <DependentUpon>RedigeraSagor1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RedigeraSagor1.aspx.designer.cs">
-      <DependentUpon>RedigeraSagor1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="RedigeraSagor2.aspx.cs">
-      <DependentUpon>RedigeraSagor2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RedigeraSagor2.aspx.designer.cs">
-      <DependentUpon>RedigeraSagor2.aspx</DependentUpon>
-    </Compile>
     <Compile Include="RegisterEllerLogin.aspx.cs">
       <DependentUpon>RegisterEllerLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -491,20 +438,6 @@
     </Compile>
     <Compile Include="RegistreringNY.aspx.designer.cs">
       <DependentUpon>RegistreringNY.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="sagoDelete.aspx.cs">
-      <DependentUpon>sagoDelete.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="sagoDelete.aspx.designer.cs">
-      <DependentUpon>sagoDelete.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Sagor.aspx.cs">
-      <DependentUpon>Sagor.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Sagor.aspx.designer.cs">
-      <DependentUpon>Sagor.aspx</DependentUpon>
     </Compile>
     <Compile Include="SagorNY.aspx.cs">
       <DependentUpon>SagorNY.aspx</DependentUpon>
@@ -520,20 +453,6 @@
     <Compile Include="Spela.aspx.designer.cs">
       <DependentUpon>Spela.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Spela2.aspx.cs">
-      <DependentUpon>Spela2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Spela2.aspx.designer.cs">
-      <DependentUpon>Spela2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Spelasaga2.aspx.cs">
-      <DependentUpon>Spelasaga2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Spelasaga2.aspx.designer.cs">
-      <DependentUpon>Spelasaga2.aspx</DependentUpon>
-    </Compile>
     <Compile Include="StartMaster.Master.cs">
       <DependentUpon>StartMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -547,13 +466,6 @@
     </Compile>
     <Compile Include="TackForDittKop.aspx.designer.cs">
       <DependentUpon>TackForDittKop.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Varor.aspx.cs">
-      <DependentUpon>Varor.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Varor.aspx.designer.cs">
-      <DependentUpon>Varor.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
