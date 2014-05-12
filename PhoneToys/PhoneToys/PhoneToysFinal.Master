@@ -57,7 +57,7 @@
             </header>
             <div class="row">
                 <div class="large-12 medium-9 small-9 columns large-offset-2 medium-offset-2 small-offset-2">
-                     
+                     <nav>
                     <ul class="button-group">
                         <li class="menuitem">
                             <asp:Button ID="m1" BackColor="Red" CssClass="button link" runat="server" Text="Hem" PostBackUrl="Hem"></asp:Button></li>
@@ -67,12 +67,10 @@
 
                         <li class="menuitem">
                             <asp:Button ID="m3" BackColor="Red" CssClass="button link" runat="server" Text="Köp sagor" PostBackUrl="~/SagorNY"></asp:Button></li>
-
-                        <li class="menuitem">
-                            <asp:Button ID="m4" CssClass="button link" BackColor="Red" runat="server" Text="Varukorg" PostBackUrl="Varor"></asp:Button></li>
                         <li class="menuitem">
                             <asp:Button ID="Button1" CssClass="button link" BackColor="Red" runat="server" Text="Logga ut" OnClick="Button1_Click"></asp:Button></li>
                     </ul>
+                         </nav>
                 </div>
             </div>
             <div id="bodyContent">

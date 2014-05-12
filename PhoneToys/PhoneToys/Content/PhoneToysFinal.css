@@ -40,18 +40,22 @@ background-size: cover;
 
 
 .link {
-  font-family: arial;
+  font-family: Maggie Moo;
   font-weight: bold;
-  color: #FFFF00 !important;
-  font-size: 16px;
-  box-shadow: 1px 1px 1px #F9F9F9;
-  padding: 10px 25px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  border: 2px solid #A3A3A3;
-  background: #FF0303;
+  color: whitesmoke !important;
+  font-size: 19px;
+  cursor: pointer;
+  padding: 5px 15px;
+  position: relative;
+  margin-top: 6px;
+  margin-left: 30px;
+  text-align:center;
+  background: #ff0303;
+}
 
+.link ul li{
+
+    text-align:center;
 }
 
 
@@ -392,7 +396,7 @@ display: inline-block;
 }
 
 
-.listaProdukt {
+/*.listaProdukt {
 width: 1024px;
 height: auto;
 
@@ -404,7 +408,7 @@ border-radius: 6px;
 box-shadow: 1px 1px 1px 1px grey;
 margin-top: 20px;
 margin-left: 4px;
-}
+}*/
 
 
 .esamsknapp {
@@ -415,7 +419,10 @@ margin-left: 4px;
     background-color: #3CB371;
     cursor:pointer;
     color:white;
-    box-shadow:2px 2px 2px #1089C8;
+    box-shadow:2px 2px 2px grey;
+    font-family: Maggie Moo;
+    font-size: 20px;
+    border: 1px solid black;
     
 }
 .betalaknapp {
@@ -427,6 +434,7 @@ font-weight: bold;
 text-shadow: white;
 color: white;
 cursor:pointer;
+float:right;
 
 }
 .esamsknapp:hover {
@@ -564,4 +572,105 @@ margin-bottom:10px;
 .texting {
     font-size:18px;
     font-weight:bold;
+}
+
+.panelK {
+  width: 1024px;
+  height: auto;
+    
+  border-style: solid;
+  border-width: 1px;
+  border-color: #F9F9F9;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: #F9F9F9; 
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px grey;
+  margin-top: 20px;
+}
+
+.listaProdukt {
+width: 1024px;
+height: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #F9F9F9;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: #F9F9F9; 
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px grey;
+
+
+}
+.produkt {
+display: inline-block;
+
+margin-top: 20px;
+margin: 0;
+width: 230px;
+height: auto;
+background-color: #F9F9F9;
+}
+
+nav{
+width:580px;
+height: 50px;
+background-image:url("http://i.imgur.com/6w9PC75.jpg");
+/*border-radius: 4px;*/
+  /*-moz-border-radius: 3px;
+  -webkit-border-radius: 3px;*/
+  /*box-shadow: 1px 1px 1px #F93532;*/
+  text-align: center;
+   border-top: 3px solid #FE7072;
+      position: -webkit-sticky;  
+    top: 0;  
+    z-index: 1;  
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  
+}
+
+
+
+.redmenu{
+width:305px;
+height: 50px;
+background-image: url("http://i.imgur.com/6w9PC75.jpg");
+/*border-radius: 4px;*/
+  /*-moz-border-radius: 3px;
+  -webkit-border-radius: 3px;*/
+  /*box-shadow: 1px 1px 1px #F93532;*/
+  text-align: center;
+   border-top: 3px solid #FE7072;
+      position: -webkit-sticky;  
+    top: 0;  
+    z-index: 1;  
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  
+}
+.panelP {
+width: 190px;
+margin: 0;
+height: 300px;
+
+}
+
+.listSagor {
+
+    height: 100px;
+   background-color: #F9F9F9;
+
+}
+.kolumn {
+    background-color: #F9F9F9;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #F9F9F9;
+    margin-bottom: 1.25rem;
+    padding: 1.25rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px grey;
+    margin-top: 20px;
 }

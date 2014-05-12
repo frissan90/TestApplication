@@ -1615,7 +1615,7 @@ button, .button {
     margin: 0;
     float: left; }
     .button-group li > button, .button-group li .button {
-      border-left: 1px solid;
+      /*border-left: 1px solid;*/
       border-color: rgba(255, 255, 255, 0.5); }
     .button-group li:first-child button, .button-group li:first-child .button {
       border-left: 0; }

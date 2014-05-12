@@ -11,27 +11,36 @@ namespace PhoneToys
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["username"] == null)
+            {
+                Button1.Text = "Logga In";
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            if (Button1.Text == "Logga ut")
+            {
+                HttpCookie KryptKaka = new HttpCookie("Krypteradkaka");
 
-            HttpCookie KryptKaka = new HttpCookie("Krypteradkaka");
+                KryptKaka.Expires = DateTime.Now.AddDays(-1);
 
-            KryptKaka.Expires = DateTime.Now.AddDays(-1);
+                Response.Cookies.Add(KryptKaka);
 
-            Response.Cookies.Add(KryptKaka);
+                HttpCookie kaka = new HttpCookie("PTKAKA", "utloggad");
 
-            HttpCookie kaka = new HttpCookie("PTKAKA", "utloggad");
+                kaka.Expires = DateTime.Now.AddDays(30);
 
-            kaka.Expires = DateTime.Now.AddDays(30);
-
-            Response.Cookies.Add(kaka);
-            //HttpContext.Current.Request.Cookies["PTKAKA"].Value = "utloggad";
-            //string g = HttpContext.Current.Request.Cookies["PTKAKA"].Value;
-            Session.Clear();
-            Response.Redirect("LoginNY");
+                Response.Cookies.Add(kaka);
+                //HttpContext.Current.Request.Cookies["PTKAKA"].Value = "utloggad";
+                //string g = HttpContext.Current.Request.Cookies["PTKAKA"].Value;
+                Session.Clear();
+                Response.Redirect("LoginNY");
+            }
+            else
+            {
+                Response.Redirect("LoginNy");
+            }
         }
     }
 }

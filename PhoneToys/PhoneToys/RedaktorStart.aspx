@@ -11,7 +11,7 @@
     <div class="row">
         <asp:Repeater runat="server" ID="sagoRepeater" OnItemCommand="sagoRepeater_ItemCommand">
             <HeaderTemplate>
-                <table class="large-10 medium-10 small-10">
+                <table class="large-10 medium-10 small-10 kolumn">
                     <tr>
                         <a href="#newModal" class="newSagaIMG"><img src="Images/nySaga.png"></img></a> <%--<asp:ImageButton ID="Image2" runat="server" CssClass="newSagaIMG" ImageUrl="~/Images/nySaga.png" ToolTip="Ny saga" PostBackUrl="~/LaddaUpp" />--%>
                         <th></th>
