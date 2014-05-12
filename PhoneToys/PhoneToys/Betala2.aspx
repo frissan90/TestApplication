@@ -13,7 +13,7 @@
                     <table class="large-10 medium-8 small-6" style="border-collapse:collapse">
                         <tr class="blueRow" style="border-bottom: 1px solid black">
                             <th align="left">Namn</th>
-                            <th align="left">Pris</th>
+                            <th align="left">Cost</th>
                             <th align="left">Ta bort</th>
                         </tr>
                 </HeaderTemplate>
