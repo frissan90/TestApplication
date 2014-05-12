@@ -13,7 +13,7 @@
             </div>
 
             <div class="large-12 medium-10 small-6 large-offset-2 medium-offset-1 small-offset-3 tvatt"> Bamse-ID hittar du på bamsens tvättlapp!
-                <asp:Image runat="server" ID="Tvattbild" ImageUrl="~/Images/tvättlapp6b.PNG" />
+                <asp:Image runat="server" ID="Tvattbild" ImageUrl="~/Images/tvattlapp6b.PNG" />
 
             </div>
                 
