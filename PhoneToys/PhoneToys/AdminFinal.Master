@@ -52,12 +52,17 @@
             </header>
             <div class="row">
                 <div class="large-centered large-12 medium-12 small-12 columns">
-
-                    <ul class="center button-group large-offset-5 medium-offset-5 small-offset-5">
+                    <nav class="redmenu">
+                    
+                        <ul class="button-group ">
                         <li class="menuitem">
+                            <asp:Button ID="Button1" BackColor="Red" CssClass="link button radius" runat="server" Text="Startsida" PostBackUrl="~/Adminsida" ></asp:Button></li>
+                            <li class="menuitem">
                             <asp:Button ID="AdminLoggaUt" BackColor="Red" CssClass="link button radius" runat="server" Text="Logga ut" PostBackUrl="~/Adminsida" OnClick="AdminLoggaUt_Click"></asp:Button></li>
+                    
                     </ul>
-                </div>
+               </nav>
+                     </div>
             </div>
             <div id="bodyContent">
                 <asp:ContentPlaceHolder runat="server" ID="body" />

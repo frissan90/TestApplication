@@ -3,6 +3,9 @@ background: url('http://i.imgur.com/x0ESsU4.jpg') center center fixed;
 -webkit-background-size:cover;
 -moz-background-size:cover;
 background-size: cover;
+/*Kevins ändreingar*/
+margin-left:auto;
+margin-right:auto;
 }
 
 
@@ -19,9 +22,9 @@ background-size: cover;
     /*height: 200px;*/
 }
 
-.center {
+/*.center {
     margin-left: 30%;
-}
+}*/
 
 
 
@@ -51,6 +54,8 @@ background-size: cover;
   margin-left: 30px;
   text-align:center;
   background: #ff0303;
+  /*Kevins*/
+  text-align:center;
 }
 
 .link ul li{
@@ -141,7 +146,10 @@ float: left;
 .panel {
     opacity: 0.9;
     border-radius: 15px;
-    box-shadow: 1px 1px 1px 1px black;
+    box-shadow: 2px 2px 2px 2px black;
+    /*Kevins*/
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .newSagaIMG {
@@ -162,35 +170,56 @@ float: left;
     font-size : 15px;
     background-color : #6bd851;
     color : white;
-    border-width: 2px;
     cursor:pointer;
-    border-radius: 5px;
+     /*Kevins*/
+    border-radius: 10px;
+    box-shadow:1px 1px 1px 1px grey;
+      border-width: 1px;
 }
+ /*Kevins*/
+.gbtn:hover {
+    background-color:darkgreen;
+
+}
+
 .gbtn2 {
     
     width : 170px;
     height : 70px;
     font-weight : bold;
     font-size : 15px;
-    background-color : #6bd851;
+    background-color : #3CB371;
     color : white;
-    border-width: 2px;
-    /*border-radius:3px;*/
+     /*Kevins*/
+    border-width: 1px;
+  border-radius:10px;
+    box-shadow:1px 1px 1px 1px grey;
+    cursor:pointer;
+    margin-top: 50px;
 
+}
+  /*Kevins*/
+.gbtn2:hover {
+    background-color:#459e6b;
 }
 .avbrytBtn {
-    width : 120px;
-    height : 70px;
-    font-weight : bold;
-    font-size : 15px;
-    background-color :#e5e5e5; 
-    border-width: 2px;
-    border-radius : 3px;
-    text-shadow:white;
-    cursor:pointer;
-    color:black;
+    width: 120px;
+    height: 70px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #FF0000;
+    border-width: 1px;
+    border-radius: 10px;
+    text-shadow: white;
+    cursor: pointer;
+    color: white;
+    box-shadow: 1px 1px 1px 1px grey;
+    margin-right: 30px;
 }
-
+  /*Kevins*/
+ .avbrytBtn:hover {
+        background-color:darkred;
+    }
 
 .payIMG {
     height : 50px;
@@ -302,6 +331,8 @@ border:2px solid;
 border-radius:20px;
 text-align:center;
 box-shadow: 10px 10px 5px #888888;
+  /*Kevins*/
+padding-top:5px;
 }
 
 .labeladmin:after { content: ":" }
@@ -336,16 +367,20 @@ box-shadow: 10px 10px 5px black;
 }
 
 .bamseOnrepeat {
-    border:5px solid LimeGreen;
-    border-radius:10px;
-background-color:  	#585858 ;
+    /*border:5px solid LimeGreen;*/
+      /*Kevins*/
+    border-radius:7px;
+background-color:  	white ;
+box-shadow:2px 2px 2px 2px grey;
 }
 
 .text1 {
     text-shadow: 1px 1px 0px rgba(156, 202, 255, 1);
     font-size:large;
     font-weight:bold;
-    color:  	#F8F8F8 ;
+       /*Kevins*/
+    color:  	black ;
+    text-align:center;
 }
 .Spelauppknapp {
 
@@ -383,8 +418,9 @@ background-color:  	#585858 ;
    }
 
 .td1 {
-    background-color:LightSteelBlue ;
-
+    background-color:white;
+         /*Kevins*/
+     text-align:center;
 }
 
 /*Esams CSS*/
@@ -396,7 +432,7 @@ display: inline-block;
 }
 
 
-/*.listaProdukt {
+.listaProdukt {
 width: 1024px;
 height: auto;
 
@@ -408,7 +444,7 @@ border-radius: 6px;
 box-shadow: 1px 1px 1px 1px grey;
 margin-top: 20px;
 margin-left: 4px;
-}*/
+}
 
 
 .esamsknapp {
@@ -568,10 +604,47 @@ margin-bottom:10px;
     font-weight : bold;
     font-size : 12px;
 }
+/*Kevins*/
+.menubutton {
+    font-weight:bolder;
 
+    font-size:15px;
+}
 .texting {
     font-size:18px;
     font-weight:bold;
+}
+/*Kevins*/
+.center{
+    text-align:center;
+}
+
+.panelW2 {
+      border-style: solid;
+  border-width: 1px;
+  border-color: #F9F9F9;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: #F9F9F9; 
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px grey;
+  text-align:center;
+  margin-left: 150px;
+}
+
+hr{
+border: 0; 
+height: 1px; 
+background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); }
+
+.redaktorRep {
+
+    border-radius:7px;
+    background-color:  	white ;
+box-shadow:2px 2px 2px 2px grey;
 }
 
 .panelK {
@@ -607,14 +680,14 @@ height: auto;
 display: inline-block;
 
 margin-top: 20px;
-margin: 0;
+margin-left: 5px;
 width: 230px;
 height: auto;
 background-color: #F9F9F9;
 }
 
 nav{
-width:580px;
+width:500px;
 height: 50px;
 background-image:url("http://i.imgur.com/6w9PC75.jpg");
 /*border-radius: 4px;*/
@@ -628,6 +701,7 @@ background-image:url("http://i.imgur.com/6w9PC75.jpg");
     z-index: 1;  
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    margin-left: 120px;
   
 }
 
@@ -648,6 +722,7 @@ background-image: url("http://i.imgur.com/6w9PC75.jpg");
     z-index: 1;  
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    margin-left:320px;
   
 }
 .panelP {

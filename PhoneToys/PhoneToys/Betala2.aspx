@@ -86,13 +86,15 @@
 
 
           
-                <asp:Label runat="server" ID="CVClbl" CssClass="PTLabels2">CVC</asp:Label>
+               
             
             <br />
+            
             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="Textbox2" ValidationExpression="^[0-9]$"></asp:RegularExpressionValidator>
         </div>
-
+        
         <div class="large-3 medium-6 large-offset-4 columns">
+            <asp:Label runat="server" ID="CVClbl" CssClass="PTLabels2">CVC</asp:Label>
             <asp:TextBox ID="cvctb" runat="server" placeholder="555" CssClass="textbox3"></asp:TextBox>
 
             <a href="http://payex.se/support/help/ccexample" onclick="window.open(this.href, 'mywin',

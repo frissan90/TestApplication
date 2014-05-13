@@ -21,8 +21,8 @@
                 </GroupTemplate>
                 <ItemTemplate>
 
-                    <div class="produkt panel ">
-                        <img src='<%#Eval("bilden") %>' id="Image1" runat="server" style="width: 170px" />
+                    <div class="produkt panel large-12 small-12 ">
+                        <img src='<%#Eval("bilden") %>' id="Image1" runat="server" style="width: 170px; height:200px;" />
 
                         <p>
                             <asp:Label CssClass="large-1 medium-1 small-1 tiny" runat="server" ID="text" Text='<%#Eval("Namn") %>' Style="width: 170px"></asp:Label>
