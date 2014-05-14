@@ -723,7 +723,6 @@ background-image: url("http://i.imgur.com/6w9PC75.jpg");
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     margin-left:320px;
-  
 }
 .panelP {
 width: 190px;
@@ -748,4 +747,25 @@ height: 300px;
     border-radius: 5px;
     box-shadow: 1px 1px 1px 1px grey;
     margin-top: 20px;
+}
+
+.regbtn {
+     
+    width : 120px;
+    height : 60px;
+    font-weight : bold;
+    font-size : 15px;
+    background-color : #1E90FF;
+    border-color:white;
+    color : white;
+    border-width: 2px;
+    border-radius:10px;
+    box-shadow:1px 1px 1px 1px grey;
+    cursor:pointer;
+}
+
+.marginreg {
+
+    margin-top:50px;
+
 }

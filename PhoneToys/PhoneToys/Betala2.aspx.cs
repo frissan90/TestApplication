@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Entities;
 using DataAccessLayer;
+using System.Web.UI.HtmlControls;
+using System.Text.RegularExpressions;
 
 namespace PhoneToys
 {
@@ -14,14 +16,14 @@ namespace PhoneToys
         private Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
-             if(Session["varukorg"]==null)
-             {
-                 List<Varukorgen> Varukorgen = new List<Varukorgen>(); 
-             }
-
+            if (Session["varukorg"] == null)
+            {
+                List<Varukorgen> Varukorgen = new List<Varukorgen>();
+            }
+            
             DropdownList1.Items.Add("VISA");
             DropdownList1.Items.Add("Mastercard");
-            DropdownList1.Items.Add("American Express Card");
+            
 
 
             int Ar = DateTime.Now.Year - 2000;
@@ -32,7 +34,7 @@ namespace PhoneToys
                 Ar += 1;
             }
 
-
+            
 
             for (int i = 01; i < 13; i++)
             {
@@ -68,13 +70,54 @@ namespace PhoneToys
 
         protected void BetalaBTN_Click(object sender, EventArgs e)
         {
-            data.kopSagor(Session["username"].ToString(), (List<Varukorgen>)Session["varukorg"]);
+            string KortnummerRegex = "^[0-9]{15,16}$";
 
-            Session["varukorg"] = new List<Varukorgen>();
+            string KortnemnRegex = "^[a-ö]";
 
-            Response.Redirect("TackForDittKop");
+            string CvcRegexw = "^[0-9]{3,3}$";
+
+            Regex Knregex = new Regex(KortnummerRegex);
+
+            Regex KnemnRegex = new Regex(KortnemnRegex, RegexOptions.IgnoreCase);
+
+            Regex CvcRegex = new Regex(CvcRegexw);
+
+            if (!Knregex.Match(TextBox1.Text).Success)
+            {
+                knrFail.Text = "Fel kortnummer";
+            }
+            else
+            {
+                knrFail.Text = "";
+            }
+
+            if (!KnemnRegex.Match(TextBox2.Text).Success)
+            {
+                knameFail.Text = "Fel kortname";
+            }
+            else
+            {
+                knameFail.Text = "";
+            }
+
+            if (!CvcRegex.Match(cvctb.Text).Success)
+            {
+                cvcFail.Text = "Fel cvc";
+            }
+
+            else
+            {
+                knrFail.Text = "";
+                knameFail.Text = "";
+                cvcFail.Text = "";
+                data.kopSagor(Session["username"].ToString(), (List<Varukorgen>)Session["varukorg"]);
+
+                Session["varukorg"] = new List<Varukorgen>();
+
+                Response.Redirect("TackForDittKop");
+            }
         }
-
+        
         protected void Button1_Click(object sender, EventArgs e)
         {
         }

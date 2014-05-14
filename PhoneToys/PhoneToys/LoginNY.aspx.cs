@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using DataAccessLayer;
 using Entities;
+using System.Net;
+using System.Net.Mail;
 
 namespace PhoneToys
 {
@@ -61,6 +63,21 @@ namespace PhoneToys
                 Session["Admin"] = userTB.Text;
                 Response.Redirect("Adminsida");
             }
+        }
+
+        protected void FBTN_Click(object sender, EventArgs e)
+        {
+            string PW = data.getPwByUname(FAnameTB.Text);
+            MailMessage mail = new MailMessage();
+            mail.From = new MailAddress("noreply@phonetoys.se");
+            mail.Subject = "Ditt lösenord";
+            mail.To.Add(FEmailTB.Text);
+            mail.Body = "Hej!ditt lösenord är: " + PW;
+            mail.IsBodyHtml = true;
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+            client.EnableSsl = true;
+            client.Credentials = new NetworkCredential("phonetoyspwrecovery@gmail.com", "PhonetoysBamseFinal");
+            client.Send(mail);
         }
     }
 }

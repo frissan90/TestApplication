@@ -56,9 +56,9 @@ namespace PhoneToys
             {
                 ((ImageButton)e.Item.FindControl("PlayBTN")).CommandName = "Pausa";
 
-                ((ImageButton)e.Item.FindControl("PlayBTN")).ImageUrl = "~/Images/Pause.png";
+                ((ImageButton)e.Item.FindControl("PlayBTN")).ImageUrl = "~/Images/PauseMellan.png";
 
-                string sagonamn = ((LinkButton)e.Item.FindControl("LinkButton1")).Text;
+                string sagonamn = ((Label)e.Item.FindControl("Label2")).Text;
 
                 for (int i = 0; i < MinaSagorRepeater.Items.Count; i++)
                 {
@@ -74,7 +74,7 @@ namespace PhoneToys
             if (e.CommandName == "Pausa")
             {
                 ((ImageButton)e.Item.FindControl("PlayBTN")).CommandName = "Spela upp";
-                ((ImageButton)e.Item.FindControl("PlayBTN")).ImageUrl = "~/Images/SpelaLiten.png";
+                ((ImageButton)e.Item.FindControl("PlayBTN")).ImageUrl = "~/Images/Spelamellan.png";
 
                 for (int i = 0; i < MinaSagorRepeater.Items.Count; i++)
                 {

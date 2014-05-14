@@ -1157,6 +1157,38 @@ namespace DataAccessLayer
 
             return editorn;
         }
+
+        public string getPwByUname(string user)
+        {
+            string Query = @"Select Password from Member where username = @User";
+
+            string PW = null;
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                SqlParameter param = new SqlParameter("@User", user);
+                cmd.Parameters.Add(param);
+
+                PW = (string)cmd.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+
+            return PW;
+
+        }
     }
 }
 

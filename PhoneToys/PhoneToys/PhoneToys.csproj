@@ -259,6 +259,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\Pause.png" />
+    <Content Include="Images\Pausemellan.png" />
     <Content Include="Images\payex-logo.gif" />
     <Content Include="Images\PhoneToysHeader.png" />
     <Content Include="Images\play.gif" />
@@ -268,6 +269,7 @@
     <Content Include="Images\Shellman.png" />
     <Content Include="Images\Spela1.png" />
     <Content Include="Images\SpelaLiten.png" />
+    <Content Include="Images\SpelaMellan.png" />
     <Content Include="Images\startPageIMG.png" />
     <Content Include="Images\startPageIMG2.png" />
     <Content Include="Images\startPageIMG3.png" />
