@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-  <div class="row collapse large-offset-4 medium-offset-4 small-offset-3">
+  <div class="row collapse large-offset-2 medium-offset-4 small-offset-3">
         <br />
 
 

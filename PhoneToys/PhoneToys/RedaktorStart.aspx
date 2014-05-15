@@ -10,9 +10,10 @@
     <div class="row">
         <asp:Repeater runat="server" ID="sagoRepeater" OnItemCommand="sagoRepeater_ItemCommand">
             <HeaderTemplate>
-                <table class="large-10 medium-10 small-10 redaktorRep">
+                <table class="large-10 medium-10 small-0 large-offset-1 medium-offset-1 redaktorRep">
                     <tr>
-                        <a href="#newModal" class="newSagaIMG"><img src="Images/nySaga.png"  style="border-radius:5px;"></img></a> <%--<asp:ImageButton ID="Image2" runat="server" CssClass="newSagaIMG" ImageUrl="~/Images/nySaga.png" ToolTip="Ny saga" PostBackUrl="~/LaddaUpp" />--%>
+                        <div class="large-offset-1 medium-offset-1">
+                        <a href="#newModal" class="newSagaIMG"><img src="Images/nySaga.png"  style="border-radius:5px;"></img></a></div>
                         <th></th>
                         <th>Namn</th>
                         <th>Längd</th>

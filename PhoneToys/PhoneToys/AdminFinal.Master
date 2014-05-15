@@ -47,7 +47,7 @@
         <div class="row large-12">
             <header class="row">
                 
-                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/PhoneToysHeader.png" CssClass="headerIMG" />
+                  <div class="large-12 small-10 medium-10 center"><asp:HyperLink ID="HyperLink1" runat="server" ImageUrl="~/Images/PhoneToysHeader.png" NavigateUrl="~/Spela"></asp:HyperLink></div>
                 
             </header>
             <div class="row">

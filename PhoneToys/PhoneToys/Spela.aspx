@@ -7,8 +7,8 @@
         <div class="center">
     <asp:Repeater runat="server" ID="MinaSagorRepeater" OnItemCommand="MinaSagorRepeater_ItemCommand">
         <HeaderTemplate>
-                    <table class="large-10 medium-8 small-6 bamseOnrepeat" style="border-collapse:collapse;">
-                        <tr style="border-bottom:1px black;border-style:groove">
+                    <table class="large-11 large-offset-1 medium-8 medium-offset-2 small-1 bamseOnrepeat">
+                        <tr>
                             <th align="left"></th>
                             <th align="left" class="text1">Namn</th>
                             <th align="left" class="text1">Längd</th>
