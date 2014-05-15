@@ -58,42 +58,74 @@
         </asp:Repeater>
 
         <div id="openModal" class="modalDialog">
-	<div>
+            <div>
 		<a href="#close" title="Close" class="close">X</a>
 		<div class="row">
-        <h2>Redigera Saga</h2> 
+      <h2 style="color: black; font-family: Sanford;  text-align: center;">Redigera saga</h2>
         <hr />
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-        <asp:TextBox ID="SagaNamnTB" runat="server"></asp:TextBox>
-            <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-        <asp:TextBox ID="SagaPrisTB" runat="server"></asp:TextBox>
-            <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
-        <asp:TextBox ID="SagaBeskrivningTB" runat="server"></asp:TextBox>
-            <asp:Button ID="Spara" runat="server" Text="Button" OnClick="Spara_Click" />
+             <div class="large-12 medium-6 small-12 ">
+            <asp:Label ID="Label1" runat="server"  Text="Namn"></asp:Label>
+        <asp:TextBox ID="SagaNamnTB" runat="server" CssClass="textbox2"></asp:TextBox>
+           </div>
+              <div class="large-12 medium-6 small-12 ">
+            <asp:Label ID="Label2" runat="server" Text="Pris"></asp:Label>
+        <asp:TextBox ID="SagaPrisTB" runat="server" CssClass="textbox2"></asp:TextBox>
+            </div>
+             <div class="large-12 medium-6 small-12 ">
+            <asp:Label ID="Label3" runat="server" Text="Beskrivning"></asp:Label>
+        <asp:TextBox ID="SagaBeskrivningTB" runat="server" CssClass="textbox2"></asp:TextBox>
+           </div>
+                   <br />
+             <div class="large-12 medium-6 small-12 ">
+            <asp:Label ID="Label9" runat="server" Text="Välj Fil" CssClass=""></asp:Label>
+            <asp:FileUpload runat="server" ID="FileUpload1" BackColor="White" />
+           </div>
+                  <br />
+            <div class="large-12 medium-6 small-12 ">
+             <asp:Label ID="Label10" runat="server" Text="Välj bild" CssClass=""></asp:Label>
+            <asp:FileUpload runat="server" ID="FileUpload2" BackColor="White" />
+            </div>
+                <br />
+            
+            
+            <asp:Button ID="Spara" runat="server" Text="Spara ändringar" CssClass="esamsknapp" Style="font-family: Sanford; margin-left: 70px;" OnClick="Spara_Click" />
+            
 </div>
 	</div>
-</div>
+        </div>
 
         <div id="newModal" class="modalDialog">
 	<div>
 		<a href="#close" title="Close" class="close">X</a>
 		<div class="row">
-        <h2>Redigera Saga</h2> 
+        <h2 style="color: black; font-family: Sanford;  text-align: center;">Lägg till ny saga</h2>
         <hr />
-            <asp:Label ID="Label8" runat="server" Text="Namn" CssClass="label PTLabels"></asp:Label>
-            <asp:TextBox runat="server" CssClass="textbox2" ID="Namn" placeholder="Namn"></asp:TextBox>
-            <asp:Label ID="Label4" runat="server" Text="Beskrivning" CssClass="label PTLabels"></asp:Label>
-            <asp:TextBox runat="server" CssClass="textbox2" ID="BeskrivningTB" placeholder="Beskrivning"></asp:TextBox>
-            <asp:Label ID="Label5" runat="server" Text="Pris" CssClass="label PTLabels"></asp:Label>
-            <asp:TextBox runat="server" CssClass="textbox2" ID="PrisTB" placeholder="Pris"></asp:TextBox>
-            <br />
-            <asp:Label ID="Label6" runat="server" Text="Välj Fil" CssClass="label PTLabels"></asp:Label>
+             <div class="large-12 medium-6 small-12 ">
+            <asp:Label ID="Label8" runat="server" Text="Namn" ></asp:Label>
+            <asp:TextBox runat="server" CssClass="textbox5" ID="Namn" placeholder="Namn" ></asp:TextBox>
+            </div>
+             <div class="large-12 medium-6 small-12 ">
+            <asp:Label ID="Label4" runat="server" Text="Beskrivning" ></asp:Label>
+            <asp:TextBox runat="server" CssClass="textbox5" ID="BeskrivningTB" placeholder="Beskrivning"></asp:TextBox>
+            </div>
+             <div class="large-12 medium-6 small-12 ">
+            <asp:Label ID="Label5" runat="server" Text="Pris" ></asp:Label>
+            <asp:TextBox runat="server" CssClass="textbox5" ID="PrisTB" placeholder="Pris"></asp:TextBox>
+            </div>
+             <br />
+            
+             <div class="large-12 medium-6 small-12 ">
+            <asp:Label ID="Label6" runat="server" Text="Välj Fil"></asp:Label>
             <asp:FileUpload runat="server" ID="minUpload" BackColor="White" />
-            <br />
-            <asp:Label ID="Label7" runat="server" Text="Välj bild" CssClass="label PTLabels"></asp:Label>
+            </div>      
+             <br />
+            
+            
+            <asp:Label ID="Label7" runat="server" Text="Välj bild"></asp:Label>
             <asp:FileUpload runat="server" ID="bildUpload" BackColor="White" />
             <br />
-            <asp:Button runat="server" BackColor="Red" Text="Ladda upp" ID="uploadBTN" CssClass="link" OnClick="uploadBTN_Click"  />
+           
+             <asp:Button runat="server"  Text="Ladda upp" ID="uploadBTN" CssClass="esamsknapp" Style="font-family: Sanford; margin-left: 90px;" OnClick="uploadBTN_Click"  />
 </div>
 	</div>
 </div>

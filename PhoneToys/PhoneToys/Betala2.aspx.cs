@@ -8,6 +8,7 @@ using Entities;
 using DataAccessLayer;
 using System.Web.UI.HtmlControls;
 using System.Text.RegularExpressions;
+using System.Drawing;
 
 namespace PhoneToys
 {
@@ -85,10 +86,13 @@ namespace PhoneToys
             if (!Knregex.Match(TextBox1.Text).Success)
             {
                 knrFail.Text = "Fel kortnummer";
+                Color c = TextBox1.ForeColor;
+                TextBox1.BackColor = Color.Tomato;
             }
             else
             {
                 knrFail.Text = "";
+                
             }
 
             if (!KnemnRegex.Match(TextBox2.Text).Success)

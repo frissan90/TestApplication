@@ -68,11 +68,11 @@
 
 
 
-                <asp:Label runat="server" ID="Label1" CssClass="PTLabels2">Kortnummer</asp:Label>
-                <asp:TextBox runat="server" ID="TextBox1" CssClass="textbox3"></asp:TextBox><asp:Label runat="server" ID="knrFail" ForeColor="Red"></asp:Label>
+                <asp:Label runat="server" ID="Label1" CssClass="PTLabels2">Kortnummer<asp:Label runat="server" ID="knrFail" ForeColor="Red"></asp:Label></asp:Label>
+                <asp:TextBox runat="server" ID="TextBox1" CssClass="textbox3"></asp:TextBox>
 
-                <asp:Label runat="server" ID="Label2" CssClass="PTLabels2">Kortinnehavarens Namn</asp:Label>
-                <asp:TextBox runat="server" ID="TextBox2" CssClass="textbox3"></asp:TextBox><asp:Label runat="server" ForeColor="Red" ID="knameFail"></asp:Label>
+                <asp:Label runat="server" ID="Label2" CssClass="PTLabels2">Kortinnehavarens Namn<asp:Label runat="server" ForeColor="Red" ID="knameFail"></asp:Label></asp:Label>
+                <asp:TextBox runat="server" ID="TextBox2" CssClass="textbox3"></asp:TextBox>
                 
             </div>
 

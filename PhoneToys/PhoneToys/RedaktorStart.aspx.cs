@@ -89,6 +89,9 @@ namespace PhoneToys
             sagan.Beskrivning = SagaBeskrivningTB.Text;
             string namn = Session["CurrentSaga"].ToString();
             Session["CurrentSaga"] = null;
+            BinaryReader bildReader = new BinaryReader(FileUpload2.PostedFile.InputStream);
+
+            sagan.bild = bildReader.ReadBytes((int)FileUpload2.PostedFile.InputStream.Length);
             data.editSaga(namn, sagan);
 
             
