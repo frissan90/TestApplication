@@ -38,7 +38,7 @@
                         <td class="td2">
                             <asp:ImageButton runat="server" ID="redaktorEditimg" CommandName="edit" ImageUrl="~/Images/gtk-edit.png" ToolTip="Redigera redaktor"/>
                         <asp:ImageButton runat="server" ID="sagaRemoveimg" Width="30px" Height="30px" ImageUrl="~/Images/trash_can.png" ToolTip="Ta bort redaktor" CommandName="remove" OnClientClick="return confirm('Vill du verkligen ta bort redaktören?')" />
-                        <a href="#newModal"><img src="Images/add_contact.png" style="width:20px;height:20px; margin-bottom: 17px;"/></a>
+                        <a href="#newModal"><img src="Images/add_contact.png" style="width:20px;height:20px; margin-bottom: 17px;" title="Lägg till redaktör"/></a>
                    </tr>
 
                         

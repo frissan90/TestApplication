@@ -1,6 +1,4 @@
-﻿
-
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PhoneToysFinal.master.cs" Inherits="PhoneToys.PhoneToysFinal" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PhoneToysFinal.master.cs" Inherits="PhoneToys.PhoneToysFinal" %>
 
 <!DOCTYPE html>
 
@@ -51,26 +49,21 @@
     <form runat="server">
         <div class="row large-12 medium-12">
             <header class="row small-12">
-                
-                <div class="large-12 small-10 medium-10 center"><asp:HyperLink runat="server" ImageUrl="~/Images/PhoneToysHeader.png" NavigateUrl="~/Spela"></asp:HyperLink></div>
-                
+
+                <div class="large-12 small-10 medium-10 center">
+                    <asp:HyperLink runat="server" ImageUrl="~/Images/PhoneToysHeader.png" NavigateUrl="~/Spela"></asp:HyperLink></div>
+
             </header>
             <div class="row">
-                <div class="large-12 medium-9 small-9 columns large-offset-2 medium-offset-2 small-offset-2">
-                     <nav>
-                    <ul class="button-group">
-                        <%--<li class="menuitem">
-                            <asp:Button ID="m1" BackColor="Red" CssClass="button link" runat="server" Text="Hem" PostBackUrl="Hem"></asp:Button></li>--%>
-
+                <div class="large-12 medium-9 small-9 columns">
+                    <ul class="button-group">    
                         <li class="menuitem">
-                            <asp:Button ID="m2" BackColor="Red" CssClass="button link" runat="server" Text="Spela Sagor" PostBackUrl="~/Spela"></asp:Button></li>
-
+                            <asp:Button ID="m2" BackColor="#ff0303" CssClass="button link" runat="server" Text="Spela Sagor" PostBackUrl="~/Spela"></asp:Button></li>
                         <li class="menuitem">
-                            <asp:Button ID="m3" BackColor="Red" CssClass="button link" runat="server" Text="Köp sagor" PostBackUrl="~/SagorNY"></asp:Button></li>
+                            <asp:Button ID="m3" BackColor="#ff0303" CssClass="button link" runat="server" Text="Köp sagor" PostBackUrl="~/SagorNY"></asp:Button></li>     
                         <li class="menuitem">
-                            <asp:Button ID="Button1" CssClass="button link" BackColor="Red" runat="server" Text="Logga ut" OnClick="Button1_Click"></asp:Button></li>
+                            <asp:Button ID="Button1" CssClass="button link" BackColor="#ff0303" runat="server" Text="Logga ut" OnClick="Button1_Click"></asp:Button></li>
                     </ul>
-                         </nav>
                 </div>
             </div>
             <div id="bodyContent">
