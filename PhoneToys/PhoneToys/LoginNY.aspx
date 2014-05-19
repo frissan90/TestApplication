@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-    <div class="row large-7 large-offset-4 columns medium-7 medium-offset-3" aria-haspopup="True">
+    <div class="row large-7 large-offset-4 columns medium-12 small-12 medium-offset-3" aria-haspopup="True">
         <div class="panel">
             <asp:Label CssClass="texting" runat="server" ID="Login" Text="Användarnamn"></asp:Label>
             <asp:TextBox ID="userTB" CssClass="textbox" runat="server"></asp:TextBox>
@@ -24,7 +24,7 @@
             <asp:TextBox runat="server" ID="FEmailTB"></asp:TextBox>
             <asp:Label Text="Användarnamn" runat="server"></asp:Label>
             <asp:TextBox runat="server" ID="FAnameTB"></asp:TextBox>
-            <asp:Button runat="server" ID="FBTN" OnClick="FBTN_Click" Text="Skicka" />
+            <asp:Button CssClass="esamsknapp" runat="server" ID="FBTN" OnClick="FBTN_Click" Text="Skicka" />
             </div>
         </div>
         </div>

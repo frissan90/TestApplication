@@ -44,17 +44,15 @@ margin-right:auto;
 
 .link { 
     background: #ff0303;  
-    font-family: 'Maggie Moo';
-
-     font-weight: bold;
+     font-weight: bolder;
       color: white !important;
        font-size: 16px; 
-       box-shadow: 1px 1px 1px #F9F9F9; 
-       padding: 10px 25px; 
+       /*box-shadow: 1px 1px 1px #F9F9F9;*/ 
+       padding: 15px 30px; 
 
        /*-moz-border-radius: 10px;
         -webkit-border-radius: 10px;*/ /*border-radius: 10px;*/ 
-        background: #FF0303; }
+        }
 
 
 .link ul li{
@@ -148,6 +146,7 @@ float: left;
     box-shadow: 2px 2px 2px 2px black;
     /*Kevins*/
     margin-left:auto;
+    margin-top: 80px;
     margin-right:auto;
 }
 
@@ -447,31 +446,60 @@ margin-left: 4px;
 
 
 .esamsknapp {
-    height: 50px;
-    border-radius:5px;
-    text-shadow:white;
-    font-weight:bold;
-    background-color: #3CB371;
-    cursor:pointer;
-    color:white;
-    box-shadow:2px 2px 2px grey;
-    font-family: Maggie Moo;
-    font-size: 20px;
-    border: 1px solid black;
+    
+height: 50px;
+   
+ border-radius:5px;
+   
+ text-shadow:white;
+    
+font-weight:bold;
+  
+  background-color: 	#228B22;
+   
+ cursor:pointer;
+   
+ color:white;
+   
+ box-shadow:2px 2px 2px grey;
+  
+  /*font-family: Maggie Moo;*/
+  
+  font-size: 20px;
+  
+  border: 1px solid black;
     
 }
+
 .betalaknapp {
-height: 60px;
-width: 150px;
-border-radius: 5px;
+
+height: 80px;
+
+width: 180px;
+
+font-weight:bold;
+
+border-radius: 8px;
+
 background-color: #3CB371;
+
 font-weight: bold;
+
+font-size: 18px;
+
 text-shadow: white;
+
 color: white;
+
 cursor:pointer;
-float:right;
+
+margin-bottom:20px;
+
+box-shadow:2px 2px 2px grey;
 
 }
+
+
 .esamsknapp:hover {
 background-color:#459e6b;
 
@@ -690,6 +718,13 @@ margin-left: 5px;
 width: 230px;
 height: auto;
 background-color: #F9F9F9;
+/*display: inline-block;
+border-radius: 15px;
+margin-top: 20px;
+margin-left: 20px;
+text-align:center;
+border:solid 1px;*/
+
 }
 
 nav{
@@ -804,4 +839,50 @@ box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5), inset 0px 1px 4px rgba(0, 0, 0
 
  outline:0; 
 width:570px; 
+}
+
+.errorLabels {
+    visibility:hidden;
+}
+
+.nydiv {
+    height:auto;
+    border:solid 1px;
+    background-color: 	 	white;
+    border-radius:15px;
+    box-shadow:3px 3px 3px 3px black;
+    text-align:center;
+}
+
+.marginleft {
+    margin-left:20px;
+}
+
+.marginbtm {
+
+    margin-bottom:20px;
+}
+
+.meny {
+    border-bottom-right-radius:7px;
+    border-top-right-radius:7px;
+}
+
+.meny2 {
+    border-top-left-radius:7px;
+    border-bottom-left-radius:7px;
+
+}
+
+.menytext {
+
+    font-family:'Comic Sans MS';
+    font-weight:100;
+}
+
+.RepAdmin {
+        border-radius:7px;
+background-color:  	white ;
+box-shadow:2px 2px 2px 2px grey;
+
 }

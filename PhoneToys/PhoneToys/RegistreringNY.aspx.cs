@@ -23,35 +23,76 @@ namespace PhoneToys
 
         protected void Nextbtn_Click(object sender, EventArgs e)
         {
-            User user = new User();
+            if (UnameTB.Text == String.Empty)
+            {
+                UnameError.Visible = true;
+                UnameError.CssClass = "error";
+                UnameError.Text = "Skriv in något";
+            }
+            else if (data.checkUser(UnameTB.Text))
+            {
+                UnameError.Visible = true;
+                UnameError.CssClass = "error";
+                UnameError.Text = "Användarnamnet finns redan";
+            }
+            else
+            {
+                UnameError.Visible = false;
+                UnameError.CssClass = "";
+            }
 
-            user.Uname = UnameTB.Text;
-            user.Password = PWTB.Text;
-            user.Bamse = Request.Cookies["BAMSE"].Value;
+            if (PWTB.Text == "")
+            {
+                PWError.Visible = true;
+                PWError.CssClass = "error";
+                PWError.Text = "Skriv in något";
+            }
+            else if (CPWTB.Text == "")
+            {
+                PWError.Visible = false;
+                PWError.CssClass = "";
+                CPWError.Visible = true;
+                CPWError.CssClass = "error";
+                CPWError.Text = "Skriv något";
+            }
+            else if (!PWTB.Text.Equals(CPWTB.Text))
+            {
+                CPWError.Visible = true;
+                CPWError.CssClass = "error";
+                CPWError.Text = "Lösenorden är inte lika";
+            }
+            else
+            {
+                User user = new User();
 
-            data.Register(user);
+                user.Uname = UnameTB.Text;
+                user.Password = PWTB.Text;
+                user.Bamse = Request.Cookies["BAMSE"].Value;
 
-            Session["username"] = UnameTB.Text;
+                data.Register(user);
 
-            Session["varukorg"] = new List<Varukorgen>();
+                Session["username"] = UnameTB.Text;
 
-            HttpCookie kaka = new HttpCookie("PTKAKA", "inloggad");
+                Session["varukorg"] = new List<Varukorgen>();
 
-            kaka.Expires = DateTime.Now.AddDays(30);
+                HttpCookie kaka = new HttpCookie("PTKAKA", "inloggad");
 
-            Response.Cookies.Add(kaka);
+                kaka.Expires = DateTime.Now.AddDays(30);
 
-            HttpCookie kryptCookie = new HttpCookie("Krypteradkaka", UnameTB.Text);
+                Response.Cookies.Add(kaka);
 
-            kryptCookie = Kryptering.encryptUser(kryptCookie);
+                HttpCookie kryptCookie = new HttpCookie("Krypteradkaka", UnameTB.Text);
 
-            kryptCookie.Expires = DateTime.Now.AddDays(30);
+                kryptCookie = Kryptering.encryptUser(kryptCookie);
 
-            Response.Cookies.Add(kryptCookie);
+                kryptCookie.Expires = DateTime.Now.AddDays(30);
 
-            data.gratisSagor(UnameTB.Text);
+                Response.Cookies.Add(kryptCookie);
 
-            Response.Redirect("Spela");
+                data.gratisSagor(UnameTB.Text);
+
+                Response.Redirect("Spela");
+            }
         }
     }
 }

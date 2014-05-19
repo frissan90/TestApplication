@@ -31,6 +31,15 @@ namespace PhoneToys {
         protected global::System.Web.UI.WebControls.TextBox UnameTB;
         
         /// <summary>
+        /// UnameError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label UnameError;
+        
+        /// <summary>
         /// PWTB control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace PhoneToys {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PWTB;
+        
+        /// <summary>
+        /// PWError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PWError;
         
         /// <summary>
         /// CPWTB control.
@@ -49,13 +67,13 @@ namespace PhoneToys {
         protected global::System.Web.UI.WebControls.TextBox CPWTB;
         
         /// <summary>
-        /// CompareValidator1 control.
+        /// CPWError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+        protected global::System.Web.UI.WebControls.Label CPWError;
         
         /// <summary>
         /// Nextbtn control.

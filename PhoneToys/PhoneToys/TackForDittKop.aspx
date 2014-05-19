@@ -3,10 +3,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
 
-     <div class="large-6 medium-12 small-12">
+     <div class="large-10 medium-6 small-12 large-offset-1 medium-offset-2">
          <div class="panelW2">
         <asp:Label ID="Tack" runat="server" Text="Tack För Ditt Köp" CssClass="TackF"></asp:Label>
     <br />
+                 <br />
+         
+
    <asp:Label ID="Nyttköp" runat="server" Text="Dina nya sagor finns nu på Spela Sagor i menyn"></asp:Label>
        <br />
 

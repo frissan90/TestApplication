@@ -58,6 +58,8 @@ namespace PhoneToys
 
                 ((ImageButton)e.Item.FindControl("PlayBTN")).ImageUrl = "~/Images/PauseMellan.png";
 
+                
+
                 string sagonamn = ((Label)e.Item.FindControl("Label2")).Text;
 
                 for (int i = 0; i < MinaSagorRepeater.Items.Count; i++)
@@ -67,7 +69,7 @@ namespace PhoneToys
                         ((ImageButton)MinaSagorRepeater.Items[i].FindControl("PlayBTN")).Enabled = false;
                     }
                 }
-
+                Play();
                 //Response.Redirect("Spela2?Saga=" + sagonamn);
             }
 
@@ -81,6 +83,23 @@ namespace PhoneToys
                         ((ImageButton)MinaSagorRepeater.Items[i].FindControl("PlayBTN")).Enabled = true;
                 }
             }
+        }
+
+        private void Play()
+        {
+            string klient = "https://api.spark.io/v1/devices/48ff6c065067555035261587/Spela?access_token=3befe6e381301e3e900adb01bab8072c4ce4cd23";
+
+            var restClient = new RestClient(klient);
+
+            var request = new RestRequest(Method.POST);
+
+            //var response = new RestResponse();
+
+            //string test = response.Content;
+
+            request.RequestFormat = DataFormat.Json;
+
+            IRestResponse result = restClient.Execute(request);
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using RestSharp;
 using DataAccessLayer;
 using Entities;
+using System.Drawing;
 
 namespace PhoneToys
 {
@@ -23,31 +24,42 @@ namespace PhoneToys
 
         protected void imgBtn_Click(object sender, ImageClickEventArgs e)
         {
-            Bamse bamse = data.getBamseInfo(TextBox1.Text);
-          
-            //string klient = "https://api.spark.io/v1/devices/48ff6c065067555035261587/Light?access_token=0db5f14f8deff81a1ac03b43508f15e7e8637af7";
+            if (!data.checkBamse(TextBox1.Text))
+            {
+                BIDError.Visible = true;
+                BIDError.CssClass = "error";
+                BIDError.Text = "Denna Bamse finns inte";
+                TextBox1.BorderColor = Color.Red;
+                TextBox1.BorderWidth = 1;
+            }
+            else
+            {
+                Bamse bamse = data.getBamseInfo(TextBox1.Text);
 
-            string klient = "https://api.spark.io/v1/devices/" + bamse.DeviceID + "/Light?access_token=" + bamse.Token;
+                //string klient = "https://api.spark.io/v1/devices/48ff6c065067555035261587/Light?access_token=0db5f14f8deff81a1ac03b43508f15e7e8637af7";
 
-            var restClient = new RestClient(klient);
+                string klient = "https://api.spark.io/v1/devices/" + bamse.DeviceID + "/Spela?access_token=" + bamse.Token;
 
-            var request = new RestRequest(Method.POST);
+                var restClient = new RestClient(klient);
 
-            //var response = new RestResponse();
+                var request = new RestRequest(Method.POST);
 
-            //string test = response.Content;
+                //var response = new RestResponse();
 
-            request.RequestFormat = DataFormat.Json;
+                //string test = response.Content;
 
-            IRestResponse result = restClient.Execute(request);
+                request.RequestFormat = DataFormat.Json;
 
-            System.Web.HttpCookie BamseID = new System.Web.HttpCookie("BAMSE", TextBox1.Text);
+                IRestResponse result = restClient.Execute(request);
 
-            //BamseID.Expires = DateTime.Now.AddDays(30);
+                System.Web.HttpCookie BamseID = new System.Web.HttpCookie("BAMSE", TextBox1.Text);
 
-            Response.Cookies.Add(BamseID);
+                //BamseID.Expires = DateTime.Now.AddDays(30);
 
-            Response.Redirect("RegistreringNY");
+                Response.Cookies.Add(BamseID);
+
+                Response.Redirect("RegistreringNY");
+            }
         }
     }
 }

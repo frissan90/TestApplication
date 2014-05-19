@@ -54,18 +54,36 @@
                     <asp:HyperLink runat="server" ImageUrl="~/Images/PhoneToysHeader.png" NavigateUrl="~/Spela"></asp:HyperLink></div>
 
             </header>
+            <%--div class="row">
+                <ul class="button-group">
+                    <li class="menuitem">
+                        <asp:Button ID="Button3" runat="server" Text="Spela upp Sagor" PostBackUrl="~/Spela.aspx" CssClass="button link" BackColor="#ff0303" /></li>
+                    <li class="menuitem">
+                        <asp:Button ID="Button2" runat="server" Text="Köp Sagor" PostBackUrl="~/SagorNY.aspx" CssClass="button link" BackColor="#ff0303" /> </li>
+                    <li class="menuitem">
+                        <asp:Button ID="Button1" runat="server" CssClass="button link" Text="Logga ut" OnClick="Button1_Click" />
+                    </li>
+                </ul>
+                </div>--%>
+
+            
+
             <div class="row">
-                <div class="large-12 medium-9 small-9 columns">
+                <div class="large-12 medium-9 small-12 columns large-offset-4 medium-offset-3" style="text-align:center"">
                     <ul class="button-group">    
                         <li class="menuitem">
-                            <asp:Button ID="m2" BackColor="#ff0303" CssClass="button link" runat="server" Text="Spela Sagor" PostBackUrl="~/Spela"></asp:Button></li>
+                            <asp:Button ID="m2" BackColor="#ff0303" CssClass="button link meny2 menytext" runat="server" Text="Spela Sagor" PostBackUrl="~/Spela"></asp:Button></li>
                         <li class="menuitem">
-                            <asp:Button ID="m3" BackColor="#ff0303" CssClass="button link" runat="server" Text="Köp sagor" PostBackUrl="~/SagorNY"></asp:Button></li>     
+                            <asp:Button ID="m3" BackColor="#ff0303" CssClass="button link menytext" runat="server" Text="Köp sagor" PostBackUrl="~/SagorNY"></asp:Button></li>     
                         <li class="menuitem">
-                            <asp:Button ID="Button1" CssClass="button link" BackColor="#ff0303" runat="server" Text="Logga ut" OnClick="Button1_Click"></asp:Button></li>
+                            <asp:Button ID="Button1" CssClass="button link meny menytext" BackColor="#ff0303" runat="server" Text="Logga ut" OnClick="Button1_Click"></asp:Button></li>
                     </ul>
                 </div>
             </div>
+
+
+
+            
             <div id="bodyContent">
                 <asp:ContentPlaceHolder runat="server" ID="body" />
             </div>

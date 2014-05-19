@@ -25,7 +25,8 @@
   <div class="row" style="margin-top:100px">
     <div class="large-2 medium-2 small-12 columns">
                               <div class="label PTLabels font1">Användarnamn</div>
-        <asp:TextBox runat="server" ID="UnameTB" CssClass="textbox"></asp:TextBox>
+        <asp:TextBox runat="server" ID="UnameTB" CssClass="textbox"></asp:TextBox><asp:Label runat="server" ID="UnameError" Visible="false"></asp:Label>
+        
 
               </div>
 
@@ -36,13 +37,12 @@
 
     <div class="large-2 medium-2 small-12 columns">
                               <div class="label PTLabels font1">Lösenord</div>
-              <asp:TextBox runat="server" ID="PWTB" CssClass="textbox" TextMode="Password"></asp:TextBox>
+              <asp:TextBox runat="server" ID="PWTB" CssClass="textbox" TextMode="Password"></asp:TextBox><asp:Label runat="server" ID="PWError" Visible="false"></asp:Label>
 </div>
 
     <div class="large-2 medium-2 small-12 columns">
                       <div class="label PTLabels font1">Bekräfta lösenord</div>
-              <asp:TextBox runat="server" ID="CPWTB" CssClass="textbox" TextMode="Password"></asp:TextBox>
-        <asp:CompareValidator ID="CompareValidator1" runat="server" SetFocusOnError="true" ControlToCompare="PWTB" ControlToValidate="CPWTB"></asp:CompareValidator>
+              <asp:TextBox runat="server" ID="CPWTB" CssClass="textbox" TextMode="Password"></asp:TextBox><asp:Label runat="server" ID="CPWError" Visible="false"></asp:Label>
 
     </div>
 
@@ -51,7 +51,6 @@
           </div>
   </div>
      
-        </div>
 </asp:Content>
 
 

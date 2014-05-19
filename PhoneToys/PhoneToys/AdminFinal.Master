@@ -47,22 +47,17 @@
         <div class="row large-12">
             <header class="row">
                 
-                  <div class="large-12 small-10 medium-10 center"><asp:HyperLink ID="HyperLink1" runat="server" ImageUrl="~/Images/PhoneToysHeader.png" NavigateUrl="~/Spela"></asp:HyperLink></div>
+                  <div class="large-12 small-10 medium-10 center"><asp:HyperLink ID="HyperLink1" runat="server" ImageUrl="~/Images/PhoneToysHeader.png" NavigateUrl="~/Adminsida"></asp:HyperLink></div>
                 
             </header>
+           
             <div class="row">
-                <div class="large-centered large-12 medium-12 small-12 columns">
-                    <nav class="redmenu">
-                    
-                        <ul class="button-group ">
+                <div class="large-12 medium-9 small-12 columns large-offset-5 medium-offset-5 small-offset-4" style="text-align:center"">
+                    <ul class="button-group">    
                         <li class="menuitem">
-                            <asp:Button ID="Button1" BackColor="Red" CssClass="link button radius" runat="server" Text="Startsida" PostBackUrl="~/Adminsida" ></asp:Button></li>
-                            <li class="menuitem">
-                            <asp:Button ID="AdminLoggaUt" BackColor="Red" CssClass="link button radius" runat="server" Text="Logga ut" PostBackUrl="~/Adminsida" OnClick="AdminLoggaUt_Click"></asp:Button></li>
-                    
+                            <asp:Button ID="Button1" CssClass="button link meny meny2 menytext" BackColor="#ff0303" runat="server" Text="Logga ut" OnClick="Button1_Click"></asp:Button></li>
                     </ul>
-               </nav>
-                     </div>
+                </div>
             </div>
             <div id="bodyContent">
                 <asp:ContentPlaceHolder runat="server" ID="body" />

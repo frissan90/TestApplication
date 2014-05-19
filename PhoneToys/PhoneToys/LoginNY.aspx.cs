@@ -72,7 +72,7 @@ namespace PhoneToys
             mail.From = new MailAddress("noreply@phonetoys.se");
             mail.Subject = "Ditt lösenord";
             mail.To.Add(FEmailTB.Text);
-            mail.Body = "Hej!ditt lösenord är: " + PW;
+            mail.Body = "Hej " + FAnameTB.Text +  "!<br /> Ditt lösenord är: " + "<b>" + PW + "</b>";
             mail.IsBodyHtml = true;
             SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
             client.EnableSsl = true;

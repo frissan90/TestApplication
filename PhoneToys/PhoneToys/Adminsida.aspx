@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminFinal.Master" AutoEventWireup="true" CodeBehind="Adminsida.aspx.cs" Inherits="PhoneToys.Adminsida" EnableEventValidation="true" %>
+﻿<%--<%@ Page Title="" Language="C#" MasterPageFile="~/AdminFinal.Master" AutoEventWireup="true" CodeBehind="Adminsida.aspx.cs" Inherits="PhoneToys.Adminsida" EnableEventValidation="true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
@@ -49,36 +49,35 @@
                             <hr />
                         </td>
                     </tr>
-                </SeparatorTemplate>--%>
+                </SeparatorTemplate>
           
                 <FooterTemplate>
                     </table>
-                    
-                </FooterTemplate>
-                
+                </FooterTemplate>  
             </asp:Repeater>
-
-
-
-    </div>
+    </div>--%>
     
-      <%--<%--<div class="row collapse large-offset-4 medium-offset-4 small-offset-3">
-        <br />
-<asp:Label runat="server" ID="labeltitle" CssClass="labeladmin">Registrera redaktörsanvändare</asp:Label>
 
-    </div>
-    <div class="row-content large-offset-4 medium-offset-4">
+<%@ Page Title="" Language="C#" MasterPageFile="~/AdminFinal.Master" AutoEventWireup="true" CodeBehind="Adminsida.aspx.cs" Inherits="PhoneToys.Adminsida" EnableEventValidation="true" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
+  <div class="row collapse large-offset-2 medium-offset-4 small-offset-3">
+        <br />
+
 
         <asp:Repeater runat="server" ID="RedaktorRepeater" OnItemCommand="RedaktorRepeater_ItemCommand">
                 <HeaderTemplate>
-
-                    <table class="large-10 medium-8 small-6">
-                        <tr class="blueRow">
-                            <a href="#newModal" class="newSagaIMG"><img src="Images/nySaga.png"></img></a>
+                            
+                    <table class="large-10 medium-10 small-10 RepAdmin" >
+                        <tr>
+                            <a href="#newModal" class="newSagaIMG">
+                                
+                            
                             <th align="left">Användarnamn</th>
                             <th align="left">Förnamn</th>
                             <th align="left">Efternamn</th>
-                            <th align="left">Epost</th>
+                            <th align="left">Epost</th> 
                              
 
                         </tr>
@@ -96,21 +95,17 @@
                             <asp:Label runat="server" ID="Label1" Text='<%#Eval("Lname") %>'></asp:Label></td>
                         <td class="whiteRow">
                             <asp:Label runat="server" ID="Label2" Text='<%#Eval("Email") %>'></asp:Label></td>
-                        <td><%--<asp:LinkButton runat="server" ID="varukorgRemoveBTN" Text="Ta bort" CommandName="Remove"></asp:LinkButton>--%>
-                             <%--<a href="#openModal" class="newSagaIMG"><img src="Images/gtk-edit.png"></img></a>--%><%--<asp:ImageButton runat="server" ID="redaktorEditimg" CommandName="edit" ImageUrl="~/Images/gtk-edit.png" ToolTip="Redigera redaktor" />--%>
-                       <%-- <asp:ImageButton runat="server" ID="sagaRemoveimg" Width="30px" Height="30px" ImageUrl="~/Images/trash_can.png" ToolTip="Ta bort redaktor" CommandName="remove" OnClientClick="return confirm('Vill du verkligen ta bort redaktören?')" /></td>
-                    </tr>
+                        <td class="whiteRow center">
+                            <asp:ImageButton runat="server" ID="redaktorEditimg" CommandName="edit" ImageUrl="~/Images/gtk-edit.png" ToolTip="Redigera redaktor"/>
+                        <asp:ImageButton runat="server" ID="sagaRemoveimg" Width="30px" Height="30px" ImageUrl="~/Images/trash_can.png" ToolTip="Ta bort redaktor" CommandName="remove" OnClientClick="return confirm('Vill du verkligen ta bort redaktören?')" />
+                        <a href="#newModal"><img src="Images/add_contact.png" style="width:20px;height:20px; margin-bottom: 17px;" title="Lägg till redaktör"/></a>
+                   </tr>
+
                         
-                </ItemTemplate>--%>
-                <%--<SeparatorTemplate>
-                    <tr class="blueRow">
-                        <td colspan="0">
-                            <hr />
-                        </td>
-                    </tr>
-                </SeparatorTemplate>--%>
+                </ItemTemplate>
+
           
-              <%--  <FooterTemplate>
+                <FooterTemplate>
                     </table>
                     
                 </FooterTemplate>
@@ -119,8 +114,9 @@
 
 
 
-<%--    </div>--%>
+    </div>
 
+<%--Modaler --%>
     <div id="openModal" class="modalDialog">
 	<div>
 		<a href="#close" title="Close" class="close">X</a>

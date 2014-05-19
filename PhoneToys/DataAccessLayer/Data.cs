@@ -1189,6 +1189,74 @@ namespace DataAccessLayer
             return PW;
 
         }
+
+        public bool checkUser(string user)
+        {
+            string Query = @"Select count(*) from Member where Username = @User";
+
+            bool Result = false;
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                SqlParameter param = new SqlParameter("@User", user);
+                cmd.Parameters.Add(param);
+
+                if ((int)cmd.ExecuteScalar() > 0)
+                {
+                    Result = true;
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+
+            return Result;
+        }
+
+        public bool checkBamse(string BID)
+        {
+            string Query = @"select count(*) from Bamse where BamseID = @BID";
+
+            bool result = false;
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+
+                SqlParameter param = new SqlParameter("@BID", BID);
+                cmd.Parameters.Add(param);
+
+                if ((int)cmd.ExecuteScalar() > 0)
+                {
+                    result = true;
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+
+            return result;
+        }
     }
 }
 

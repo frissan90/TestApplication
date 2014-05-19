@@ -49,6 +49,10 @@ namespace PhoneToys
             editor.Lname = LnameATB.Text;
 
             data.Register(editor);
+
+            RedaktorRepeater.DataSource = data.getEditors();
+
+            RedaktorRepeater.DataBind();
         }
 
         protected void RedaktorRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
