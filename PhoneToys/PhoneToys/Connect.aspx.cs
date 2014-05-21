@@ -38,7 +38,7 @@ namespace PhoneToys
 
                 //string klient = "https://api.spark.io/v1/devices/48ff6c065067555035261587/Light?access_token=0db5f14f8deff81a1ac03b43508f15e7e8637af7";
 
-                string klient = "https://api.spark.io/v1/devices/" + bamse.DeviceID + "/Spela?access_token=" + bamse.Token;
+                string klient = "https://api.spark.io/v1/devices/" + bamse.DeviceID + "/Koppla?access_token=" + bamse.Token;
 
                 var restClient = new RestClient(klient);
 

@@ -71,55 +71,12 @@ namespace PhoneToys
 
         protected void BetalaBTN_Click(object sender, EventArgs e)
         {
-            string KortnummerRegex = "^[0-9]{15,16}$";
-
-            string KortnemnRegex = "^[a-ö]";
-
-            string CvcRegexw = "^[0-9]{3,3}$";
-
-            Regex Knregex = new Regex(KortnummerRegex);
-
-            Regex KnemnRegex = new Regex(KortnemnRegex, RegexOptions.IgnoreCase);
-
-            Regex CvcRegex = new Regex(CvcRegexw);
-
-            if (!Knregex.Match(TextBox1.Text).Success)
-            {
-                knrFail.Text = "Fel kortnummer";
-                Color c = TextBox1.ForeColor;
-                TextBox1.BackColor = Color.Tomato;
-            }
-            else
-            {
-                knrFail.Text = "";
-                
-            }
-
-            if (!KnemnRegex.Match(TextBox2.Text).Success)
-            {
-                knameFail.Text = "Fel kortname";
-            }
-            else
-            {
-                knameFail.Text = "";
-            }
-
-            if (!CvcRegex.Match(cvctb.Text).Success)
-            {
-                cvcFail.Text = "Fel cvc";
-            }
-
-            else
-            {
-                knrFail.Text = "";
-                knameFail.Text = "";
-                cvcFail.Text = "";
                 data.kopSagor(Session["username"].ToString(), (List<Varukorgen>)Session["varukorg"]);
 
                 Session["varukorg"] = new List<Varukorgen>();
 
                 Response.Redirect("TackForDittKop");
-            }
+            
         }
         
         protected void Button1_Click(object sender, EventArgs e)

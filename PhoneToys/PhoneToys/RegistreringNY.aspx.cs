@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Entities;
 using DataAccessLayer;
+using System.Drawing;
 
 namespace PhoneToys
 {
@@ -26,24 +27,28 @@ namespace PhoneToys
             if (UnameTB.Text == String.Empty)
             {
                 UnameError.Visible = true;
+                UnameTB.BorderColor = Color.Red;
                 UnameError.CssClass = "error";
                 UnameError.Text = "Skriv in något";
             }
             else if (data.checkUser(UnameTB.Text))
             {
                 UnameError.Visible = true;
+                UnameTB.BorderColor = Color.Red;
                 UnameError.CssClass = "error";
                 UnameError.Text = "Användarnamnet finns redan";
             }
             else
             {
                 UnameError.Visible = false;
+                UnameTB.BorderWidth = 0;
                 UnameError.CssClass = "";
             }
 
             if (PWTB.Text == "")
             {
                 PWError.Visible = true;
+                PWTB.BorderColor = Color.Red;
                 PWError.CssClass = "error";
                 PWError.Text = "Skriv in något";
             }
@@ -52,16 +57,18 @@ namespace PhoneToys
                 PWError.Visible = false;
                 PWError.CssClass = "";
                 CPWError.Visible = true;
+                CPWTB.BorderColor = Color.Red;
                 CPWError.CssClass = "error";
                 CPWError.Text = "Skriv något";
             }
-            else if (!PWTB.Text.Equals(CPWTB.Text))
+            else if (PWTB.Text != CPWTB.Text)
             {
+                CPWTB.BorderColor = Color.Red;
                 CPWError.Visible = true;
                 CPWError.CssClass = "error";
                 CPWError.Text = "Lösenorden är inte lika";
             }
-            else
+            else if(!data.checkUser(UnameTB.Text) && PWTB.Text.Equals(CPWTB.Text))
             {
                 User user = new User();
 
