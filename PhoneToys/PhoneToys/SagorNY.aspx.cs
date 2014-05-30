@@ -102,13 +102,10 @@ namespace PhoneToys
 
             Session["varukorg"] = varor;
 
-            //ClientScript.RegisterStartupScript(Page.GetType(), "alert", "javascript:alert('Vara tillagd i varukorgen');", true);
-
             ((Button)SagorLoad.Items[index].FindControl("Button1")).Enabled = false;
             ((Button)SagorLoad.Items[index].FindControl("Button1")).Text = "Lagd i varukorg";
             ((Button)SagorLoad.Items[index].FindControl("Button1")).BackColor = Color.Tomato;
 
-            //Response.Redirect("SagorNY");
         }
 
         protected void BetalaBTN_Click(object sender, EventArgs e)
